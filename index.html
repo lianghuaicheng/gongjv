@@ -280,7 +280,7 @@
         
         <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称或描述...">
+            <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称或描述..." oninput="handleSearch(this.value)" onkeypress="if(event.key==='Enter')handleSearch(this.value)">
         </div>
         
         <nav class="header-right">
@@ -886,6 +886,15 @@ document.addEventListener('DOMContentLoaded', () => {
     handleRoute();
     setupEventListeners();
 });
+
+// 搜索处理
+function handleSearch(value) {
+    currentSearch = value;
+    document.getElementById('detailPage').classList.remove('active');
+    document.getElementById('listPage').style.display = 'block';
+    currentTool = null;
+    renderTools();
+}
 
 // 渲染热门工具
 function renderHotTools() {
