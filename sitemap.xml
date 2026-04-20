@@ -9,23 +9,25 @@
         <xhtml:link rel="alternate" hreflang="zh-CN" href="https://gongjv.pages.dev/"/>
     </url>
 
-    <!-- 各分类页面（通过前端筛选实现，仅做分类标记） -->
+    <!-- AI 工具区块（50个） -->
     <url>
         <loc>https://gongjv.pages.dev/</loc>
         <lastmod>2025-04-20</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.85</priority>
     </url>
+    <!-- 开发工具区块（100个） -->
     <url>
         <loc>https://gongjv.pages.dev/</loc>
         <lastmod>2025-04-20</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.80</priority>
     </url>
+    <!-- 设计工具区块（60个） -->
     <url>
         <loc>https://gongjv.pages.dev/</loc>
         <lastmod>2025-04-20</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.80</priority>
     </url>
 </urlset>
