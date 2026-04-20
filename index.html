@@ -266,41 +266,41 @@
 const TOOLS = [
 // ===================== AI 工具 =====================
 // AI对话助手
-{ id: 'chatgpt', name: 'ChatGPT', desc: 'OpenAI 推出的智能对话助手，全球最流行的 AI 聊天工具，支持文本生成、代码编写等。', url: 'https://chat.openai.com', category: 'ai-chat', icon: '💬', color: '#10a37f', features: ['智能对话', '代码生成', '文章撰写', '翻译支持'] },
-{ id: 'claude', name: 'Claude', desc: 'Anthropic 出品的高质量 AI 助手，被认为是写代码最强的 AI，擅长长文本分析。', url: 'https://claude.ai', category: 'ai-chat', icon: '🧠', color: '#d97706', features: ['长文本处理', '代码编写', '分析推理', '安全对话'] },
-{ id: 'gemini', name: 'Gemini', desc: 'Google DeepMind 打造的多模态 AI，支持图文理解、代码生成与实时联网搜索。', url: 'https://gemini.google.com', category: 'ai-chat', icon: '✨', color: '#4285f4', features: ['多模态理解', '联网搜索', '代码生成'] },
-{ id: 'kimi', name: 'Kimi', desc: '月之暗面推出的智能 AI 助手，支持长文档阅读与多轮对话，国产 AI 之光。', url: 'https://kimi.moonshot.cn', category: 'ai-chat', icon: '🌙', color: '#1e3a8a', features: ['长文本处理', '文档分析', '联网搜索'] },
-{ id: 'doubao', name: '豆包', desc: '字节跳动推出的 AI 助手，完全免费使用，支持智能对话与任务管理。', url: 'https://www.doubao.com', category: 'ai-chat', icon: '🦆', color: '#f85959', features: ['免费使用', '智能对话', '字节生态'] },
-{ id: 'wenvyiyan', name: '文心一言', desc: '百度推出的国产大语言模型，支持多轮对话与多模态内容生成。', url: 'https://yiyan.baidu.com', category: 'ai-chat', icon: '💎', color: '#2932e1', features: ['中文优化', '多模态', '百度生态'] },
-{ id: 'tongyi', name: '通义千问', desc: '阿里云推出的多模态大模型，支持文本、图像、语音生成。', url: 'https://qianwen.aliyun.com', category: 'ai-chat', icon: '💬', color: '#ff6a00', features: ['多模态', '阿里生态', 'API接入'] },
-{ id: 'xinghuo', name: '讯飞星火', desc: '科大讯飞发布的认知大模型，支持文本生成与多模态交互，语音技术领先。', url: 'https://xinghuo.xfyun.cn', category: 'ai-chat', icon: '✨', color: '#0052cc', features: ['语音识别', '多模态', '行业应用'] },
-{ id: 'deepseek', name: 'DeepSeek', desc: '开源大模型，专注于代码生成与逻辑推理，性能优秀且完全免费。', url: 'https://deepseek.com', category: 'ai-chat', icon: '🔍', color: '#2c3e50', features: ['代码生成', '开源免费', 'API接入'] },
-{ id: 'coze', name: '扣子(Coze)', desc: '字节跳动推出的 AI 应用开发平台，零代码构建 AI Agent。', url: 'https://www.coze.cn', category: 'ai-chat', icon: '🤖', color: '#6366f1', features: ['AI Agent', '工作流', '插件集成'] },
-{ id: 'poe', name: 'Poe', desc: '聚合式 AI 聊天平台，支持 ChatGPT、Claude 等多模型一键切换。', url: 'https://poe.com', category: 'ai-chat', icon: '📱', color: '#a674b5', features: ['多模型切换', '快速访问', '低成本'] },
-{ id: 'bard', name: 'Google Bard', desc: 'Google 旗下对话式 AI 助手，支持实时信息检索与多轮对话。', url: 'https://bard.google.com', category: 'ai-chat', icon: '🎵', color: '#4285f4', features: ['实时信息', '多轮对话', '免费使用'] },
-{ id: 'character', name: 'Character.AI', desc: '自定义 AI 角色聊天平台，与虚拟角色进行对话，体验有趣。', url: 'https://character.ai', category: 'ai-chat', icon: '🎭', color: '#7c3aed', features: ['角色扮演', '创意对话', '娱乐互动'] },
-{ id: 'grok', name: 'Grok AI', desc: 'xAI 推出的 AI 助手，通过 X 平台实时了解世界。', url: 'https://x.ai', category: 'ai-chat', icon: '🚀', color: '#000000', features: ['实时信息', '幽默风格', 'X集成'] },
-{ id: 'qoder', name: 'Qoder', desc: '阿里出品的 AI 编程工具，专注于代码生成与优化。', url: 'https://qoder.com', category: 'ai-chat', icon: '💻', color: '#ff6a00', features: ['代码生成', '编程辅助', '阿里生态'] },
-{ id: 'trae', name: 'TRAE 编程', desc: '字节旗下的 AI 编程工具，Vibe Coding 必备神器。', url: 'https://www.trae.com.cn', category: 'ai-chat', icon: '⚡', color: '#4f46e5', features: ['代码补全', 'AI编程', '字节生态'] },
-{ id: 'yuanbao', name: '腾讯元宝', desc: '腾讯出品的大语言模型，集成微信生态。', url: 'https://yuanbao.tencent.com', category: 'ai-chat', icon: '🐧', color: '#12b7f5', features: ['腾讯生态', '智能对话', '免费使用'] },
-{ id: 'zhipu', name: '智谱清言', desc: '智谱公司推出的 AI 聊天助手，支持长文档解析。', url: 'https://chatglm.cn', category: 'ai-chat', icon: '🧩', color: '#e60012', features: ['长文本处理', '知识问答', '国产AI'] },
+{ id: 'chatgpt', name: 'ChatGPT', desc: 'OpenAI 推出的智能对话助手，全球最流行的 AI 聊天工具。 基于 GPT-4 大语言模型，支持文本生成、代码编写、文章撰写、翻译等，还能进行多轮对话、头脑风暴和创意写作，是日常工作和生活中的得力 AI 助手。', url: 'https://chat.openai.com', category: 'ai-chat', icon: '💬', color: '#10a37f', features: ['智能对话', '代码生成', '文章撰写', '翻译支持', '多轮对话', '创意写作'] },
+{ id: 'claude', name: 'Claude', desc: 'Anthropic 出品的高质量 AI 助手，被认为是写代码最强的 AI，擅长长文本分析。由 Claude 3.5 Sonnet 模型驱动，特别擅长处理长文档、代码编写、分析推理和写作创作，支持 100K 上下文窗口。', url: 'https://claude.ai', category: 'ai-chat', icon: '🧠', color: '#d97706', features: ['长文本处理', '代码编写', '分析推理', '安全对话', '100K上下文', '写作助手'] },
+{ id: 'gemini', name: 'Gemini', desc: 'Google DeepMind 打造的多模态 AI，支持图文理解、代码生成与实时联网搜索。Google 最强的 AI 模型，原名 Bard，支持图像、视频、音频理解，可实时搜索最新信息。', url: 'https://gemini.google.com', category: 'ai-chat', icon: '✨', color: '#4285f4', features: ['多模态理解', '联网搜索', '代码生成', '图像理解', '视频分析', '实时信息'] },
+{ id: 'kimi', name: 'Kimi', desc: '月之暗面推出的智能 AI 助手，支持长文档阅读与多轮对话，国产 AI 之光。支持超长上下文（200万字），可读取 PDF、Word、PPT 等文档，特别适合处理长文本和学术论文。', url: 'https://kimi.moonshot.cn', category: 'ai-chat', icon: '🌙', color: '#1e3a8a', features: ['长文本处理', '文档分析', '联网搜索', '200万字上下文', '多格式文档', '国产AI'] },
+{ id: 'doubao', name: '豆包', desc: '字节跳动推出的 AI 助手，完全免费使用，支持智能对话与任务管理。基于 Doubao 大模型，支持语音输入、AI 绘画和智能体创建，是性价比极高的国产 AI 工具。', url: 'https://www.doubao.com', category: 'ai-chat', icon: '🦆', color: '#f85959', features: ['免费使用', '智能对话', '字节生态', 'AI绘画', '语音输入', '智能体'] },
+{ id: 'wenvyiyan', name: '文心一言', desc: '百度推出的国产大语言模型，支持多轮对话与多模态内容生成。基于文心大模型 4.0，支持图像生成、知识问答、代码编写等，是百度 AI 生态的核心产品。', url: 'https://yiyan.baidu.com', category: 'ai-chat', icon: '💎', color: '#2932e1', features: ['中文优化', '多模态', '百度生态', '图像生成', '知识问答', 'API接入'] },
+{ id: 'tongyi', name: '通义千问', desc: '阿里云推出的多模态大模型，支持文本、图像、语音生成。基于 Qwen 大模型，提供强大的推理能力和多模态理解，支持 API 接入和企业部署。', url: 'https://qianwen.aliyun.com', category: 'ai-chat', icon: '💬', color: '#ff6a00', features: ['多模态', '阿里生态', 'API接入', '语音生成', '图像理解', '企业部署'] },
+{ id: 'xinghuo', name: '讯飞星火', desc: '科大讯飞发布的认知大模型，支持文本生成与多模态交互，语音技术领先。基于讯飞语音技术，提供语音合成、语音识别等能力，适合语音相关应用场景。', url: 'https://xinghuo.xfyun.cn', category: 'ai-chat', icon: '✨', color: '#0052cc', features: ['语音识别', '多模态', '行业应用', '语音合成', '文字转语音', '语音转文字'] },
+{ id: 'deepseek', name: 'DeepSeek', desc: '开源大模型，专注于代码生成与逻辑推理，性能优秀且完全免费。DeepSeek Coder 和 DeepSeek Chat 在代码能力和推理能力上表现出色，提供开源版本和 API。', url: 'https://deepseek.com', category: 'ai-chat', icon: '🔍', color: '#2c3e50', features: ['代码生成', '开源免费', 'API接入', '逻辑推理', '高性能', '本地部署'] },
+{ id: 'coze', name: '扣子(Coze)', desc: '字节跳动推出的 AI 应用开发平台，零代码构建 AI Agent。支持工作流编排、插件集成、知识库配置，可快速搭建企业级 AI 应用和客服机器人。', url: 'https://www.coze.cn', category: 'ai-chat', icon: '🤖', color: '#6366f1', features: ['AI Agent', '工作流', '插件集成', '知识库', '零代码', '企业级'] },
+{ id: 'poe', name: 'Poe', desc: '聚合式 AI 聊天平台，支持 ChatGPT、Claude 等多模型一键切换。集成多种主流 AI 模型，可对比不同模型回答，选择最优答案，适合研究和比较使用。', url: 'https://poe.com', category: 'ai-chat', icon: '📱', color: '#a674b5', features: ['多模型切换', '快速访问', '低成本', '模型对比', '集成GPT-4', 'Claude接入'] },
+{ id: 'bard', name: 'Google Bard', desc: 'Google 旗下对话式 AI 助手，支持实时信息检索与多轮对话。基于 Gemini 大模型，可联网搜索最新信息，提供准确、实时的回答。', url: 'https://bard.google.com', category: 'ai-chat', icon: '🎵', color: '#4285f4', features: ['实时信息', '多轮对话', '免费使用', '联网搜索', 'Gmail集成', 'YouTube集成'] },
+{ id: 'character', name: 'Character.AI', desc: '自定义 AI 角色聊天平台，与虚拟角色进行对话，体验有趣。可创建各种角色如名人、动漫角色、历史人物等，进行角色扮演和创意对话。', url: 'https://character.ai', category: 'ai-chat', icon: '🎭', color: '#7c3aed', features: ['角色扮演', '创意对话', '娱乐互动', '自定义角色', '社区角色', '情感陪伴'] },
+{ id: 'grok', name: 'Grok AI', desc: 'xAI 推出的 AI 助手，通过 X 平台实时了解世界。独特的设计风格，擅长幽默回答和实时信息获取，与 X 平台深度集成。', url: 'https://x.ai', category: 'ai-chat', icon: '🚀', color: '#000000', features: ['实时信息', '幽默风格', 'X集成', '实时推文', '独特回答', '免费使用'] },
+{ id: 'qoder', name: 'Qoder', desc: '阿里出品的 AI 编程工具，专注于代码生成与优化。基于通义大模型，专为编程场景优化，提供代码补全、解释、调试等功能。', url: 'https://qoder.com', category: 'ai-chat', icon: '💻', color: '#ff6a00', features: ['代码生成', '编程辅助', '阿里生态', '代码优化', '调试助手', 'API接入'] },
+{ id: 'trae', name: 'TRAE 编程', desc: '字节旗下的 AI 编程工具，Vibe Coding 必备神器。支持代码补全、重构、单元测试生成，适合快速开发和原型设计。', url: 'https://www.trae.com.cn', category: 'ai-chat', icon: '⚡', color: '#4f46e5', features: ['代码补全', 'AI编程', '字节生态', '代码重构', '单元测试', '中文界面'] },
+{ id: 'yuanbao', name: '腾讯元宝', desc: '腾讯出品的大语言模型，集成微信生态。基于腾讯混元大模型，支持公众号文章分析、微信文档处理等特色功能。', url: 'https://yuanbao.tencent.com', category: 'ai-chat', icon: '🐧', color: '#12b7f5', features: ['腾讯生态', '智能对话', '免费使用', '公众号分析', '微信集成', '文档处理'] },
+{ id: 'zhipu', name: '智谱清言', desc: '智谱公司推出的 AI 聊天助手，支持长文档解析。基于 GLM 大模型，特别擅长长文本处理和学术文献分析。', url: 'https://chatglm.cn', category: 'ai-chat', icon: '🧩', color: '#e60012', features: ['长文本处理', '知识问答', '国产AI', '文档解析', '学术论文', 'API接入'] },
 
 // AI图像生成
-{ id: 'midjourney', name: 'Midjourney', desc: '顶级 AI 图像生成工具，通过文字描述创作惊艳的视觉艺术作品。', url: 'https://www.midjourney.com', category: 'ai-image', icon: '🎨', color: '#000000', features: ['文生图', '风格多样', '高清输出'] },
-{ id: 'stablediffusion', name: 'Stable Diffusion', desc: '开源 AI 绘画模型，支持本地部署与自定义训练，完全免费。', url: 'https://stability.ai', category: 'ai-image', icon: '🖼️', color: '#9333ea', features: ['开源免费', '本地部署', '高度定制'] },
-{ id: 'dalle', name: 'DALL·E 3', desc: 'OpenAI 图像生成模型，集成于 ChatGPT 中，生成图片质量极高。', url: 'https://openai.com/dall-e-3', category: 'ai-image', icon: '🌈', color: '#6366f1', features: ['文字渲染', '高清图片', 'ChatGPT集成'] },
-{ id: 'liblibai', name: 'LiblibAI·哩布哩布', desc: '国内领先的 AI 图像创作平台和模型分享社区。', url: 'https://www.liblibai.com', category: 'ai-image', icon: '📚', color: '#8b5cf6', features: ['模型分享', '在线生图', '中文社区'] },
-{ id: 'tusiart', name: '吐司AI', desc: 'AI 绘画模型社区和在线生图平台。', url: 'https://tusiart.com', category: 'ai-image', icon: '🎭', color: '#ec4899', features: ['在线生图', '模型社区', '免费使用'] },
-{ id: 'keling', name: '可灵AI', desc: '快手推出的 AI 图像和视频创作平台。', url: 'https://klingai.com', category: 'ai-image', icon: '⚡', color: '#f43f5e', features: ['文生图', '图生视频', '国产AI'] },
-{ id: 'tongyixiang', name: '通义万相', desc: '阿里推出的 AI 创意内容生成平台。', url: 'https://tongyi.aliyun.com', category: 'ai-image', icon: '🎪', color: '#ff6a00', features: ['AI绘画', '多风格', '阿里生态'] },
-{ id: 'meitu', name: '美图设计室', desc: 'AI 图像创作和设计平台，商业设计神器。', url: 'https://www.designkit.cn', category: 'ai-image', icon: '🖌️', color: '#ff68a4', features: ['商业设计', '商品图', '海报生成'] },
-{ id: 'huwa', name: '绘蛙', desc: '字节推出的 AI 电商营销工具，免费生成商品图。', url: 'https://www.ihuwu.com', category: 'ai-image', icon: '🐸', color: '#3b82f6', features: ['电商设计', '商品图', '免费使用'] },
-{ id: 'duiyou', name: '堆友AI', desc: '阿里推出的全能 AI 绘画和视频创作神器。', url: 'https://d.design', category: 'ai-image', icon: '⛰️', color: '#f59e0b', features: ['AI绘画', '视频生成', '多功能'] },
-{ id: 'civitai', name: 'Civitai', desc: '免费的 AI 图像绘画作品和模型分享平台。', url: 'https://civitai.com', category: 'ai-image', icon: '🎯', color: '#f97316', features: ['模型分享', '社区互动', '免费使用'] },
-{ id: 'krea', name: 'Krea AI', desc: '实时 AI 图像、视频生成和编辑平台。', url: 'https://krea.ai', category: 'ai-image', icon: '✨', color: '#8b5cf6', features: ['实时生成', '视频编辑', 'AI绘画'] },
-{ id: 'removebg', name: 'Remove.bg', desc: 'AI 一键抠图工具，自动去除图片背景。', url: 'https://www.remove.bg', category: 'ai-image', icon: '✂️', color: '#2c82c9', features: ['AI抠图', '自动去背景', '批量处理'] },
-{ id: 'gaoding', name: '稿定AI', desc: '一站式 AI 设计工具集，AI 绘图、图片转 AI 绘画。', url: 'https://www.gaoding.com', category: 'ai-image', icon: '🎨', color: '#6366f1', features: ['AI绘图', '图片处理', '设计工具'] },
-{ id: 'weita', name: '微ta AI', desc: 'AI 图片编辑和设计工具平台。', url: 'https://www.ivitta.cn', category: 'ai-image', icon: '📸', color: '#06b6d4', features: ['图片编辑', 'AI特效', '设计辅助'] },
+{ id: 'midjourney', name: 'Midjourney', desc: '顶级 AI 图像生成工具，通过文字描述创作惊艳的视觉艺术作品。被认为是目前最具艺术性的 AI 绘画工具，特别擅长生成油画风格、概念艺术、人物肖像等高质量图像。新版本 V6 支持更准确的文字渲染和风格控制。', url: 'https://www.midjourney.com', category: 'ai-image', icon: '🎨', color: '#000000', features: ['文生图', '风格多样', '高清输出', 'V6版本', '艺术风格', '社区分享'] },
+{ id: 'stablediffusion', name: 'Stable Diffusion', desc: '开源 AI 绘画模型，支持本地部署与自定义训练，完全免费。Stability AI 推出的开源图像生成模型，可本地部署或使用在线平台，支持 LoRA 训练和 ControlNet 控制，适合专业玩家和开发者。', url: 'https://stability.ai', category: 'ai-image', icon: '🖼️', color: '#9333ea', features: ['开源免费', '本地部署', '高度定制', 'LoRA训练', 'ControlNet', '模型丰富'] },
+{ id: 'dalle', name: 'DALL·E 3', desc: 'OpenAI 图像生成模型，集成于 ChatGPT 中，生成图片质量极高。最新版 DALL·E 3 在文字渲染、图像质量和语义理解方面有显著提升，可直接在 ChatGPT 中使用，支持自然语言指令。', url: 'https://openai.com/dall-e-3', category: 'ai-image', icon: '🌈', color: '#6366f1', features: ['文字渲染', '高清图片', 'ChatGPT集成', '语义理解', '多风格', '商业可用'] },
+{ id: 'liblibai', name: 'LiblibAI·哩布哩布', desc: '国内领先的 AI 图像创作平台和模型分享社区。提供大量中文 prompt 教程和本土化模型，国内用户使用最方便的 AI 绘画平台之一，支持在线生图和模型训练。', url: 'https://www.liblibai.com', category: 'ai-image', icon: '📚', color: '#8b5cf6', features: ['模型分享', '在线生图', '中文社区', '中文教程', 'LoRA训练', '每日免费'] },
+{ id: 'tusiart', name: '吐司AI', desc: 'AI 绘画模型社区和在线生图平台。提供丰富的模型选择和在线生图功能，国内知名的 AI 绘画社区，用户可以分享作品和交流技巧。', url: 'https://tusiart.com', category: 'ai-image', icon: '🎭', color: '#ec4899', features: ['在线生图', '模型社区', '免费使用', '作品分享', '中文界面', '每日积分'] },
+{ id: 'keling', name: '可灵AI', desc: '快手推出的 AI 图像和视频创作平台。国内首个支持生成 2 分钟视频的 AI 工具，图像生成效果优秀，特别擅长写实风格，适合电商和内容创作。', url: 'https://klingai.com', category: 'ai-image', icon: '⚡', color: '#f43f5e', features: ['文生图', '图生视频', '国产AI', '高清写实', '视频生成', '电商设计'] },
+{ id: 'tongyixiang', name: '通义万相', desc: '阿里推出的 AI 创意内容生成平台。提供多种风格图像生成，支持局部重绘和图像编辑功能，阿里生态内可无缝衔接使用。', url: 'https://tongyi.aliyun.com', category: 'ai-image', icon: '🎪', color: '#ff6a00', features: ['AI绘画', '多风格', '阿里生态', '图像编辑', '局部重绘', '免费使用'] },
+{ id: 'meitu', name: '美图设计室', desc: 'AI 图像创作和设计平台，商业设计神器。特别适合电商从业者，提供商品图生成、海报设计、AI 模特等功能，是电商运营的得力助手。', url: 'https://www.designkit.cn', category: 'ai-image', icon: '🖌️', color: '#ff68a4', features: ['商业设计', '商品图', '海报生成', 'AI模特', '电商素材', '智能抠图'] },
+{ id: 'huwa', name: '绘蛙', desc: '字节推出的 AI 电商营销工具，免费生成商品图。专为电商设计，支持模特图生成和商品图优化，是淘宝、拼多多等平台商家的必备工具。', url: 'https://www.ihuwu.com', category: 'ai-image', icon: '🐸', color: '#3b82f6', features: ['电商设计', '商品图', '免费使用', '模特生成', '图片优化', '字节生态'] },
+{ id: 'duiyou', name: '堆友AI', desc: '阿里推出的全能 AI 绘画和视频创作神器。提供 AI 绘画、AI 视频生成、形象定制等多种功能，是阿里生态内的全能创意工具。', url: 'https://d.design', category: 'ai-image', icon: '⛰️', color: '#f59e0b', features: ['AI绘画', '视频生成', '多功能', '形象定制', '免费使用', '阿里生态'] },
+{ id: 'civitai', name: 'Civitai', desc: '免费的 AI 图像绘画作品和模型分享平台。全球最大的 Stable Diffusion 模型分享社区，有海量的 LoRA 模型和 Checkpoint，适合进阶玩家。', url: 'https://civitai.com', category: 'ai-image', icon: '🎯', color: '#f97316', features: ['模型分享', '社区互动', '免费使用', 'LoRA模型', '海量资源', '国际社区'] },
+{ id: 'krea', name: 'Krea AI', desc: '实时 AI 图像、视频生成和编辑平台。支持实时生成图像和视频，提供强大的编辑功能，适合创意设计和视频制作。', url: 'https://krea.ai', category: 'ai-image', icon: '✨', color: '#8b5cf6', features: ['实时生成', '视频编辑', 'AI绘画', '实时渲染', '创意工具', '专业设计'] },
+{ id: 'removebg', name: 'Remove.bg', desc: 'AI 一键抠图工具，自动去除图片背景。自动识别图像主体并去除背景，支持批量处理，输出透明背景 PNG，是电商和设计必备工具。', url: 'https://www.remove.bg', category: 'ai-image', icon: '✂️', color: '#2c82c9', features: ['AI抠图', '自动去背景', '批量处理', 'API支持', '高清输出', '一键操作'] },
+{ id: 'gaoding', name: '稿定AI', desc: '一站式 AI 设计工具集，AI 绘图、图片转 AI 绘画、AI 抠图等多种功能。提供丰富的设计模板和 AI 工具，适合日常设计和电商运营。', url: 'https://www.gaoding.com', category: 'ai-image', icon: '🎨', color: '#6366f1', features: ['AI绘图', '图片处理', '设计工具', '模板丰富', 'AI抠图', '在线设计'] },
+{ id: 'weita', name: '微ta AI', desc: 'AI 图片编辑和设计工具平台。提供图片增强、风格迁移、画质修复等功能，适合照片处理和老照片修复。', url: 'https://www.ivitta.cn', category: 'ai-image', icon: '📸', color: '#06b6d4', features: ['图片编辑', 'AI特效', '设计辅助', '画质修复', '风格迁移', '智能增强'] },
 { id: 'miaohua', name: '秒画', desc: '商汤科技推出的免费 AI 作画和图片生成平台。', url: 'https://miaohua.sensetime.com', category: 'ai-image', icon: '⚡', color: '#6366f1', features: ['AI绘画', '免费使用', '商汤科技'] },
 { id: 'whee', name: 'WHEE', desc: '美图推出的 AI 图片和绘画创作生成平台。', url: 'https://www.whee.com', category: 'ai-image', icon: '🎡', color: '#ec4899', features: ['AI绘画', '美图生态', '图片生成'] },
 { id: 'starvector', name: '星流AI', desc: '一站式 AI 设计与创作工具。', url: 'https://www.starvectorai.com', category: 'ai-image', icon: '⭐', color: '#8b5cf6', features: ['AI设计', '图像生成', '创作工具'] },
@@ -313,15 +313,15 @@ const TOOLS = [
 { id: 'runninghub', name: 'RunningHub', desc: '基于云端 ComfyUI 的 AI 图像与视频创作平台。', url: 'https://www.runninghub.ai', category: 'ai-image', icon: '☁️', color: '#3b82f6', features: ['ComfyUI', '云端', 'AI创作'] },
 
 // AI视频生成
-{ id: 'runway', name: 'Runway ML', desc: '专业级 AI 视频生成与编辑平台，Gen-2 支持文生视频。', url: 'https://runwayml.com', category: 'ai-video', icon: '🎬', color: '#7c3aed', features: ['视频生成', '视频编辑', '文生视频'] },
-{ id: 'suno', name: 'Suno AI', desc: 'AI 音乐创作平台，输入文字描述即可生成完整歌曲。', url: 'https://suno.ai', category: 'ai-video', icon: '🎵', color: '#ec4899', features: ['音乐生成', '多风格', '原创歌曲'] },
-{ id: 'sora', name: 'Sora', desc: 'OpenAI 推出的 AI 视频生成模型。', url: 'https://openai.com/sora', category: 'ai-video', icon: '🌊', color: '#6366f1', features: ['视频生成', '文生视频', 'AI模型'] },
-{ id: 'pika', name: 'Pika', desc: 'AI 视频生成工具，快速生成短视频。', url: 'https://pika.art', category: 'ai-video', icon: '🎥', color: '#f97316', features: ['视频生成', '快速生成', 'AI工具'] },
-{ id: 'heygen', name: 'HeyGen', desc: '专业的 AI 数字人视频创作平台。', url: 'https://www.heygen.com', category: 'ai-video', icon: '👤', color: '#10b981', features: ['数字人', '视频生成', 'AI主播'] },
-{ id: 'chanjing', name: '蝉镜', desc: 'AI 数字人视频生成平台。', url: 'https://www.chanjing.com', category: 'ai-video', icon: '🦗', color: '#f97316', features: ['数字人', '视频创作', 'AI生成'] },
-{ id: 'vidu', name: 'Vidu', desc: '生数科技推出的 AI 视频生成大模型。', url: 'https://www.vidu.studio', category: 'ai-video', icon: '🎞️', color: '#8b5cf6', features: ['视频生成', 'AI模型', '国产AI'] },
-{ id: 'librtv', name: 'LibTV', desc: '专业 AI 视频创作平台，支持 Seedance 2.0。', url: 'https://www.liblibai.com/librtv', category: 'ai-video', icon: '📺', color: '#8b5cf6', features: ['视频创作', 'AI生成', '专业工具'] },
-{ id: 'jimeng', name: '即梦AI', desc: '字节跳动推出的一站式 AI 视频、图片、数字人创作工具。', url: 'https://jimeng.jianying.com', category: 'ai-video', icon: '💫', color: '#3b82f6', features: ['视频生成', '图片生成', '字节生态'] },
+{ id: 'runway', name: 'Runway ML', desc: '专业级 AI 视频生成与编辑平台，Gen-2/Gen-3 支持文生视频、图生视频。提供强大的视频编辑功能，包括运动笔刷、绿幕处理等，是专业视频创作者的首选工具。', url: 'https://runwayml.com', category: 'ai-video', icon: '🎬', color: '#7c3aed', features: ['视频生成', '视频编辑', '文生视频', '运动笔刷', '绿幕处理', '专业工具'] },
+{ id: 'suno', name: 'Suno AI', desc: 'AI 音乐创作平台，输入文字描述即可生成完整歌曲。无需任何音乐背景，输入歌词或描述即可生成包含人声、伴奏、节奏的完整音乐作品，音乐人和内容创作者的神器。', url: 'https://suno.ai', category: 'ai-video', icon: '🎵', color: '#ec4899', features: ['音乐生成', '多风格', '原创歌曲', '完整编曲', '人声合成', '自定义歌词'] },
+{ id: 'sora', name: 'Sora', desc: 'OpenAI 推出的 AI 视频生成模型，可生成最长 1 分钟的高清视频。革命性的视频生成技术，能够理解物理世界规则，生成的视频具有高度真实性和一致性。', url: 'https://openai.com/sora', category: 'ai-video', icon: '🌊', color: '#6366f1', features: ['视频生成', '文生视频', 'AI模型', '高清画质', '物理理解', '长视频'] },
+{ id: 'pika', name: 'Pika', desc: 'AI 视频生成工具，快速生成短视频。操作简单，输入文字或上传图片即可生成视频，特别适合社交媒体内容创作，是入门级用户的最佳选择。', url: 'https://pika.art', category: 'ai-video', icon: '🎥', color: '#f97316', features: ['视频生成', '快速生成', 'AI工具', '社交媒体', '图生视频', '入门简单'] },
+{ id: 'heygen', name: 'HeyGen', desc: '专业的 AI 数字人视频创作平台。提供上百个数字人形象，支持多语言配音和克隆自己的数字人形象，是企业营销、培训视频制作的热门选择。', url: 'https://www.heygen.com', category: 'ai-video', icon: '👤', color: '#10b981', features: ['数字人', '视频生成', 'AI主播', '多语言', '形象克隆', '企业应用'] },
+{ id: 'chanjing', name: '蝉镜', desc: 'AI 数字人视频生成平台。国产数字人平台，提供丰富的数字人形象和场景，支持快速生成数字人视频，适合电商直播和企业宣传。', url: 'https://www.chanjing.com', category: 'ai-video', icon: '🦗', color: '#f97316', features: ['数字人', '视频创作', 'AI生成', '国产', '直播', '电商'] },
+{ id: 'vidu', name: 'Vidu', desc: '生数科技推出的 AI 视频生成大模型。国产原创视频生成模型，支持文生视频和图生视频，在生成效率和画面质量上表现优秀。', url: 'https://www.vidu.studio', category: 'ai-video', icon: '🎞️', color: '#8b5cf6', features: ['视频生成', 'AI模型', '国产AI', '文生视频', '高效生成', '画面质量'] },
+{ id: 'librtv', name: 'LibTV', desc: '专业 AI 视频创作平台，支持 Seedance 2.0（真人参考）。LiblibAI 推出的视频生成平台，在人物动作一致性方面表现突出。', url: 'https://www.liblibai.com/librtv', category: 'ai-video', icon: '📺', color: '#8b5cf6', features: ['视频创作', 'AI生成', '专业工具', 'Seedance', '动作一致', '高清输出'] },
+{ id: 'jimeng', name: '即梦AI', desc: '字节跳动推出的一站式 AI 视频、图片、数字人创作工具。集成图像生成、视频生成、数字人等多种能力，字节生态内使用便捷。', url: 'https://jimeng.jianying.com', category: 'ai-video', icon: '💫', color: '#3b82f6', features: ['视频生成', '图片生成', '字节生态', '数字人', '一站式', '免费使用'] },
 { id: 'youyan', name: '有言', desc: '一站式 AI 视频创作和 3D 数字人生成平台。', url: 'https://www.youyan.com', category: 'ai-video', icon: '🎤', color: '#6366f1', features: ['数字人', '视频生成', '3D'] },
 { id: 'bairimeng', name: '白日梦', desc: '领先 AI 创作平台，可生成最长 50 分钟的视频。', url: 'https://www.bairimeng.com', category: 'ai-video', icon: '💭', color: '#8b5cf6', features: ['长视频', 'AI生成', '创作'] },
 { id: 'pollo', name: 'Pollo AI', desc: '一站式 AI 图像和视频创作平台。', url: 'https://pollo.ai', category: 'ai-video', icon: '🎨', color: '#6366f1', features: ['图像生成', '视频生成', 'AI创作'] },
@@ -352,18 +352,18 @@ const TOOLS = [
 { id: 'luobi', name: '落笔AI写作', desc: '专注于小说网文创作的 AI 写作工具。', url: 'https://www.luobi.com', category: 'ai-writing', icon: '✍️', color: '#ec4899', features: ['网文写作', '小说创作', 'AI'] },
 
 // AI编程
-{ id: 'githubcopilot', name: 'GitHub Copilot', desc: 'OpenAI 提供的 AI 代码补全助手，自动生成代码建议。', url: 'https://github.com/features/copilot', category: 'ai-coding', icon: '🐙', color: '#24292e', features: ['代码补全', '代码生成', 'GitHub集成'] },
-{ id: 'codeium', name: 'Codeium', desc: '免费 AI 编程助手，支持代码补全、重构、调试。', url: 'https://codeium.com', category: 'ai-coding', icon: '💻', color: '#4285f4', features: ['代码补全', '免费使用', '多语言'] },
-{ id: 'tabnine', name: 'Tabnine', desc: '企业级 AI 代码补全工具，支持多种 IDE。', url: 'https://tabnine.com', category: 'ai-coding', icon: '⌨️', color: '#1c7ed6', features: ['代码补全', '企业级', '多IDE支持'] },
-{ id: 'replitai', name: 'Replit AI', desc: '集成于在线代码编辑器的 AI 编程助手。', url: 'https://replit.com', category: 'ai-coding', icon: '🛠️', color: '#0db7ed', features: ['在线编程', 'AI助手', '实时协作'] },
-{ id: 'codegeex', name: 'CodeGeeX', desc: '智谱 AI 开发的代码生成与翻译工具。', url: 'https://codegeex.cn', category: 'ai-coding', icon: '🧩', color: '#00a676', features: ['代码生成', '多语言', '免费使用'] },
-{ id: 'qoder', name: 'Qoder', desc: '阿里出品的 AI 编程工具，专注于代码生成与优化。', url: 'https://qoder.com', category: 'ai-coding', icon: '💻', color: '#ff6a00', features: ['代码生成', '编程辅助', '阿里生态'] },
-{ id: 'trae', name: 'TRAE 编程', desc: '字节旗下的 AI 编程工具，Vibe Coding 必备神器。', url: 'https://www.trae.com.cn', category: 'ai-coding', icon: '⚡', color: '#4f46e5', features: ['代码补全', 'AI编程', '字节生态'] },
-{ id: 'claudecode', name: 'Claude Code', desc: 'Anthropic 推出的命令行编程助手。', url: 'https://claude.com/product/claude-code', category: 'ai-coding', icon: '🤖', color: '#d97706', features: ['命令行', '代码生成', '本地运行'] },
-{ id: 'cursor', name: 'Cursor', desc: 'AI-first code editor，基于 VS Code 构建。', url: 'https://cursor.sh', category: 'ai-coding', icon: '✅', color: '#6366f1', features: ['AI编辑', '代码生成', 'VS Code兼容'] },
-{ id: 'bolt', name: 'Bolt.new', desc: 'AI驱动的全栈应用开发平台。', url: 'https://bolt.new', category: 'ai-coding', icon: '⚡', color: '#8b5cf6', features: ['全栈开发', 'AI助手', '快速部署'] },
-{ id: 'lovable', name: ' Lovable', desc: 'AI驱动的��栈应用开发平台。', url: 'https://lovable.dev', category: 'ai-coding', icon: '💜', color: '#a855f7', features: ['AI开发', '全栈', '实时部署'] },
-{ id: 'v0', name: 'v0', desc: 'Vercel 推出的 AI 前端代码生成工具。', url: 'https://v0.dev', category: 'ai-coding', icon: '⚛️', color: '#000000', features: ['前端生成', 'React', 'Next.js'] },
+{ id: 'githubcopilot', name: 'GitHub Copilot', desc: 'OpenAI 提供的 AI 代码补全助手，自动生成代码建议。集成在 GitHub、VS Code、JetBrains 等主流 IDE 中，支持多种编程语言，可根据上下文自动补全代码，是开发者最常用的 AI 编程工具。', url: 'https://github.com/features/copilot', category: 'ai-coding', icon: '🐙', color: '#24292e', features: ['代码补全', '代码生成', 'GitHub集成', '多IDE支持', '上下文理解', '实时建议'] },
+{ id: 'codeium', name: 'Codeium', desc: '免费 AI 编程助手，支持代码补全、重构、调试。比 Copilot 更免费，支持主流 IDE，提供代码生成、重构、解释等功能，适合个人开发者和小型团队。', url: 'https://codeium.com', category: 'ai-coding', icon: '💻', color: '#4285f4', features: ['代码补全', '免费使用', '多语言', '代码重构', '代码解释', '多IDE'] },
+{ id: 'tabnine', name: 'Tabnine', desc: '企业级 AI 代码补全工具，支持多种 IDE。提供本地和云端两种模式，支持团队协作和代码规范化，企业级安全要求的首选。', url: 'https://tabnine.com', category: 'ai-coding', icon: '⌨️', color: '#1c7ed6', features: ['代码补全', '企业级', '多IDE支持', '本地模式', '团队协作', '代码规范'] },
+{ id: 'replitai', name: 'Replit AI', desc: '集成于在线代码编辑器的 AI 编程助手。在 Replit 在线 IDE 中使用，支持代码生成、调试、解释等功能，适合学习和快速原型开发。', url: 'https://replit.com', category: 'ai-coding', icon: '🛠️', color: '#0db7ed', features: ['在线编程', 'AI助手', '实时协作', '云端IDE', '快速部署', '多人协作'] },
+{ id: 'codegeex', name: 'CodeGeeX', desc: '智谱 AI 开发的代码生成与翻译工具。完全免费开源，支持多种编程语言，可进行代码翻译、解释、生成等功能，国产 AI 编程工具的优秀代表。', url: 'https://codegeex.cn', category: 'ai-coding', icon: '🧩', color: '#00a676', features: ['代码生成', '多语言', '免费使用', '代码翻译', '代码解释', '国产AI'] },
+{ id: 'qoder', name: 'Qoder', desc: '阿里出品的 AI 编程工具，专注于代码生成与优化。基于通义大模型，专为编程场景优化，提供代码补全、生成、调试等功能，阿里生态内使用便捷。', url: 'https://qoder.com', category: 'ai-coding', icon: '💻', color: '#ff6a00', features: ['代码生成', '编程辅助', '阿里生态', '代码优化', '调试助手', '中文优化'] },
+{ id: 'trae', name: 'TRAE 编程', desc: '字节旗下的 AI 编程工具，Vibe Coding 必备神器。集成在 VS Code 中，支持代码补全、重构、生成等功能，字节生态内可获得更好的体验。', url: 'https://www.trae.com.cn', category: 'ai-coding', icon: '⚡', color: '#4f46e5', features: ['代码补全', 'AI编程', '字节生态', '代码重构', 'VS Code', '中文界面'] },
+{ id: 'claudecode', name: 'Claude Code', desc: 'Anthropic 推出的命令行编程助手。可在本地运行，支持代码生成、文件操作、git 命令等，适合追求隐私和本地开发的开发者。', url: 'https://claude.com/product/claude-code', category: 'ai-coding', icon: '🤖', color: '#d97706', features: ['命令行', '代码生成', '本地运行', '文件操作', 'Git集成', '隐私保护'] },
+{ id: 'cursor', name: 'Cursor', desc: 'AI-first code editor，基于 VS Code 构建。专为 AI 编程设计的 IDE，内置 Chat 功能，可进行对话式编程，支持代码生成、重构、调试等。', url: 'https://cursor.sh', category: 'ai-coding', icon: '✅', color: '#6366f1', features: ['AI编辑', '代码生成', 'VS Code兼容', '对话编程', '智能补全', '项目理解'] },
+{ id: 'bolt', name: 'Bolt.new', desc: 'AI驱动的全栈应用开发平台。可通过自然语言描述快速生成完整的 Web 应用，支持前端、后端、数据库配置，适合快速原型和 MVP 开发。', url: 'https://bolt.new', category: 'ai-coding', icon: '⚡', color: '#8b5cf6', features: ['全栈开发', 'AI助手', '快速部署', '自然语言', 'Web应用', '原型开发'] },
+{ id: 'lovable', name: 'Lovable', desc: 'AI驱动的全栈应用开发平台。支持快速构建 Web 应用和 AI Agent，提供完整的项目模板，适合非技术人员和快速开发。', url: 'https://lovable.dev', category: 'ai-coding', icon: '💜', color: '#a855f7', features: ['AI开发', '全栈', '实时部署', '无代码', 'AI Agent', '快速构建'] },
+{ id: 'v0', name: 'v0', desc: 'Vercel 推出的 AI 前端代码生成工具。通过自然语言描述生成 React/Next.js 代码，可直接复制或部署到 Vercel，是前端开发者的利器。', url: 'https://v0.dev', category: 'ai-coding', icon: '⚛️', color: '#000000', features: ['前端生成', 'React', 'Next.js', 'UI生成', 'Vercel集成', '自然语言'] },
 { id: 'boltai', name: 'BoltAI', desc: 'Mac AI 编程助手，本地运行大模型。', url: 'https://boltai.com', category: 'ai-coding', icon: '🤖', color: '#1e293b', features: ['本地LLM', 'AI编程', '隐私安全'] },
 { id: 'supermaven', name: 'SuperMaven', desc: '极速 AI 代码补全工具。', url: 'https://supermaven.com', category: 'ai-coding', icon: '⚡', color: '#22c55e', features: ['极速补全', '代码生成', '本地运行'] },
 { id: 'devin', name: 'Devin', desc: 'AI 软件工程师，全球首个 AI 程序员。', url: 'https://devin.ai', category: 'ai-coding', icon: '👨‍💻', color: '#6366f1', features: ['AI工程师', '自主编程', '全栈开发'] },
@@ -755,6 +755,7 @@ const CATEGORIES = [
 // 状态
 let currentCategory = 'all';
 let currentSearch = '';
+let currentTool = null;
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
@@ -817,8 +818,18 @@ function setupEventListeners() {
             document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
             item.classList.add('active');
             currentCategory = item.dataset.category;
+            
+            // 如果在详情页，先返回列表页
+            document.getElementById('detailPage').classList.remove('active');
+            document.getElementById('listPage').style.display = 'block';
+            currentTool = null;
+            
             updateCategoryUI();
             renderTools();
+            
+            // 更新 URL
+            window.location.hash = '/' + currentCategory;
+            
             if (window.innerWidth <= 900) {
                 document.getElementById('sidebar').style.display = 'none';
             }
@@ -864,6 +875,7 @@ function showDetail(toolId) {
         return;
     }
 
+    currentTool = tool;
     document.getElementById('listPage').style.display = 'none';
     document.getElementById('detailPage').classList.add('active');
 
@@ -959,9 +971,9 @@ function goHome() {
     window.location.hash = '/';
 }
 
-// 复制详情页URL
+// 复制工具链接
 function copyDetailUrl() {
-    const url = window.location.href;
+    const url = currentTool ? currentTool.url : window.location.href;
     navigator.clipboard.writeText(url).then(() => showToast('链接已复制'));
 }
 
