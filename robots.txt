@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://gongjv.pages.dev/sitemap.xml
+
+# 优先抓取主要页面
+Crawl-delay: 0.5
