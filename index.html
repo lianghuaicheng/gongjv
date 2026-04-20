@@ -944,14 +944,26 @@ function initCounts() {
 
 // 设置事件监听
 function setupEventListeners() {
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-        currentSearch = e.target.value;
-        // 确保在列表页显示
-        document.getElementById('detailPage').classList.remove('active');
-        document.getElementById('listPage').style.display = 'block';
-        currentTool = null;
-        renderTools();
-    });
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            currentSearch = e.target.value;
+            document.getElementById('detailPage').classList.remove('active');
+            document.getElementById('listPage').style.display = 'block';
+            currentTool = null;
+            renderTools();
+        });
+        // 支持回车搜索
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                currentSearch = e.target.value;
+                document.getElementById('detailPage').classList.remove('active');
+                document.getElementById('listPage').style.display = 'block';
+                currentTool = null;
+                renderTools();
+            }
+        });
+    }
 
     document.querySelectorAll('.sidebar-item').forEach(item => {
         item.addEventListener('click', () => {
