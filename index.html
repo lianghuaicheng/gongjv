@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolHub - 优质工具聚合站 | AI · 开发 · 设计</title>
+    <meta name="description" content="ToolHub 精选优质免费在线工具，涵盖 AI 工具、开发工具、设计工具三大类别，一键直达，提升效率。">
+    <meta name="keywords" content="AI工具,在线工具,开发者工具,设计工具,免费工具,效率工具">
+    <meta property="og:title" content="ToolHub - 优质工具聚合站">
+    <meta property="og:description" content="精选优质免费在线工具，涵盖 AI、开发、设计三大领域">
+    <meta property="og:type" content="website">
+    <style>
+        /* ========== CSS 变量与重置 ========== */
+        :root {
+            --primary-start: #10b981;
+            --primary-mid: #14b8a6;
+            --primary-end: #06b6d4;
+            --bg-primary: #08090c;
+            --bg-secondary: #0e1014;
+            --bg-card: rgba(255,255,255,0.025);
+            --bg-card-hover: rgba(16,185,129,0.06);
+            --text-primary: #e8eaed;
+            --text-secondary: #9ca3af;
+            --text-muted: #5c6370;
+            --border-color: rgba(255,255,255,0.05);
+            --gradient-main: linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #06b6d4 100%);
+            --gradient-glow: linear-gradient(135deg, rgba(16,185,129,0.35) 0%, rgba(20,184,166,0.25) 50%, rgba(6,182,212,0.15) 100%);
+            --shadow-card: 0 4px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.03) inset;
+            --shadow-card-hover: 0 12px 44px rgba(16,185,129,0.1), 0 0 0 1px rgba(16,185,129,0.15) inset;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 背景装饰 */
+        .bg-glow {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(16,185,129,0.1) 0%, rgba(20,184,166,0.07) 35%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ========== 头部导航 ========== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(10,10,15,0.75);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: default;
+            user-select: none;
+        }
+        .logo span {
+            opacity: 0.6;
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 4px;
+            -webkit-text-fill-color: var(--text-muted);
+        }
+
+        /* ========== 分类标签导航 ========== */
+        .nav-tabs {
+            display: flex;
+            gap: 4px;
+            background: rgba(255,255,255,0.03);
+            padding: 4px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-tab {
+            padding: 8px 20px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            font-weight: 500;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            font-family: inherit;
+        }
+        .nav-tab:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+        .nav-tab.active {
+            background: var(--gradient-main);
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(16,185,129,0.3);
+        }
+
+        /* ========== 主内容区 ========== */
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px 80px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            padding: 48px 0 40px;
+        }
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .hero h1 .highlight {
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            color: var(--text-muted);
+            font-size: 15px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* 搜索栏 */
+        .search-wrap {
+            max-width: 520px;
+            margin: 28px auto 0;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            color: var(--text-primary);
+            font-size: 14.5px;
+            outline: none;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .search-input::placeholder { color: var(--text-muted); }
+        .search-input:focus {
+            border-color: rgba(16,185,129,0.4);
+            box-shadow: 0 0 0 3px rgba(16,185,129,0.08), 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .search-icon {
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+            font-size: 16px;
+        }
+
+        /* 统计信息 */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .stat-item strong {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* ========== 工具卡片网格 ========== */
+        .tools-section {
+            margin-top: 36px;
+        }
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+            padding-left: 2px;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+        }
+
+        /* 单个工具卡片 */
+        .tool-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 22px 24px;
+            transition: var(--transition);
+            cursor: default;
+            overflow: hidden;
+        }
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-main);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .tool-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(16,185,129,0.2);
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-3px);
+        }
+        .tool-card:hover::before { opacity: 1; }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .tool-card:hover .card-icon { transform: scale(1.08); }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 6px;
+            letter-spacing: 0.3px;
+            flex-shrink: 0;
+        }
+        .tag-ai { background: rgba(16,185,129,0.12); color: #6ee7b7; }
+        .tag-dev { background: rgba(34,197,94,0.15); color: #86efac; }
+        .tag-design { background: rgba(236,72,153,0.15); color: #f9a8d4; }
+
+        .card-body h3 {
+            font-size: 16px;
+            font-weight: 650;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+        .card-body p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--gradient-main);
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(16,185,129,0.22);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 4px 20px rgba(16,185,129,0.35);
+            transform: translateY(-1px);
+        }
+        .btn-ghost {
+            background: rgba(255,255,255,0.04);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.08);
+            color: var(--text-primary);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        /* 无结果提示 */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+        .no-results svg { margin-bottom: 12px; opacity: 0.4; }
+        .no-results p { font-size: 15px; }
+
+        /* ========== Toast 提示 ========== */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: rgba(34,197,94,0.95);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            font-weight: 500;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(34,197,94,0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ========== 页脚 ========== */
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: var(--primary-start); }
+
+        /* ========== 响应式适配 ========== */
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 16px; height: 60px; }
+            .nav-tabs { order: 3; margin-top: 12px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .nav-tabs::-webkit-scrollbar { display: none; }
+            .nav-tab { padding: 7px 14px; font-size: 13px; }
+            main { padding: 24px 16px 64px; }
+            .hero { padding: 32px 0 28px; }
+            .tools-grid { grid-template-columns: 1fr; gap: 12px; }
+            .tool-card { padding: 18px 20px; }
+            .stats-bar { gap: 20px; }
+            .search-input { padding: 12px 16px 12px 42px; }
+        }
+
+        @media (max-width: 480px) {
+            .nav-tab { padding: 6px 12px; font-size: 12.5px; }
+            .card-actions { flex-direction: column; }
+            .btn { justify-content: center; }
+        }
+
+        /* 入场动画 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tool-card { animation: fadeInUp 0.4s ease forwards; }
+        .tool-card:nth-child(1) { animation-delay: 0.02s; }
+        .tool-card:nth-child(2) { animation-delay: 0.04s; }
+        .tool-card:nth-child(3) { animation-delay: 0.06s; }
+        .tool-card:nth-child(4) { animation-delay: 0.08s; }
+        .tool-card:nth-child(5) { animation-delay: 0.10s; }
+        .tool-card:nth-child(6) { animation-delay: 0.12s; }
+        .tool-card:nth-child(n+7) { animation-delay: 0.14s; }
+
+        /* 减少动画偏好 */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 背景装饰层 -->
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+
+<!-- ====== 头部导航 ====== -->
+<header>
+    <div class="header-inner">
+        <div class="logo">ToolHub<span>/Tools</span></div>
+        <nav class="nav-tabs" role="tablist" aria-label="工具分类">
+            <button class="nav-tab active" data-filter="all" role="tab" aria-selected="true">全部</button>
+            <button class="nav-tab" data-filter="ai" role="tab" aria-selected="false">🤖 AI 工具</button>
+            <button class="nav-tab" data-filter="dev" role="tab" aria-selected="false">⚡ 开发工具</button>
+            <button class="nav-tab" data-filter="design" role="tab" aria-selected="false">🎨 设计工具</button>
+        </nav>
+    </div>
+</header>
+
+<!-- ====== 主内容区 ====== -->
+<main>
+
+    <!-- Hero 搜索区域 -->
+    <section class="hero">
+        <h1>发现 <span class="highlight">优质工具</span>，提升效率</h1>
+        <p>精选全网高质量免费在线工具，覆盖 AI、开发、设计三大领域，一键直达</p>
+
+        <div class="search-wrap">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称或描述..." autocomplete="off" aria-label="搜索工具">
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item"><strong id="totalCount">0</strong> 个工具</div>
+            <div class="stat-item"><strong id="visibleCount">0</strong> 个匹配</div>
+        </div>
+    </section>
+
+    <!-- 工具列表 -->
+    <section class="tools-section" id="toolsSection">
+        <h2 class="section-title" id="sectionTitle">全部工具</h2>
+        <div class="tools-grid" id="toolsGrid">
+            <!-- 由 JS 动态渲染 -->
+        </div>
+    </section>
+
+</main>
+
+<!-- ====== 页脚 ====== -->
+<footer>
+    <p>&copy; 2025 ToolHub &mdash; 精选优质工具，让工作更高效</p>
+</footer>
+
+<!-- Toast 提示 -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastText">链接已复制</span>
+</div>
+
+<script>
+(function() {
+    'use strict';
+
+    /* ========== 工具数据源 ========== */
+    const TOOLS = [
+        // ── AI 工具 ──
+        {
+            name: 'ChatGPT',
+            desc: 'OpenAI 推出的智能对话助手，支持文本生成、代码编写、翻译摘要等全方位能力',
+            url: 'https://chat.openai.com',
+            category: 'ai',
+            icon: '💬',
+            color: '#10a37f'
+        },
+        {
+            name: 'Claude',
+            desc: 'Anthropic 出品的高质量 AI 助手，擅长长文本分析、复杂推理与安全对话',
+            url: 'https://claude.ai',
+            category: 'ai',
+            icon: '🧠',
+            color: '#d97706'
+        },
+        {
+            name: 'Gemini',
+            desc: 'Google DeepMind 打造的多模态 AI，支持图文理解、代码生成与实时联网搜索',
+            url: 'https://gemini.google.com',
+            category: 'ai',
+            icon: '✨',
+            color: '#4285f4'
+        },
+        {
+            name: 'Midjourney',
+            desc: '顶级 AI 图像生成工具，通过自然语言描述即可创作出惊艳的视觉艺术作品',
+            url: 'https://www.midjourney.com',
+            category: 'ai',
+            icon: '🎨',
+            color: '#000000'
+        },
+        {
+            name: 'Stable Diffusion',
+            desc: '开源 AI 绘画模型，支持本地部署与自定义训练，图像生成自由度极高',
+            url: 'https://stability.ai',
+            category: 'ai',
+            icon: '🖼️',
+            color: '#9333ea'
+        },
+        {
+            name: 'DALL·E 3',
+            desc: 'OpenAI 图像生成模型，集成于 ChatGPT 中，支持精准的文字渲染与细节控制',
+            url: 'https://openai.com/dall-e-3',
+            category: 'ai',
+            icon: '🌈',
+            color: '#6366f1'
+        },
+        {
+            name: 'Suno AI',
+            desc: 'AI 音乐创作平台，输入文字描述即可生成完整歌曲，支持多种风格与语言',
+            url: 'https://suno.ai',
+            category: 'ai',
+            icon: '🎵',
+            color: '#ec4899'
+        },
+        {
+            name: 'Runway ML',
+            desc: '专业级 AI 视频生成与编辑平台，Gen-2 支持文生视频与图生视频',
+            url: 'https://runwayml.com',
+            category: 'ai',
+            icon: '🎬',
+            color: '#7c3aed'
+        },
+        {
+            name: 'Perplexity AI',
+            desc: 'AI 驱动的搜索引擎，实时检索网络并附带引用来源，回答准确且可追溯',
+            url: 'https://www.perplexity.ai',
+            category: 'ai',
+            icon: '🔍',
+            color: '#20b2aa'
+        },
+        {
+            name: 'Gamma',
+            desc: 'AI 演示文稿生成器，一键将大纲转化为精美 PPT，支持导出多格式',
+            url: 'https://gamma.app',
+            category: 'ai',
+            icon: '📊',
+            color: '#6366f1'
+        },
+        // ── 开发工具 ──
+        {
+            name: 'GitHub',
+            desc: '全球最大的代码托管平台，支持 Git 版本管理、协作开发与开源项目发现',
+            url: 'https://github.com',
+            category: 'dev',
+            icon: '🐙',
+            color: '#171515'
+        },
+        {
+            name: 'CodePen',
+            desc: '前端代码在线 playground，支持 HTML/CSS/JS 实时预览与社区分享',
+            url: 'https://codepen.io',
+            category: 'dev',
+            icon: '✏️',
+            color: '#000000'
+        },
+        {
+            name: 'JSFiddle',
+            desc: '轻量级 Web 代码在线编辑器，快速测试 JavaScript 片段并分享给他人',
+            url: 'https://jsfiddle.net',
+            category: 'dev',
+            icon: '🔧',
+            color: '#f7df1e'
+        },
+        {
+            name: 'Regex101',
+            desc: '正则表达式在线调试工具，提供实时匹配高亮、详细解释与多引擎支持',
+            url: 'https://regex101.com',
+            category: 'dev',
+            icon: '🔣',
+            color: '#d93025'
+        },
+        {
+            name: 'JSONLint',
+            desc: 'JSON 格式校验与美化工具，快速定位语法错误并输出格式化结果',
+            url: 'https://jsonlint.com',
+            category: 'dev',
+            icon: '{ }',
+            color: '#f5a623'
+        },
+        {
+            name: 'Can I Use',
+            desc: '浏览器兼容性查询数据库，查看 CSS/JS API 在各浏览器的支持情况',
+            url: 'https://caniuse.com',
+            category: 'dev',
+            icon: '🌐',
+            color: '#3eaf7c'
+        },
+        {
+            name: 'DevDocs.io',
+            desc: '聚合式开发者文档搜索引擎，一次搜索覆盖数百种技术文档',
+            url: 'https://devdocs.io',
+            category: 'dev',
+            icon: '📚',
+            color: '#3d8bfd'
+        },
+        {
+            name: 'TinyPNG',
+            desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积',
+            url: 'https://tinypng.com',
+            category: 'dev',
+            icon: '🗜️',
+            color: '#2bb673'
+        },
+        {
+            name: 'Quicktype',
+            desc: 'JSON 转 TypeScript/Go/Rust 等语言的类型定义生成器，节省手写时间',
+            url: 'https://app.quicktype.io',
+            category: 'dev',
+            icon: '⚡',
+            color: '#0088cc'
+        },
+        {
+            name: 'Cronitor',
+            desc: 'Cron 表达式可视化编辑器，直观设置定时任务周期并预览执行时间',
+            url: 'https://cronitor.io/tools/cron-builder',
+            category: 'dev',
+            icon: '⏱️',
+            color: '#0366d6'
+        },
+        // ── 设计工具 ──
+        {
+            name: 'Figma',
+            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
+            url: 'https://www.figma.com',
+            category: 'design',
+            icon: '🎯',
+            color: '#a259ff'
+        },
+        {
+            name: 'Remove.bg',
+            desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高',
+            url: 'https://www.remove.bg',
+            category: 'design',
+            icon: '✂️',
+            color: '#2c82c9'
+        },
+        {
+            name: 'Coolors',
+            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
+            url: 'https://coolors.co',
+            category: 'design',
+            icon: '🎨',
+            color: '#0066ff'
+        },
+        {
+            name: 'Unsplash',
+            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
+            url: 'https://unsplash.com',
+            category: 'design',
+            icon: '📷',
+            color: '#111111'
+        },
+        {
+            name: 'Font Awesome',
+            desc: '最流行的图标字体库，提供数千个矢量图标，支持框架集成与自定义',
+            url: 'https://fontawesome.com',
+            category: 'design',
+            icon: '★',
+            color: '#538dd7'
+        },
+        {
+            name: 'CSS Gradient',
+            desc: '渐变色在线生成器，可视调节色标位置与角度，直接复制 CSS 代码',
+            url: 'https://cssgradient.io',
+            category: 'design',
+            icon: '🌅',
+            color: '#e67685'
+        },
+        {
+            name: 'SVGOMG',
+            desc: 'Jake Archibald 出品的 SVG 优化工具，智能精简代码体积而不损失质量',
+            url: 'https://jakearchibald.github.io/svgomg/',
+            category: 'design',
+            icon: '📐',
+            color: '#ffb13b'
+        },
+        {
+            name: 'Photopea',
+            desc: '免费在线 Photoshop 替代品，支持 PSD 文件编辑与图层操作，无需安装',
+            url: 'https://www.photopea.com',
+            category: 'design',
+            icon: '🖌️',
+            color: '#31a8ff'
+        },
+        {
+            name: 'Realtime Colors',
+            desc: '实时预览配色方案在真实网页上的效果，所见即所得地调整品牌色调',
+            url: 'https://www.realtimecolors.com',
+            category: 'design',
+            icon: '👁️',
+            color: '#ff6b6b'
+        },
+        {
+            name: 'Heroicons',
+            desc: 'Tailwind 团队出品的开源 SVG 图标库，风格简洁现代，适合 Web 项目使用',
+            url: 'https://heroicons.com',
+            category: 'design',
+            icon: '◈',
+            color: '#0ea5e9'
+        }
+    ];
+
+    /* ========== DOM 引用 ========== */
+    const toolsGrid = document.getElementById('toolsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const totalCountEl = document.getElementById('totalCount');
+    const visibleCountEl = document.getElementById('visibleCount');
+    const sectionTitle = document.getElementById('sectionTitle');
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toastText');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    /* ========== 渲染工具卡片 ========== */
+    function renderCards(tools) {
+        if (tools.length === 0) {
+            toolsGrid.innerHTML =
+                '<div class="no-results">' +
+                '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' +
+                '<p>没有找到匹配的工具</p></div>';
+            return;
+        }
+
+        toolsGrid.innerHTML = tools.map((t, i) => {
+            const tagClass = t.category === 'ai' ? 'tag-ai' : t.category === 'dev' ? 'tag-dev' : 'tag-design';
+            const tagLabel = t.category === 'ai' ? 'AI' : t.category === 'dev' ? 'DEV' : 'DESIGN';
+            return '<article class="tool-card" data-index="' + i + '">' +
+                '<div class="card-header">' +
+                    '<div class="card-icon" style="background:' + t.color + '22;color:' + t.color + '">' + t.icon + '</div>' +
+                    '<span class="card-tag ' + tagClass + '">' + tagLabel + '</span>' +
+                '</div>' +
+                '<div class="card-body">' +
+                    '<h3>' + escapeHtml(t.name) + '</h3>' +
+                    '<p>' + escapeHtml(t.desc) + '</p>' +
+                '</div>' +
+                '<div class="card-actions">' +
+                    '<a href="' + t.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary">访问官网 ↗</a>' +
+                    '<button class="btn btn-ghost" onclick="window.__copyLink(\'' + t.url + '\',this)" aria-label="复制链接">复制链接</button>' +
+                '</div>' +
+            '</article>';
+        }).join('');
+    }
+
+    /* HTML 转义防 XSS */
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    /* ========== 筛选逻辑 ========== */
+    function filterTools() {
+        let filtered = TOOLS;
+
+        if (currentFilter !== 'all') {
+            filtered = filtered.filter(t => t.category === currentFilter);
+        }
+
+        if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase().trim();
+            filtered = filtered.filter(t =>
+                t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)
+            );
+        }
+
+        renderCards(filtered);
+        visibleCountEl.textContent = filtered.length;
+
+        const titles = { all: '全部工具', ai: 'AI 工具', dev: '开发工具', design: '设计工具' };
+        sectionTitle.textContent = titles[currentFilter] || '全部工具';
+    }
+
+    /* ========== Toast 提示 ========== */
+    let toastTimer = null;
+    function showToast(msg) {
+        toastText.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    /* ========== 复制链接（全局暴露供 onclick 调用）========== */
+    window.__copyLink = function(url, btn) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function() {
+                showToast('链接已复制到剪贴板');
+                const orig = btn.textContent;
+                btn.textContent = '已复制 ✓';
+                setTimeout(function() { btn.textContent = orig; }, 1500);
+            });
+        } else {
+            /* 降级方案：创建临时 textarea */
+            const ta = document.createElement('textarea');
+            ta.value = url;
+            ta.style.cssText = 'position:fixed;left:-9999px;';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); showToast('链接已复制到剪贴板'); } catch(e) { showToast('复制失败，请手动复制'); }
+            document.body.removeChild(ta);
+        }
+    };
+
+    /* ========== 事件绑定 ========== */
+
+    /* 分类切换 */
+    navTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            navTabs.forEach(function(t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+            currentFilter = this.dataset.filter;
+            filterTools();
+        });
+    });
+
+    /* 搜索输入（带防抖） */
+    let debounceTimer = null;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(function() {
+            searchQuery = searchInput.value;
+            filterTools();
+        }, 150);
+    });
+
+    /* 键盘快捷键：/ 聚焦搜索框 */
+    document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+            e.preventDefault();
+            searchInput.focus();
+        }
+        if (e.key === 'Escape') {
+            searchInput.blur();
+        }
+    });
+
+    /* ========== 初始化 ========== */
+    totalCountEl.textContent = TOOLS.length;
+    filterTools();
+
+})();
+</script>
+
+</body>
+</html>
