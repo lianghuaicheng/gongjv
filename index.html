@@ -406,6 +406,49 @@ const TOOLS = [
 { id: 'haitun', name: '海螺AI', desc: 'MiniMax 推出的 AI 助手。', url: 'https://hailuoai.com', category: 'ai-office', icon: '🐚', color: '#ec4899', features: ['AI助手', '智能对话', '国产'] },
 { id: 'tongyixiezuo', name: '通义写作', desc: '阿里推出的 AI 写作助手。', url: 'https://tongyi.aliyun.com/write', category: 'ai-office', icon: '✍️', color: '#ff6a00', features: ['AI写作', '文档处理', '阿里生态'] },
 { id: 'chatexcel', name: 'ChatExcel', desc: 'AI 帮你做 Excel。', url: 'https://chatexcel.com', category: 'ai-office', icon: '📊', color: '#10b981', features: ['Excel', 'AI处理', '在线工具'] },
+{ id: 'freeaippt', name: 'FreeAIPPT', desc: '免费一键 AI 生成 PPT 服务平台。', url: 'https://freeaippt.com', category: 'ai-office', icon: '🆓', color: '#10b981', features: ['免费PPT', 'AI生成', '模板'] },
+{ id: 'napkin', name: 'Napkin AI', desc: '将文本自动转换为直观图表的 AI 办公工具。', url: 'https://www.napkin.ai', category: 'ai-office', icon: '📊', color: '#6366f1', features: ['文本转图表', 'AI可视化', '办公'] },
+{ id: 'magicresume', name: '魔方简历', desc: '免费开源的 AI 驱动在线简历编辑器。', url: 'https://magicv.art', category: 'ai-office', icon: '📄', color: '#8b5cf6', features: ['简历生成', 'AI编辑', '免费'] },
+{ id: 'excelbot', name: 'Excel Formula Bot', desc: '将自然语言描述快速转换为 Excel 公式的 AI 助手。', url: 'https://excelformulabot.com', category: 'ai-office', icon: '📊', color: '#10b981', features: ['Excel公式', 'AI转换', '办公'] },
+{ id: 'weeklyreport', name: 'Weekly Report', desc: '用 GPT 模型自动生成完整周工作报告的工具。', url: 'https://weeklyreport.avemaria.fun/zh', category: 'ai-office', icon: '📝', color: '#6366f1', features: ['周报生成', 'AI写作', '办公'] },
+{ id: 'chatexcel2', name: 'ChatExcel', desc: '用聊天对话的方式操控 Excel 的智能工具。', url: 'https://chatexcel.com', category: 'ai-office', icon: '💬', color: '#3b82f6', features: ['Excel', 'AI对话', '办公'] },
+{ id: 'chatpdf', name: 'ChatPDF', desc: '与 PDF 文档对话的 AI 助手。', url: 'https://www.chatpdf.com', category: 'ai-office', icon: '📄', color: '#6366f1', features: ['PDF问答', 'AI助手', '文档理解'] },
+{ id: 'picdoc', name: 'PicDoc', desc: '将文字内容秒变专业图表和文档的 AI 可视化工具。', url: 'https://www.picdoc.cn', category: 'ai-office', icon: '📊', color: '#8b5cf6', features: ['文本转图表', 'AI可视化', '办公'] },
+{ id: 'chiplot', name: 'ChiPlot', desc: '一键画出专业级图表的网站。', url: 'https://www.chiplot.online', category: 'ai-office', icon: '📈', color: '#10b981', features: ['图表生成', '数据可视化', '专业'] },
+{ id: 'goblin', name: 'Goblin Tools', desc: '多个贴心小工具组成的 AI 辅助套件。', url: 'https://goblin.tools', category: 'ai-office', icon: '🧙', color: '#8b5cf6', features: ['AI工具', '效率', '多功能'] },
+{ id: 'formalizer', name: 'Formalizer', desc: '将一段文字按照指定语气和正式度进行改写的 AI 工具。', url: 'https://goblin.tools/Formalizer', category: 'ai-office', icon: '✍️', color: '#6366f1', features: ['语气改写', 'AI润色', '办公'] },
+{ id: 'quillbot', name: 'QuillBot', desc: 'AI 驱动的在线文本改写与润色工具。', url: 'https://quillbot.com', category: 'ai-office', icon: '✅', color: '#6366f1', features: ['文本改写', '润色', '语法检查'] },
+
+// AI音频
+{ id: 'moying', name: '魔音工坊', desc: 'AI 配音工具，轻松配出媲美真人的声音。', url: 'https://www.moyin.com', category: 'ai-audio', icon: '🎤', color: '#6366f1', features: ['AI配音', '语音合成', '多音色'] },
+{ id: 'xunfeizhizuo', name: '讯飞智作', desc: 'AI 文本配音工具，数字人课程，营销视频制作。', url: 'https://zhiwang.xfyun.cn', category: 'ai-audio', icon: '🎙️', color: '#0052cc', features: ['AI配音', '数字人', '视频制作'] },
+{ id: 'douge', name: '逗哥配音', desc: '一站式 AI 配音工具，抖音爆款配音始发地。', url: 'https://www.douge.com', category: 'ai-audio', icon: '🎵', color: '#f97316', features: ['AI配音', '短视频', '抖音'] },
+{ id: 'elevenlabs', name: 'ElevenLabs', desc: 'AI 文本转语音，支持包含中文在内的 29 种语言。', url: 'https://elevenlabs.io', category: 'ai-audio', icon: '🔊', color: '#6366f1', features: ['文本转语音', '多语言', '高质量'] },
+{ id: 'langlang', name: '琅琅配音', desc: '智能文本转语音工具。', url: 'https://www.langlang.com', category: 'ai-audio', icon: '🎤', color: '#10b981', features: ['TTS', '语音合成', '免费'] },
+{ id: 'haimian', name: '海绵音乐', desc: '字节跳动推出的免费 AI 音乐创作和发现平台。', url: 'https://haimianmusic.com', category: 'ai-audio', icon: '🎵', color: '#3b82f6', features: ['AI音乐', '免费', '字节生态'] },
+{ id: 'udio', name: 'Udio', desc: '免费的 AI 音乐创作工具，每月可生成 1200 首歌曲。', url: 'https://udio.com', category: 'ai-audio', icon: '🎶', color: '#8b5cf6', features: ['AI音乐', '免费', '歌曲生成'] },
+{ id: 'ttsmaker', name: 'TTSMaker', desc: '马克配音推出的免费 AI 文字转语音工具。', url: 'https://ttsmaker.com', category: 'ai-audio', icon: '🔊', color: '#10b981', features: ['TTS', '免费', '多语言'] },
+{ id: 'lovo', name: 'LOVO AI', desc: '专业的 AI 文字转语音工具，支持 500+ 声音和 100 种语言。', url: 'https://lovo.ai', category: 'ai-audio', icon: '🎤', color: '#6366f1', features: ['TTS', '多声音', '多语言'] },
+{ id: 'uberduck', name: 'Uberduck', desc: '开源的 AI 语音生成社区，5000 多种不同的声音。', url: 'https://uberduck.ai', category: 'ai-audio', icon: '🦆', color: '#f97316', features: ['语音合成', '开源', '社区'] },
+{ id: 'mubert', name: 'Mubert', desc: 'AI BGM 背景音乐生成工具。', url: 'https://mubert.com', category: 'ai-audio', icon: '🎵', color: '#8b5cf6', features: ['BGM生成', '背景音乐', 'AI'] },
+{ id: 'beatoven', name: 'Beatoven.ai', desc: '免版税 AI 音乐创建平台。', url: 'https://beatoven.ai', category: 'ai-audio', icon: '🎹', color: '#6366f1', features: ['AI音乐', '免版权', '背景音乐'] },
+{ id: 'soundraw', name: 'Soundraw', desc: 'AI 音乐生成工具。', url: 'https://soundraw.io', category: 'ai-audio', icon: '🎸', color: '#10b981', features: ['AI音乐', '自定义', '生成'] },
+{ id: 'boomy', name: 'Boomy', desc: 'AI 快速生成原创音乐的平台。', url: 'https://boomy.com', category: 'ai-audio', icon: '🎵', color: '#3b82f6', features: ['AI音乐', '原创', '快速'] },
+{ id: 'bgmmao', name: 'BGM猫', desc: '灵动音科技推出的 AI 智能生成 BGM 音乐。', url: 'https://bgmmao.com', category: 'ai-audio', icon: '🐱', color: '#f97316', features: ['BGM生成', 'AI音乐', '免费'] },
+{ id: 'speechify', name: 'Speechify', desc: '超 5000 万人都在用的文字转语音朗读器。', url: 'https://speechify.com', category: 'ai-audio', icon: '📖', color: '#6366f1', features: ['TTS', '朗读', '多语言'] },
+{ id: 'murf', name: 'Murf AI', desc: 'AI 文本转语音生成工具。', url: 'https://murf.ai', category: 'ai-audio', icon: '🎤', color: '#10b981', features: ['TTS', '语音生成', '专业'] },
+{ id: 'playht', name: 'Play.ht', desc: '超真实在线 AI 语音生成。', url: 'https://play.ht', category: 'ai-audio', icon: '🔊', color: '#3b82f6', features: ['TTS', 'AI语音', '真实'] },
+{ id: 'notta', name: 'Notta', desc: 'AI 在线将语音转换成文字。', url: 'https://notta.com', category: 'ai-audio', icon: '🎤', color: '#6366f1', features: ['语音转文字', '转录', 'AI'] },
+{ id: 'xunfeitingjian', name: '讯飞听见', desc: '科大讯飞推出的在线 AI 语音转文字工具。', url: 'https://www.iflyrec.com', category: 'ai-audio', icon: '👂', color: '#0052cc', features: ['语音转文字', '转录', '讯飞'] },
+{ id: 'tongyitingwu', name: '通义听悟', desc: '阿里推出的 AI 会议转录工具。', url: 'https://tingwu.aliyun.com', category: 'ai-audio', icon: '🎧', color: '#ff6a00', features: ['会议转录', 'AI', '阿里'] },
+{ id: 'krisp', name: 'Krisp', desc: 'AI 噪音消除工具。', url: 'https://krisp.com', category: 'ai-audio', icon: '🔇', color: '#10b981', features: ['降噪', 'AI', '音频处理'] },
+{ id: 'lalal', name: 'LALAL.AI', desc: 'AI 人声乐器分离和提取。', url: 'https://lalal.ai', category: 'ai-audio', icon: '🎵', color: '#8b5cf6', features: ['人声分离', '乐器提取', 'AI'] },
+{ id: 'audiostudio', name: 'Audo Studio', desc: 'AI 音频清洗工具（噪音消除、声音平衡、音量调节）。', url: 'https://audiostudio.com', category: 'ai-audio', icon: '🎛️', color: '#6366f1', features: ['降噪', '音频处理', 'AI'] },
+{ id: 'neteyy', name: '网易天音', desc: '网易推出的一站式 AI 音乐创作工具。', url: 'https://tianyin.163.com', category: 'ai-audio', icon: '🎵', color: '#ea4141', features: ['AI音乐', '网易', '创作'] },
+{ id: 'ace', name: 'ACE Studio', desc: 'AI 歌声合成工具，输入歌词与旋律即可生成宛如真人的歌声。', url: 'https://ace.studio', category: 'ai-audio', icon: '🎤', color: '#f97316', features: ['歌声合成', 'AI', '音乐'] },
+{ id: 'dabian', name: '大饼AI变声', desc: '免费专业的 AI 变声软件，一键实时语音变声。', url: 'https://dabianai.com', category: 'ai-audio', icon: '🔊', color: '#3b82f6', features: ['变声', 'AI', '实时'] },
+{ id: 'tianpuyue', name: '天谟乐', desc: '唱鸭团队推出的首个多模态音乐生成大模型。', url: 'https://www.tianpuyue.com', category: 'ai-audio', icon: '🎵', color: '#ec4899', features: ['AI音乐', '多模态', '国产'] },
+{ id: 'yinfeng', name: '音疯', desc: '昆仑万维推出的 AI 音乐创作平台，一键生成原创歌曲。', url: 'https://www.yinfengai.com', category: 'ai-audio', icon: '🎶', color: '#f59e0b', features: ['AI音乐', '原创', '生成'] },
 
 // ===================== 开发工具 =====================
 // 前端工具
@@ -434,6 +477,18 @@ const TOOLS = [
 { id: 'cubicbezier', name: 'Cubic Bezier', desc: '贝塞尔曲线生成器，调试 CSS 动画 timing。', url: 'https://cubic-bezier.com', category: 'dev-frontend', icon: '📈', color: '#6366f1', features: ['贝塞尔曲线', '动画调试', 'CSS代码'] },
 { id: 'autoprefixer', name: 'Autoprefixer', desc: 'CSS 前缀自动补全工具。', url: 'https://autoprefixer.github.io', category: 'dev-frontend', icon: '🔧', color: '#4caf50', features: ['前缀补全', 'CSS优化', '在线工具'] },
 { id: 'minify', name: 'MinifyCode', desc: '在线代码压缩工具。', url: 'https://minifycode.com', category: 'dev-frontend', icon: '📦', color: '#607d8b', features: ['代码压缩', 'JS/CSS/HTML', '在线工具'] },
+{ id: 'electron', name: 'Electron', desc: '用 Web 技术构建跨平台桌面应用的框架。', url: 'https://www.electronjs.org', category: 'dev-tools', icon: '💻', color: '#47848f', features: ['桌面应用', '跨平台', 'Web技术'] },
+{ id: 'flutter', name: 'Flutter', desc: '谷歌开源的跨平台 UI 应用开发框架。', url: 'https://flutter.dev', category: 'dev-tools', icon: '🦋', color: '#02569b', features: ['跨平台', 'UI框架', '移动开发'] },
+{ id: 'unity', name: 'Unity', desc: '跨平台 2D/3D 游戏引擎和开发环境。', url: 'https://unity.com', category: 'dev-tools', icon: '🎮', color: '#000000', features: ['游戏引擎', '3D', '跨平台'] },
+{ id: 'wireshark', name: 'Wireshark', desc: '功能强大的网络协议分析仪。', url: 'https://www.wireshark.org', category: 'dev-tools', icon: '🌐', color: '#800000', features: ['网络分析', '协议分析', '抓包'] },
+{ id: 'fiddler', name: 'Fiddler', desc: 'HTTP/HTTPS 抓包调试代理工具。', url: 'https://www.telerik.com/fiddler', category: 'dev-tools', icon: '🔍', color: '#0d326f', features: ['抓包', '调试', '代理'] },
+{ id: 'supabase', name: 'Supabase', desc: '开源的 Firebase 替代方案（基于 PostgreSQL）。', url: 'https://supabase.com', category: 'dev-tools', icon: '🔥', color: '#3ecf8e', features: ['后端', '数据库', '开源'] },
+{ id: 'firebase', name: 'Firebase', desc: '谷歌提供的移动/Web 后端即服务平台。', url: 'https://firebase.google.com', category: 'dev-tools', icon: '🔥', color: '#ffca28', features: ['后端', '移动', '实时数据库'] },
+{ id: 'vercel', name: 'Vercel', desc: '面向前端的极速部署与 Serverless 平台。', url: 'https://vercel.com', category: 'dev-tools', icon: '⚡', color: '#000000', features: ['部署', 'Serverless', '前端'] },
+{ id: 'netlify', name: 'Netlify', desc: '前端项目一体化部署托管平台。', url: 'https://www.netlify.com', category: 'dev-tools', icon: '🌐', color: '#00b4ab', features: ['部署', '托管', '前端'] },
+{ id: 'heroku', name: 'Heroku', desc: '早期领先的云平台即服务（PaaS）。', url: 'https://www.heroku.com', category: 'dev-tools', icon: '☁️', color: '#79589f', features: ['PaaS', '云平台', '部署'] },
+{ id: 'sentry', name: 'Sentry', desc: '应用实时错误跟踪和性能监控平台。', url: 'https://sentry.io', category: 'dev-tools', icon: '🐛', color: '#362d59', features: ['错误跟踪', '监控', '性能'] },
+{ id: 'sonarqube', name: 'SonarQube', desc: '代码质量管理与静态分析平台。', url: 'https://www.sonarqube.org', category: 'dev-tools', icon: '🔊', color: '#4e2a59', features: ['代码质量', '静态分析', '管理'] },
 
 // 编译工具
 { id: 'pythononline', name: 'Python3 在线工具', desc: '在线编译、运行 Python 代码。', url: 'https://www.jyshare.com/compile/9/', category: 'dev-compile', icon: '🐍', color: '#3776ab', features: ['Python运行', '在线编译', '代码测试'] },
@@ -526,6 +581,16 @@ const TOOLS = [
 { id: 'simpleicons', name: 'Simple Icons', desc: '流行品牌 SVG 图标库。', url: 'https://simpleicons.org', category: 'design-image', icon: '🔵', color: '#000000', features: ['品牌图标', 'SVG', '开源免费'] },
 { id: 'tablericons', name: 'Tabler Icons', desc: '高质量 SVG 图标库。', url: 'https://tabler-icons.io', category: 'design-image', icon: '📋', color: '#1e293b', features: ['SVG图标', '开源免费', '高颜值'] },
 { id: 'lucide', name: 'Lucide', desc: '轻量级图标库。', url: 'https://lucide.dev', category: 'design-image', icon: '✨', color: '#6366f1', features: ['图标库', 'SVG', '开源免费'] },
+{ id: 'iconfont', name: 'iconfont', desc: '阿里巴巴矢量图标库，收录海量国内外图标素材。', url: 'https://www.iconfont.cn', category: 'design-image', icon: '🏷️', color: '#ff6a00', features: ['图标库', '矢量', '中文'] },
+{ id: 'pngimg', name: 'PngImg', desc: '提供十万张以上免抠 PNG 透明背景图片素材。', url: 'https://pngimg.com', category: 'design-image', icon: '🖼️', color: '#10b981', features: ['PNG', '免抠', '素材'] },
+{ id: 'undraw', name: 'unDraw', desc: '免费开源的插画素材库，可在线自定义主色。', url: 'https://undraw.co', category: 'design-image', icon: '🎨', color: '#8b5cf6', features: ['插画', '开源', '可定制'] },
+{ id: 'easel', name: 'Easel.ly', desc: '简单易用的在线信息图制作工具。', url: 'https://easel.ly', category: 'design-image', icon: '📊', color: '#f97316', features: ['信息图', '模板', '设计'] },
+{ id: 'infogram', name: 'Infogram', desc: '专注信息图表和数据可视化的在线作图工具。', url: 'https://infogram.com', category: 'design-image', icon: '📈', color: '#6366f1', features: ['图表', '数据可视化', '在线'] },
+{ id: 'autodraw', name: 'AutoDraw', desc: 'Google 推出的 AI 在线绘图工具。', url: 'https://autodraw.com', category: 'design-image', icon: '✏️', color: '#4285f4', features: ['AI绘图', 'Google', '简笔画'] },
+{ id: 'coolbackgrounds', name: 'Cool Backgrounds', desc: '生成引人注目背景图像的小工具合集。', url: 'https://coolbackgrounds.io', category: 'design-image', icon: '🌈', color: '#8b5cf6', features: ['背景', '生成器', '酷炫'] },
+{ id: 'khroma', name: 'Khroma', desc: 'AI 智能配色工具，设计师专属的调色助手。', url: 'https://khroma.co', category: 'design-color', icon: '🎨', color: '#f97316', features: ['AI配色', '个性化', '设计师'] },
+{ id: 'colorspace', name: 'ColorSpace', desc: '输入任意颜色值即可生成多组完美搭配的配色方案。', url: 'https://mycolor.space', category: 'design-color', icon: '🌈', color: '#6366f1', features: ['配色', '渐变', '在线工具'] },
+{ id: 'zeoseven', name: 'ZeoSeven Fonts', desc: '收录 800+ 款免费可商用字体并提供 Web 字体引用 API。', url: 'https://fonts.zeoseven.com', category: 'design-image', icon: '🔤', color: '#10b981', features: ['字体', '可商用', 'API'] },
 
 // 配色工具
 { id: 'coolors', name: 'Coolors', desc: '配色方案生成器，一键生成协调色彩组合。', url: 'https://coolors.co', category: 'design-color', icon: '🎨', color: '#0066ff', features: ['配色生成', '色板导出', '品牌色'] },
@@ -604,7 +669,55 @@ const TOOLS = [
 { id: 'stopwatch', name: '秒表', desc: '在线秒表工具。', url: 'https://www.jyshare.com/front-end/9720/', category: 'common-other', icon: '⏱️', color: '#6366f1', features: ['秒表', '计时器'] },
 { id: 'lottery', name: '幸运大转盘', desc: '在线抽奖工具。', url: 'https://www.jyshare.com/front-end/9721/', category: 'common-other', icon: '🎰', color: '#f59e0b', features: ['抽奖', '随机选择'] },
 { id: 'sudoku', name: '数独游戏', desc: '在线数独游戏。', url: 'https://www.jyshare.com/front-end/10259/', category: 'common-other', icon: '🔢', color: '#10b981', features: ['数独', '益智游戏'] },
-{ id: 'macaddress', name: 'MAC 地址生成器', desc: '随机 MAC 地址生成。', url: 'https://www.jyshare.com/front-end/9915/', category: 'common-other', icon: '📡', color: '#3b82f6', features: ['MAC地址', '网络工具'] }
+{ id: 'macaddress', name: 'MAC 地址生成器', desc: '随机 MAC 地址生成。', url: 'https://www.jyshare.com/front-end/9915/', category: 'common-other', icon: '📡', color: '#3b82f6', features: ['MAC地址', '网络工具'] },
+
+// 下载工具
+{ id: 'bestvideo', name: 'BestVideo', desc: '一键免费下载全网高清无水印视频。', url: 'https://bestvideow.com', category: 'common-other', icon: '📥', color: '#f97316', features: ['视频下载', '去水印', '免费'] },
+{ id: 'datatool', name: 'DataTool', desc: '支持 40+ 平台无水印下载视频音频的全能工具。', url: 'https://www.datatool.vip', category: 'common-other', icon: '⬇️', color: '#10b981', features: ['视频下载', '音频下载', '多平台'] },
+{ id: 'cobalt', name: 'Cobalt', desc: '去除广告和付费墙、支持多平台的在线内容下载器。', url: 'https://cobalt.tools', category: 'common-other', icon: '📱', color: '#6366f1', features: ['内容下载', '去广告', '在线'] },
+{ id: 'alternativeto', name: 'AlternativeTo', desc: '寻找软件和应用替代方案的用户驱动型推荐平台。', url: 'https://alternativeto.net', category: 'common-other', icon: '🔄', color: '#f97316', features: ['软件替代', '推荐', '发现'] },
+{ id: 'bookmarkearth', name: '书签地球', desc: '一键获取别人浏览器书签的网站。', url: 'https://bookmarkearth.cn', category: 'common-other', icon: '🔖', color: '#10b981', features: ['书签', '分享', '工具'] },
+{ id: 'pcbuilds', name: 'PC-Builds', desc: '判断电脑能不能跑动某款游戏的网站。', url: 'https://pc-builds.com', category: 'common-other', icon: '💻', color: '#3b82f6', features: ['硬件检测', '游戏', '性能'] },
+{ id: 'buildcores', name: 'BuildCores', desc: '3D 模拟组装电脑的网站。', url: 'https://buildcores.com', category: 'common-other', icon: '🖥️', color: '#8b5cf6', features: ['电脑组装', '3D', '模拟'] },
+{ id: 'fileunzip', name: 'FileUnzip', desc: '专门用来在线解压各种文件格式的网站。', url: 'https://cn.fileunzip.com', category: 'common-other', icon: '📦', color: '#f59e0b', features: ['解压', '在线', '格式'] },
+{ id: '123apps', name: '123APPS', desc: '一站式搞定视频剪辑、音频处理、PDF编辑和文件格式转换。', url: 'https://123apps.com/cn', category: 'common-other', icon: '🛠️', color: '#6366f1', features: ['视频剪辑', '音频处理', 'PDF编辑'] },
+{ id: 'imagestool', name: 'ImagesTool', desc: '完全基于浏览器的图片和视频处理神器。', url: 'https://imagestool.com/zh_CN/', category: 'common-other', icon: '🖼️', color: '#10b981', features: ['图片处理', '视频处理', '在线'] },
+{ id: 'cdkm', name: 'CDKM', desc: '免费开源的万能文件格式在线转换平台。', url: 'https://cdkm.com/cn', category: 'common-convert', icon: '🔄', color: '#3b82f6', features: ['格式转换', '免费', '在线'] },
+
+// 影音娱乐
+{ id: 'freesound', name: 'Freesound', desc: '全网最全的免费音效素材库网站。', url: 'https://freesound.org', category: 'common-other', icon: '🔊', color: '#f97316', features: ['音效', '素材', '免费'] },
+{ id: 'lowmovie', name: '低端影视', desc: '无广告、免费更新迅速的影视剧下载和在线观看网站。', url: 'https://ddys.pro', category: 'common-other', icon: '🎬', color: '#8b5cf6', features: ['影视', '免费', '在线观看'] },
+{ id: 'netflixgc', name: '奈飞工厂', desc: '提供 Netflix 影视剧动漫资源免费观看的流媒体网站。', url: 'https://www.netflixgc.com', category: 'common-other', icon: '📺', color: '#e50914', features: ['Netflix', '影视', '免费'] },
+{ id: 'tubi', name: 'Tubi', desc: '提供海量正版影视内容的免费流媒体服务。', url: 'https://www.tubitv.com', category: 'common-other', icon: '📺', color: '#6366f1', features: ['影视', '免费', '流媒体'] },
+{ id: 'radiocast', name: 'Radiocast', desc: '通过地图界面收听全球 8000+ 电台直播的在线平台。', url: 'https://radiocast.co', category: 'common-other', icon: '📻', color: '#f97316', features: ['电台', '直播', '全球'] },
+{ id: 'shotdeck', name: 'ShotDeck', desc: '全球最大规模、可搜索的高清电影剧照资料库。', url: 'https://shotdeck.com', category: 'common-other', icon: '📷', color: '#10b981', features: ['剧照', '电影', '素材'] },
+{ id: 'zhaotaici', name: '找台词', desc: '通过对白台词文字搜索快速定位影视片段的引擎。', url: 'https://www.zhaotaici.cn', category: 'common-other', icon: '🎥', color: '#3b82f6', features: ['台词', '搜索', '影视'] },
+{ id: 'animetrace', name: 'AnimeTrace', desc: '基于 AI 算法的动漫截图识别搜索引擎。', url: 'https://ai.animedb.cn', category: 'common-other', icon: '🔍', color: '#ec4899', features: ['动漫', '识别', '截图'] },
+{ id: 'tvgarden', name: 'TV.Garden', desc: '通过 3D 地球仪界面观看全球各地电视直播的平台。', url: 'https://tv.garden', category: 'common-other', icon: '🌍', color: '#6366f1', features: ['电视', '直播', '全球'] },
+
+// 教育学习
+{ id: 'phet', name: 'PhET', desc: '把抽象的理科知识变成小游戏一样直观易懂的网站。', url: 'https://phet.colorado.edu/zh_CN/', category: 'common-other', icon: '🔬', color: '#f97316', features: ['教育', '理科', '互动'] },
+{ id: 'biodigital', name: 'BioDigital', desc: '可以 3D 可视化了解人体的网站。', url: 'https://www.biodigital.com', category: 'common-other', icon: '🫀', color: '#10b981', features: ['人体', '3D', '教育'] },
+{ id: 'instructables', desc: '专门教你自己动手解决一切问题的网站。', url: 'https://www.instructables.com', category: 'common-other', icon: '🛠️', color: '#f97316', features: ['DIY', '教程', '动手'] },
+{ id: 'classcentral', name: 'Class Central', desc: '汇总各大在线课程（MOOC）并提供评价排行的选课平台。', url: 'https://www.classcentral.com', category: 'common-other', icon: '🎓', color: '#6366f1', features: ['MOOC', '课程', '选课'] },
+{ id: 'doyoudo', name: 'doyoudo', desc: '专注于设计、剪辑和动画软件教学的免费视频学习平台。', url: 'https://doyoudo.com', category: 'common-other', icon: '🎬', color: '#3b82f6', features: ['设计', '剪辑', '教程'] },
+{ id: 'dxzy163', name: '大学资源网', desc: '提供从小学到大学各阶段课程视频和资料的免费学习网站。', url: 'https://www.dxzy163.com', category: 'common-other', icon: '📚', color: '#10b981', features: ['大学', '课程', '免费'] },
+{ id: 'musclewiki', name: 'MuscleWiki', desc: '交互式的人体肌肉图谱与健身锻炼指导平台。', url: 'https://musclewiki.com', category: 'common-other', icon: '💪', color: '#f97316', features: ['健身', '肌肉', '教程'] },
+{ id: 'examcoo', name: '考试酷', desc: '永久免费并且可以一键生成试卷的在线考试神器。', url: 'https://www.examcoo.com', category: 'common-other', icon: '📝', color: '#6366f1', features: ['考试', '试卷', '免费'] },
+{ id: 'pano', name: '全景故宫', desc: '可以在家就能沉浸式逛遍整个故宫的网站。', url: 'https://pano.dpm.org.cn', category: 'common-other', icon: '🏯', color: '#ea4141', features: ['故宫', '全景', 'VR'] },
+{ id: 'archive', name: 'Internet Archive', desc: '一键穿越回 20 年前互联网的宝藏网站。', url: 'https://archive.org', category: 'common-other', icon: '📜', color: '#f97316', features: ['存档', '历史', '互联网'] },
+{ id: 'librivox', name: 'LibriVox', desc: '公共领域书籍有声化的免费数字图书馆。', url: 'https://librivox.org', category: 'common-other', icon: '📖', color: '#10b981', features: ['有声书', '免费', '图书馆'] },
+{ id: 'wattpad', name: 'Wattpad', desc: '全球知名的免费原创故事创作与阅读社区。', url: 'https://www.wattpad.com', category: 'common-other', icon: '📚', color: '#f97316', features: ['小说', '创作', '社区'] },
+
+// 更多开发工具
+{ id: 'jupyter', name: 'Jupyter Notebook', desc: '浏览器中的交互式笔记本编程环境。', url: 'https://jupyter.org', category: 'dev-tools', icon: '📓', color: '#f97316', features: ['Python', '数据分析', '交互'] },
+{ id: 'jupyterlab', name: 'JupyterLab', desc: '下一代 Jupyter 笔记本环境。', url: 'https://jupyterlab.readthedocs.io', category: 'dev-tools', icon: '🔬', color: '#f97316', features: ['Python', 'IDE', '数据科学'] },
+{ id: 'colab', name: 'Google Colab', desc: '免费云端 Jupyter 笔记本环境。', url: 'https://colab.research.google.com', category: 'dev-tools', icon: '☁️', color: '#f9ab00', features: ['Python', '免费GPU', '云端'] },
+{ id: 'kaggle', name: 'Kaggle', desc: '数据科学竞赛和笔记本平台。', url: 'https://www.kaggle.com', category: 'dev-tools', icon: '🏆', color: '#20beff', features: ['数据科学', '竞赛', ' notebooks'] },
+{ id: 'huggingface', name: 'Hugging Face', desc: 'AI 模型社区和工具平台。', url: 'https://huggingface.co', category: 'dev-tools', icon: '🤗', color: '#ffc107', features: ['AI模型', '社区', '开源'] },
+{ id: 'replicate', name: 'Replicate', desc: '运行开源 AI 模型的云平台。', url: 'https://replicate.com', category: 'dev-tools', icon: '☁️', color: '#6366f1', features: ['AI', '云端', '开源模型'] },
+{ id: 'runpod', name: 'RunPod', desc: '云端 GPU 运行环境。', url: 'https://runpod.io', category: 'dev-tools', icon: '🚀', color: '#6366f1', features: ['GPU', '云端', 'AI'] },
+{ id: 'paperspace', name: 'Paperspace', desc: 'GPU 云端加速平台。', url: 'https://www.paperspace.com', category: 'dev-tools', icon: '🚀', color: '#6366f1', features: ['GPU', '云端', '深度学习'] }
 ];
 
 // 分类数据
@@ -617,7 +730,8 @@ const CATEGORIES = [
         { id: 'ai-writing', name: 'AI写作', icon: '✍️' },
         { id: 'ai-coding', name: 'AI编程', icon: '💻' },
         { id: 'ai-search', name: 'AI搜索', icon: '🔍' },
-        { id: 'ai-office', name: 'AI办公', icon: '📊' }
+        { id: 'ai-office', name: 'AI办公', icon: '📊' },
+        { id: 'ai-audio', name: 'AI音频', icon: '🎵' }
     ]},
     { id: 'dev', name: '开发工具', icon: '💻', parent: null, children: [
         { id: 'dev-frontend', name: '前端工具', icon: '🌐' },
