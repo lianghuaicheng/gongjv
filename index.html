@@ -946,6 +946,10 @@ function initCounts() {
 function setupEventListeners() {
     document.getElementById('searchInput').addEventListener('input', (e) => {
         currentSearch = e.target.value;
+        // 确保在列表页显示
+        document.getElementById('detailPage').classList.remove('active');
+        document.getElementById('listPage').style.display = 'block';
+        currentTool = null;
         renderTools();
     });
 
