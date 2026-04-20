@@ -3,2992 +3,531 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToolHub - 免费在线工具导航 | AI工具 开发工具 设计工具聚合网站</title>
-    <meta name="description" content="ToolHub 精选30+优质免费在线工具，涵盖ChatGPT、Claude、GitHub、Figma等热门AI工具、开发工具与设计工具。支持实时搜索筛选，一键直达官网，无需注册即可使用。">
-    <meta name="keywords" content="AI工具,ChatGPT,Claude,GitHub,Figma,在线工具,免费工具,开发者工具,设计工具,AI绘画,代码工具,正则表达式,图片压缩,效率工具,工具导航,工具箱,在线生成器">
-    <meta name="author" content="ToolHub">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://gongjv.pages.dev/">
-
-    <!-- Open Graph / 社交分享 -->
-    <meta property="og:title" content="ToolHub - 免费在线工具导航 | AI · 开发 · 设计">
-    <meta property="og:description" content="精选30+优质免费在线工具，涵盖ChatGPT、Claude、GitHub、Figma等，一键直达，提升工作效率。">
+    <title>工具聚合 - 优质在线工具导航</title>
+    <meta name="description" content="精选免费在线工具导航，涵盖AI工具、开发工具、设计工具、常用工具、编程工具等，一键直达，提升效率。">
+    <meta name="keywords" content="在线工具,AI工具,开发工具,设计工具,编程工具,工具导航">
+    <meta property="og:title" content="工具聚合 - 优质在线工具导航">
+    <meta property="og:description" content="精选免费在线工具导航，一键直达">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gongjv.pages.dev/">
-    <meta property="og:site_name" content="ToolHub">
-    <meta property="og:locale" content="zh_CN">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ToolHub - 免费在线工具导航 | AI · 开发 · 设计">
-    <meta name="twitter:description" content="精选30+优质免费在线工具，涵盖ChatGPT、Claude、GitHub、Figma等，一键直达。">
-
-    <!-- 结构化数据 JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "ToolHub",
-        "url": "https://gongjv.pages.dev/",
-        "description": "精选优质免费在线工具聚合平台，涵盖AI工具、开发工具、设计工具三大类别",
-        "inLanguage": "zh-CN",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://gongjv.pages.dev/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "优质工具推荐列表",
-        "description": "ToolHub 精选的免费在线工具合集，包含AI工具、开发工具和设计工具",
-        "itemListElement": [
-            {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"ChatGPT","url":"https://chat.openai.com","applicationCategory":"AI助手","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Claude","url":"https://claude.ai","applicationCategory":"AI助手","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Gemini","url":"https://gemini.google.com","applicationCategory":"AI助手","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Midjourney","url":"https://www.midjourney.com","applicationCategory":"图像生成","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Stable Diffusion","url":"https://stability.ai","applicationCategory":"图像生成","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":6,"item":{"@type":"SoftwareApplication","name":"DALL·E 3","url":"https://openai.com/dall-e-3","applicationCategory":"图像生成","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":7,"item":{"@type":"SoftwareApplication","name":"Suno AI","url":"https://suno.ai","applicationCategory":"音乐生成","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":8,"item":{"@type":"SoftwareApplication","name":"Runway ML","url":"https://runwayml.com","applicationCategory":"视频编辑","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":9,"item":{"@type":"SoftwareApplication","name":"Perplexity AI","url":"https://www.perplexity.ai","applicationCategory":"搜索引擎","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":10,"item":{"@type":"SoftwareApplication","name":"Gamma","url":"https://gamma.app","applicationCategory":"演示文稿","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":11,"item":{"@type":"SoftwareApplication","name":"GitHub","url":"https://github.com","applicationCategory":"代码托管","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":12,"item":{"@type":"SoftwareApplication","name":"CodePen","url":"https://codepen.io","applicationCategory":"前端开发","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":13,"item":{"@type":"SoftwareApplication","name":"JSFiddle","url":"https://jsfiddle.net","applicationCategory":"前端开发","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":14,"item":{"@type":"SoftwareApplication","name":"Regex101","url":"https://regex101.com","applicationCategory":"开发工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":15,"item":{"@type":"SoftwareApplication","name":"JSONLint","url":"https://jsonlint.com","applicationCategory":"开发工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":16,"item":{"@type":"SoftwareApplication","name":"Can I Use","url":"https://caniuse.com","applicationCategory":"开发工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":17,"item":{"@type":"SoftwareApplication","name":"DevDocs.io","url":"https://devdocs.io","applicationCategory":"开发文档","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":18,"item":{"@type":"SoftwareApplication","name":"TinyPNG","url":"https://tinypng.com","applicationCategory":"图片压缩","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":19,"item":{"@type":"SoftwareApplication","name":"Quicktype","url":"https://app.quicktype.io","applicationCategory":"开发工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":20,"item":{"@type":"SoftwareApplication","name":"Cronitor","url":"https://cronitor.io/tools/cron-builder","applicationCategory":"开发工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":21,"item":{"@type":"SoftwareApplication","name":"Figma","url":"https://www.figma.com","applicationCategory":"UI设计","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":22,"item":{"@type":"SoftwareApplication","name":"Remove.bg","url":"https://www.remove.bg","applicationCategory":"图片处理","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":23,"item":{"@type":"SoftwareApplication","name":"Coolors","url":"https://coolors.co","applicationCategory":"配色工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":24,"item":{"@type":"SoftwareApplication","name":"Unsplash","url":"https://unsplash.com","applicationCategory":"素材库","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":25,"item":{"@type":"SoftwareApplication","name":"Font Awesome","url":"https://fontawesome.com","applicationCategory":"图标库","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":26,"item":{"@type":"SoftwareApplication","name":"CSS Gradient","url":"https://cssgradient.io","applicationCategory":"CSS工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":27,"item":{"@type":"SoftwareApplication","name":"SVGOMG","url":"https://jakearchibald.github.io/svgomg/","applicationCategory":"SVG优化","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":28,"item":{"@type":"SoftwareApplication","name":"Photopea","url":"https://www.photopea.com","applicationCategory":"图像编辑","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":29,"item":{"@type":"SoftwareApplication","name":"Realtime Colors","url":"https://www.realtimecolors.com","applicationCategory":"配色工具","operatingSystem":"Web"}},
-            {"@type":"ListItem","position":30,"item":{"@type":"SoftwareApplication","name":"Heroicons","url":"https://heroicons.com","applicationCategory":"图标库","operatingSystem":"Web"}}
-        ]
-    }
-    </script>
+    <link rel="canonical" href="https://gongjv.pages.dev/">
     <style>
-        /* ========== CSS 变量与重置 ========== */
         :root {
-            --primary-start: #10b981;
-            --primary-mid: #14b8a6;
-            --primary-end: #06b6d4;
-            --bg-primary: #08090c;
-            --bg-secondary: #0e1014;
-            --bg-card: rgba(255,255,255,0.025);
-            --bg-card-hover: rgba(16,185,129,0.06);
-            --text-primary: #e8eaed;
-            --text-secondary: #9ca3af;
-            --text-muted: #5c6370;
-            --border-color: rgba(255,255,255,0.05);
-            --gradient-main: linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #06b6d4 100%);
-            --gradient-glow: linear-gradient(135deg, rgba(16,185,129,0.35) 0%, rgba(20,184,166,0.25) 50%, rgba(6,182,212,0.15) 100%);
-            --shadow-card: 0 4px 24px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.03) inset;
-            --shadow-card-hover: 0 12px 44px rgba(16,185,129,0.1), 0 0 0 1px rgba(16,185,129,0.15) inset;
-            --radius: 12px;
-            --radius-lg: 16px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --primary: #e65100;
+            --primary-light: #ff9800;
+            --primary-dark: #bf360c;
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-header: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
+            --radius: 8px;
+            --radius-sm: 4px;
+            --transition: all 0.25s ease;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul, ol { list-style: none; }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        /* 顶部导航 */
+        .header { background: var(--bg-header); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 20px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 22px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
+        
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .header-nav { display: flex; gap: 16px; }
+        .header-nav a { color: var(--text-secondary); font-size: 14px; transition: var(--transition); }
+        .header-nav a:hover { color: var(--primary); }
+        
+        .search-box { position: relative; }
+        .search-input { width: 280px; padding: 8px 16px 8px 40px; border: 1px solid var(--border-color); border-radius: 20px; font-size: 14px; outline: none; transition: var(--transition); background: var(--bg-primary); }
+        .search-input:focus { border-color: var(--primary); width: 320px; }
+        .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
 
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        /* 移动端菜单按钮 */
+        .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        /* 主体布局 */
+        .main-container { max-width: 1400px; margin: 0 auto; padding: 20px; display: flex; gap: 20px; }
+        
+        /* 左侧导航 */
+        .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 80px; height: fit-content; max-height: calc(100vh - 100px); overflow-y: auto; }
+        .sidebar-section { margin-bottom: 20px; }
+        .sidebar-title { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 12px; }
+        .sidebar-menu { background: var(--bg-secondary); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+        .sidebar-item { display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: var(--text-secondary); font-size: 14px; cursor: pointer; transition: var(--transition); border-left: 3px solid transparent; }
+        .sidebar-item:hover { background: #fff3e0; color: var(--primary); border-left-color: var(--primary-light); }
+        .sidebar-item.active { background: #fff3e0; color: var(--primary); border-left-color: var(--primary); font-weight: 500; }
+        .sidebar-item-icon { font-size: 16px; width: 20px; text-align: center; }
+        .sidebar-item-count { margin-left: auto; font-size: 12px; color: var(--text-muted); background: var(--bg-primary); padding: 2px 8px; border-radius: 10px; }
 
-        /* 背景装饰 */
-        .bg-glow {
-            position: fixed;
-            top: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 600px;
-            background: radial-gradient(ellipse at center, rgba(16,185,129,0.1) 0%, rgba(20,184,166,0.07) 35%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        .bg-grid {
-            position: fixed;
-            inset: 0;
-            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
+        /* 右侧内容 */
+        .content { flex: 1; min-width: 0; }
+        
+        /* 分类标题 */
+        .category-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+        .category-title { font-size: 20px; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 10px; }
+        .category-title-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
 
-        /* ========== 头部导航 ========== */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(10,10,15,0.75);
-            border-bottom: 1px solid var(--border-color);
-        }
+        /* 工具网格 */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        
+        /* 工具卡片 */
+        .tool-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer; display: flex; gap: 14px; }
+        .tool-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+        .tool-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+        .tool-info { flex: 1; min-width: 0; }
+        .tool-name { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+        .tool-tag { font-size: 11px; padding: 2px 6px; border-radius: 3px; background: #fff3e0; color: var(--primary); font-weight: 500; }
+        .tool-desc { font-size: 13px; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 68px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        /* 无结果 */
+        .no-result { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+        .no-result-icon { font-size: 48px; margin-bottom: 16px; }
 
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            cursor: default;
-            user-select: none;
-        }
-        .logo span {
-            opacity: 0.6;
-            font-weight: 400;
-            font-size: 14px;
-            margin-left: 4px;
-            -webkit-text-fill-color: var(--text-muted);
-        }
+        /* 工具详情页 */
+        .detail-page { display: none; }
+        .detail-page.active { display: block; }
+        
+        .detail-header { background: var(--bg-secondary); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow); }
+        .detail-header-inner { display: flex; align-items: center; gap: 20px; }
+        .detail-icon { width: 72px; height: 72px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 36px; }
+        .detail-title { font-size: 24px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+        .detail-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+        .detail-actions { display: flex; gap: 12px; margin-top: 16px; }
+        .detail-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; border-radius: var(--radius); font-size: 14px; font-weight: 500; cursor: pointer; transition: var(--transition); border: none; }
+        .detail-btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: #fff; }
+        .detail-btn-primary:hover { box-shadow: 0 4px 16px rgba(230, 81, 0, 0.3); }
+        .detail-btn-secondary { background: var(--bg-primary); color: var(--text-secondary); border: 1px solid var(--border-color); }
+        .detail-btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+        
+        .detail-content { background: var(--bg-secondary); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+        .detail-section { margin-bottom: 24px; }
+        .detail-section:last-child { margin-bottom: 0; }
+        .detail-section-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); }
+        .detail-features { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+        .detail-feature { display: flex; align-items: flex-start; gap: 10px; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); }
+        .detail-feature-icon { color: var(--primary); font-size: 14px; margin-top: 2px; }
+        .detail-feature-text { font-size: 13px; color: var(--text-secondary); }
 
-        /* ========== 分类标签导航 ========== */
-        .nav-tabs {
-            display: flex;
-            gap: 4px;
-            background: rgba(255,255,255,0.03);
-            padding: 4px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-        }
+        /* 返回按钮 */
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 14px; cursor: pointer; margin-bottom: 16px; transition: var(--transition); }
+        .back-btn:hover { color: var(--primary); }
 
-        .nav-tab {
-            padding: 8px 20px;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            font-size: 13.5px;
-            font-weight: 500;
-            border-radius: 7px;
-            cursor: pointer;
-            transition: var(--transition);
-            white-space: nowrap;
-            font-family: inherit;
-        }
-        .nav-tab:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
-        .nav-tab.active {
-            background: var(--gradient-main);
-            color: #fff;
-            box-shadow: 0 2px 12px rgba(16,185,129,0.3);
-        }
+        /* Toast */
+        .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #4caf50; color: #fff; padding: 12px 24px; border-radius: 8px; font-size: 14px; z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 
-        /* ========== 主内容区 ========== */
-        main {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 32px 24px 80px;
-        }
+        /* Footer */
+        .footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border-color); margin-top: 40px; background: var(--bg-secondary); }
 
-        /* Hero 区域 */
-        .hero {
-            text-align: center;
-            padding: 48px 0 40px;
-        }
-        .hero h1 {
-            font-size: clamp(28px, 5vw, 42px);
-            font-weight: 800;
-            letter-spacing: -1px;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
-        .hero h1 .highlight {
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero p {
-            color: var(--text-muted);
-            font-size: 15px;
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        /* 搜索栏 */
-        .search-wrap {
-            max-width: 520px;
-            margin: 28px auto 0;
-            position: relative;
-        }
-        .search-input {
-            width: 100%;
-            padding: 14px 20px 14px 48px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            color: var(--text-primary);
-            font-size: 14.5px;
-            outline: none;
-            transition: var(--transition);
-            font-family: inherit;
-        }
-        .search-input::placeholder { color: var(--text-muted); }
-        .search-input:focus {
-            border-color: rgba(16,185,129,0.4);
-            box-shadow: 0 0 0 3px rgba(16,185,129,0.08), 0 4px 20px rgba(0,0,0,0.2);
-        }
-        .search-icon {
-            position: absolute;
-            left: 17px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            pointer-events: none;
-            font-size: 16px;
-        }
-
-        /* 统计信息 */
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-        .stat-item strong {
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        /* ========== 工具卡片网格 ========== */
-        .tools-section {
-            margin-top: 36px;
-        }
-        .section-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 18px;
-            padding-left: 2px;
-        }
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 16px;
-        }
-
-        /* 单个工具卡片 */
-        .tool-card {
-            position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 22px 24px;
-            transition: var(--transition);
-            cursor: default;
-            overflow: hidden;
-        }
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gradient-main);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .tool-card:hover {
-            background: var(--bg-card-hover);
-            border-color: rgba(16,185,129,0.2);
-            box-shadow: var(--shadow-card-hover);
-            transform: translateY(-3px);
-        }
-        .tool-card:hover::before { opacity: 1; }
-
-        .card-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-        .card-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 19px;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-        .tool-card:hover .card-icon { transform: scale(1.08); }
-
-        .card-tag {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 9px;
-            border-radius: 6px;
-            letter-spacing: 0.3px;
-            flex-shrink: 0;
-        }
-        .tag-ai { background: rgba(16,185,129,0.12); color: #6ee7b7; }
-        .tag-dev { background: rgba(34,197,94,0.15); color: #86efac; }
-        .tag-design { background: rgba(236,72,153,0.15); color: #f9a8d4; }
-
-        .card-body h3 {
-            font-size: 16px;
-            font-weight: 650;
-            margin-bottom: 6px;
-            letter-spacing: -0.2px;
-        }
-        .card-body p {
-            font-size: 13.5px;
-            color: var(--text-secondary);
-            line-height: 1.55;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .card-actions {
-            display: flex;
-            gap: 8px;
-            margin-top: 16px;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 8px;
-            font-size: 12.5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: inherit;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .btn-primary {
-            background: var(--gradient-main);
-            color: #fff;
-            box-shadow: 0 2px 10px rgba(16,185,129,0.22);
-        }
-        .btn-primary:hover {
-            box-shadow: 0 4px 20px rgba(16,185,129,0.35);
-            transform: translateY(-1px);
-        }
-        .btn-ghost {
-            background: rgba(255,255,255,0.04);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-        }
-        .btn-ghost:hover {
-            background: rgba(255,255,255,0.08);
-            color: var(--text-primary);
-            border-color: rgba(255,255,255,0.1);
-        }
-
-        /* 无结果提示 */
-        .no-results {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-muted);
-        }
-        .no-results svg { margin-bottom: 12px; opacity: 0.4; }
-        .no-results p { font-size: 15px; }
-
-        /* ========== Toast 提示 ========== */
-        .toast {
-            position: fixed;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            background: rgba(34,197,94,0.95);
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 10px;
-            font-size: 13.5px;
-            font-weight: 500;
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(34,197,94,0.3);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .toast.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        /* ========== 页脚 ========== */
-        footer {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 32px 24px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-        footer a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        footer a:hover { color: var(--primary-start); }
-
-        /* ========== 响应式适配 ========== */
+        /* 响应式 */
         @media (max-width: 768px) {
-            .header-inner { padding: 0 16px; height: 60px; }
-            .nav-tabs { order: 3; margin-top: 12px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-            .nav-tabs::-webkit-scrollbar { display: none; }
-            .nav-tab { padding: 7px 14px; font-size: 13px; }
-            main { padding: 24px 16px 64px; }
-            .hero { padding: 32px 0 28px; }
-            .tools-grid { grid-template-columns: 1fr; gap: 12px; }
-            .tool-card { padding: 18px 20px; }
-            .stats-bar { gap: 20px; }
-            .search-input { padding: 12px 16px 12px 42px; }
-        }
-
-        @media (max-width: 480px) {
-            .nav-tab { padding: 6px 12px; font-size: 12.5px; }
-            .card-actions { flex-direction: column; }
-            .btn { justify-content: center; }
+            .main-container { flex-direction: column; padding: 12px; }
+            .sidebar { width: 100%; position: static; max-height: none; }
+            .sidebar-menu { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px; }
+            .sidebar-item { flex: 1 1 calc(50% - 4px); min-width: 120px; padding: 10px 12px; border-left: none; border-radius: var(--radius-sm); }
+            .sidebar-item:hover, .sidebar-item.active { border-left: none; }
+            .header-nav { display: none; }
+            .menu-toggle { display: block; }
+            .search-input { width: 180px; }
+            .search-input:focus { width: 200px; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .detail-header-inner { flex-direction: column; text-align: center; }
+            .detail-actions { justify-content: center; }
         }
 
         /* 入场动画 */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .tool-card { animation: fadeInUp 0.4s ease forwards; }
-        .tool-card:nth-child(1) { animation-delay: 0.02s; }
-        .tool-card:nth-child(2) { animation-delay: 0.04s; }
-        .tool-card:nth-child(3) { animation-delay: 0.06s; }
-        .tool-card:nth-child(4) { animation-delay: 0.08s; }
-        .tool-card:nth-child(5) { animation-delay: 0.10s; }
-        .tool-card:nth-child(6) { animation-delay: 0.12s; }
-        .tool-card:nth-child(n+7) { animation-delay: 0.14s; }
-
-        /* 减少动画偏好 */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .tool-card { animation: fadeIn 0.3s ease forwards; }
     </style>
 </head>
-<body itemscope itemtype="https://schema.org/WebPage">
+<body>
 
-<!-- 背景装饰层 -->
-<div class="bg-glow" aria-hidden="true"></div>
-<div class="bg-grid" aria-hidden="true"></div>
-
-<!-- ====== 头部导航 ====== -->
-<header role="banner">
+<!-- 顶部导航 -->
+<header class="header">
     <div class="header-inner">
-        <a href="/" class="logo" itemprop="name">ToolHub<span>/Tools</span></a>
-        <nav class="nav-tabs" role="tablist" aria-label="工具分类导航">
-            <button class="nav-tab active" data-filter="all" role="tab" aria-selected="true">全部工具</button>
-            <button class="nav-tab" data-filter="ai" role="tab" aria-selected="false">AI 工具</button>
-            <button class="nav-tab" data-filter="dev" role="tab" aria-selected="false">开发工具</button>
-            <button class="nav-tab" data-filter="design" role="tab" aria-selected="false">设计工具</button>
+        <a href="#/" class="logo" onclick="goHome()">
+            <div class="logo-icon">🛠</div>
+            <span>工具聚合</span>
+        </a>
+        
+        <nav class="header-nav">
+            <a href="#/">首页</a>
+            <a href="#/ai">AI工具</a>
+            <a href="#/dev">开发工具</a>
+            <a href="#/design">设计工具</a>
         </nav>
+        
+        <div class="header-right">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称或功能...">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
     </div>
 </header>
 
-<!-- ====== 主内容区 ====== -->
-<main role="main" itemprop="mainContentOfPage">
+<!-- 主体内容 -->
+<div class="main-container">
+    <!-- 左侧导航 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-title">工具分类</div>
+            <div class="sidebar-menu" id="categoryMenu">
+                <div class="sidebar-item active" data-category="all">
+                    <span class="sidebar-item-icon">📁</span>
+                    <span>全部工具</span>
+                    <span class="sidebar-item-count" id="countAll">0</span>
+                </div>
+                <div class="sidebar-item" data-category="ai">
+                    <span class="sidebar-item-icon">🤖</span>
+                    <span>AI 工具</span>
+                    <span class="sidebar-item-count" id="countAi">0</span>
+                </div>
+                <div class="sidebar-item" data-category="dev">
+                    <span class="sidebar-item-icon">💻</span>
+                    <span>开发工具</span>
+                    <span class="sidebar-item-count" id="countDev">0</span>
+                </div>
+                <div class="sidebar-item" data-category="design">
+                    <span class="sidebar-item-icon">🎨</span>
+                    <span>设计工具</span>
+                    <span class="sidebar-item-count" id="countDesign">0</span>
+                </div>
+            </div>
+        </div>
+    </aside>
 
-    <!-- Hero 搜索区域 -->
-    <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">发现 <span class="highlight">优质免费在线工具</span>，提升工作效率</h1>
-        <p itemprop="description">精选全网 200+ 高质量免费在线工具，覆盖 AI 智能助手、开发者工具、设计辅助三大领域，支持实时搜索筛选，一键直达官网</p>
-
-        <div class="search-wrap">
-            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            <input type="search" class="search-input" id="searchInput" placeholder="搜索工具名称或功能描述..." autocomplete="off" aria-label="搜索工具名称或功能描述">
+    <!-- 右侧内容 -->
+    <main class="content">
+        <!-- 列表页 -->
+        <div id="listPage">
+            <div class="category-header">
+                <h1 class="category-title">
+                    <span class="category-title-icon" id="categoryIcon">📁</span>
+                    <span id="categoryTitle">全部工具</span>
+                </h1>
+            </div>
+            <div class="tools-grid" id="toolsGrid"></div>
         </div>
 
-        <div class="stats-bar">
-            <div class="stat-item"><strong id="totalCount">0</strong> 个精选工具</div>
-            <div class="stat-item"><strong id="visibleCount">0</strong> 个匹配结果</div>
+        <!-- 详情页 -->
+        <div class="detail-page" id="detailPage">
+            <div class="back-btn" onclick="goBack()">← 返回列表</div>
+            <div class="detail-header">
+                <div class="detail-header-inner">
+                    <div class="detail-icon" id="detailIcon"></div>
+                    <div style="flex:1">
+                        <h1 class="detail-title" id="detailTitle"></h1>
+                        <p class="detail-desc" id="detailDesc"></p>
+                        <div class="detail-actions">
+                            <button class="detail-btn detail-btn-primary" id="detailVisitBtn">访问官网 ↗</button>
+                            <button class="detail-btn detail-btn-secondary" onclick="copyDetailUrl()">复制链接</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="detail-section">
+                    <h3 class="detail-section-title">主要功能</h3>
+                    <div class="detail-features" id="detailFeatures"></div>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- AI 工具区块 -->
-    <section class="tools-section" id="ai-tools" aria-labelledby="ai-title">
-        <h2 class="section-title" id="ai-title">AI 工具推荐</h2>
-        <div class="tools-grid" id="toolsGrid" itemscope itemtype="https://schema.org/ItemList">
-            <!-- 由 JS 动态渲染 -->
-        </div>
-    </section>
-
-</main>
-
-<!-- ====== 页脚 ====== -->
-<footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
-    <p>&copy; 2025 ToolHub &mdash; 精选优质免费工具，让工作更高效 | <a href="https://gongjv.pages.dev/" itemprop="url">gongjv.pages.dev</a></p>
-    <nav aria-label="底部导航" style="margin-top:8px;">
-        <a href="#ai-tools" style="color:var(--text-muted);text-decoration:none;margin:0 8px;font-size:12px;">AI工具</a>
-        <a href="#" onclick="document.querySelector('[data-filter=dev]').click();return false;" style="color:var(--text-muted);text-decoration:none;margin:0 8px;font-size:12px;">开发工具</a>
-        <a href="#" onclick="document.querySelector('[data-filter=design]').click();return false;" style="color:var(--text-muted);text-decoration:none;margin:0 8px;font-size:12px;">设计工具</a>
-    </nav>
-</footer>
-
-<!-- Toast 提示 -->
-<div class="toast" id="toast" role="alert" aria-live="polite">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    <span id="toastText">链接已复制</span>
+    </main>
 </div>
 
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 工具聚合 - 精选优质在线工具导航</p>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
 <script>
-(function() {
-    'use strict';
+const TOOLS = [
+    // AI 工具
+    { id: 'chatgpt', name: 'ChatGPT', desc: 'OpenAI 推出的智能对话助手，支持文本生成、代码编写、翻译摘要等全方位能力，全球最流行的 AI 聊天工具。', url: 'https://chat.openai.com', category: 'ai', icon: '💬', color: '#10a37f', features: ['智能对话', '代码生成', '文章撰写', '翻译支持', '多语言'] },
+    { id: 'claude', name: 'Claude', desc: 'Anthropic 出品的高质量 AI 助手，擅长长文本分析、复杂推理与安全对话，被认为是写代码最强的 AI。', url: 'https://claude.ai', category: 'ai', icon: '🧠', color: '#d97706', features: ['长文本处理', '代码编写', '分析推理', '安全对话'] },
+    { id: 'gemini', name: 'Gemini', desc: 'Google DeepMind 打造的多模态 AI，支持图文理解、代码生成与实时联网搜索，是 GPT-4 的强劲对手。', url: 'https://gemini.google.com', category: 'ai', icon: '✨', color: '#4285f4', features: ['多模态理解', '联网搜索', '代码生成', '图像识别'] },
+    { id: 'midjourney', name: 'Midjourney', desc: '顶级 AI 图像生成工具，通过自然语言描述即可创作出惊艳的视觉艺术作品，被誉为最强 AI 绘画工具。', url: 'https://www.midjourney.com', category: 'ai', icon: '🎨', color: '#000000', features: ['文生图', '风格多样', '高清输出', '艺术创作'] },
+    { id: 'stablediffusion', name: 'Stable Diffusion', desc: '开源 AI 绘画模型，支持本地部署与自定义训练，图像生成自由度极高，完全免费开源。', url: 'https://stability.ai', category: 'ai', icon: '🖼️', color: '#9333ea', features: ['开源免费', '本地部署', '自定义训练', '高度定制'] },
+    { id: 'dalle', name: 'DALL·E 3', desc: 'OpenAI 图像生成模型，集成于 ChatGPT 中，支持精准的文字渲染与细节控制，生成图片质量极高。', url: 'https://openai.com/dall-e-3', category: 'ai', icon: '🌈', color: '#6366f1', features: ['文字渲染', '高清图片', '创意生成', 'ChatGPT集成'] },
+    { id: 'suno', name: 'Suno AI', desc: 'AI 音乐创作平台，输入文字描述即可生成完整歌曲，支持多种风格与语言，轻松创作原创音乐。', url: 'https://suno.ai', category: 'ai', icon: '🎵', color: '#ec4899', features: ['音乐生成', '多风格', '原创歌曲', '歌词创作'] },
+    { id: 'runway', name: 'Runway ML', desc: '专业级 AI 视频生成与编辑平台，Gen-2 支持文生视频与图生视频，视频创作利器。', url: 'https://runwayml.com', category: 'ai', icon: '🎬', color: '#7c3aed', features: ['视频生成', '视频编辑', '文生视频', '图生视频'] },
+    { id: 'perplexity', name: 'Perplexity AI', desc: 'AI 驱动的搜索引擎，实时检索网络并附带引用来源，回答准确且可追溯，是新一代搜索工具。', url: 'https://www.perplexity.ai', category: 'ai', icon: '🔍', color: '#20b2aa', features: ['AI搜索', '实时信息', '引用来源', '追问功能'] },
+    { id: 'gamma', name: 'Gamma', desc: 'AI 演示文稿生成器，一键将大纲转化为精美 PPT，支持导出多格式，做 PPT 效率提升 10 倍。', url: 'https://gamma.app', category: 'ai', icon: '📊', color: '#6366f1', features: ['PPT生成', '一键创建', '多格式导出', 'AI设计'] },
+    { id: 'huggingface', name: 'Hugging Face', desc: 'AI 模型与数据集托管平台，提供数千个预训练模型与完整开发环境，是 AI 开发者必用平台。', url: 'https://huggingface.co', category: 'ai', icon: '🤗', color: '#ff7c00', features: ['模型托管', '数据集', '模型试用', '开源社区'] },
+    { id: 'poe', name: 'Poe', desc: '聚合式 AI 聊天平台，支持 ChatGPT、Claude、GPT-4 等多个模型一键切换，性价比极高。', url: 'https://poe.com', category: 'ai', icon: '🤖', color: '#a674b5', features: ['多模型切换', '快速访问', '低成本', 'API接入'] },
+    { id: 'jasper', name: 'Jasper', desc: '专为营销内容设计的 AI 写作助手，支持博客、社媒、广告文案生成，是营销人的效率神器。', url: 'https://jasper.ai', category: 'ai', icon: '✍️', color: '#c02d28', features: ['营销文案', '博客写作', '广告创意', 'SEO优化'] },
+    { id: 'copyai', name: 'Copy.ai', desc: '企业级 AI 内容生成平台，支持营销文案、邮件、博客、社交媒体内容创作，效率倍增。', url: 'https://copy.ai', category: 'ai', icon: '📝', color: '#000000', features: ['内容生成', '多场景', '团队协作', '品牌调性'] },
+    { id: 'notionai', name: 'Notion AI', desc: '集成于 Notion 中的 AI 写作助手，支持总结、扩写、翻译、内容润色，办公效率提升利器。', url: 'https://notion.so', category: 'ai', icon: '🧠', color: '#000000', features: ['智能润色', '内容扩写', '翻译支持', '笔记增强'] },
+    { id: 'grammarly', name: 'Grammarly', desc: 'AI 驱动的英文语法检查与写作优化工具，支持拼写、语法、风格建议，写作必备。', url: 'https://grammarly.com', category: 'ai', icon: '✅', color: '#2684ff', features: ['语法检查', '风格建议', '拼写纠正', '多平台'] },
+    { id: 'deepl', name: 'DeepL', desc: '高精度机器翻译工具，支持 30+ 语言互译，准确度远超同类产品，被誉为最准翻译器。', url: 'https://deepl.com', category: 'ai', icon: '🌍', color: '#4a90e2', features: ['高精度翻译', '多语言', '文档翻译', '术语库'] },
+    { id: 'bard', name: 'Google Bard', desc: 'Google 旗下对话式 AI 助手，支持实时信息检索与多轮对话，免费使用。', url: 'https://bard.google.com', category: 'ai', icon: '💬', color: '#4285f4', features: ['实时信息', '多轮对话', '免费使用', 'Google集成'] },
+    { id: 'character', name: 'Character.AI', desc: '自定义 AI 角色聊天平台，与虚拟角色进行对话，支持创作与娱乐，体验有趣。', url: 'https://character.ai', category: 'ai', icon: '🎭', color: '#000000', features: ['角色扮演', '创意对话', '情感陪伴', '娱乐互动'] },
+    { id: 'kimi', name: 'Kimi', desc: '月之暗面推出的智能 AI 助手，支持长文档阅读与多轮对话，国产 AI 之光。', url: 'https://kimi.moonshot.cn', category: 'ai', icon: '🌙', color: '#1e3a8a', features: ['长文本处理', '文档分析', '联网搜索', '国产AI'] },
+    { id: 'deepseek', name: 'DeepSeek', desc: '开源大模型，专注于代码生成与逻辑推理，性能优秀且完全免费。', url: 'https://deepseek.com', category: 'ai', icon: '🔍', color: '#2c3e50', features: ['代码生成', '开源免费', '性能强劲', 'API接入'] },
+    { id: 'wenvyiyan', name: '文心一言', desc: '百度推出的国产大语言模型，支持多轮对话与多模态内容生成，中文理解能力强。', url: 'https://yiyan.baidu.com', category: 'ai', icon: '💎', color: '#2932e1', features: ['中文优化', '多模态', '百度生态', '企业服务'] },
+    { id: 'tongyi', name: '通义千问', desc: '阿里云推出的多模态大模型，支持文本、图像、语音生成，阿里生态集成。', url: 'https://qianwen.aliyun.com', category: 'ai', icon: '💬', color: '#ff6a00', features: ['多模态', '阿里生态', 'API接入', '企业级'] },
+    { id: 'doubao', name: '豆包', desc: '字节跳动推出的 AI 助手，支持智能对话与任务管理，完全免费使用。', url: 'https://www.doubao.com', category: 'ai', icon: '🦆', color: '#f85959', features: ['免费使用', '智能对话', '字节生态', '移动端'] },
+    { id: 'xinghuo', name: '讯飞星火', desc: '科大讯飞发布的认知大模型，支持文本生成与多模态交互，语音技术领先。', url: 'https://xinghuo.xfyun.cn', category: 'ai', icon: '✨', color: '#0052cc', features: ['语音识别', '多模态', '语音合成', '行业应用'] },
+    // 开发工具
+    { id: 'github', name: 'GitHub', desc: '全球最大的代码托管平台，支持 Git 版本管理、协作开发与开源项目发现，开发者必备。', url: 'https://github.com', category: 'dev', icon: '🐙', color: '#171515', features: ['代码托管', 'Git版本管理', '开源社区', 'CI/CD'] },
+    { id: 'gitlab', name: 'GitLab', desc: '企业级代码托管平台，提供 CI/CD、DevSecOps 与协作开发功能，支持自托管。', url: 'https://gitlab.com', category: 'dev', icon: '🐙', color: '#fc6d26', features: ['DevOps', 'CI/CD', '自托管', '企业版'] },
+    { id: 'codepen', name: 'CodePen', desc: '前端代码在线 playground，支持 HTML/CSS/JS 实时预览与社区分享，前端开发者必备。', url: 'https://codepen.io', category: 'dev', icon: '✏️', color: '#000000', features: ['在线预览', '社区分享', '前端调试', '代码片段'] },
+    { id: 'jsfiddle', name: 'JSFiddle', desc: '轻量级 Web 代码在线编辑器，快速测试 JavaScript 片段并分享给他人。', url: 'https://jsfiddle.net', category: 'dev', icon: '🔧', color: '#f7df1e', features: ['在线编辑', 'JS测试', '代码分享', '嵌入功能'] },
+    { id: 'regex101', name: 'Regex101', desc: '正则表达式在线调试工具，提供实时匹配高亮、详细解释与多引擎支持，regex 神器。', url: 'https://regex101.com', category: 'dev', icon: '🔣', color: '#d93025', features: ['正则调试', '实时高亮', '详细解释', '多引擎'] },
+    { id: 'jsonlint', name: 'JSONLint', desc: 'JSON 格式校验与美化工具，快速定位语法错误并输出格式化结果。', url: 'https://jsonlint.com', category: 'dev', icon: '{ }', color: '#f5a623', features: ['JSON校验', '格式化', '错误定位', '压缩功能'] },
+    { id: 'caniuse', name: 'Can I Use', desc: '浏览器兼容性查询数据库，查看 CSS/JS API 在各浏览器的支持情况。', url: 'https://caniuse.com', category: 'dev', icon: '🌐', color: '#3eaf7c', features: ['兼容性查询', '浏览器支持', '全球统计', 'API文档'] },
+    { id: 'devdocs', name: 'DevDocs.io', desc: '聚合式开发者文档搜索引擎，一次搜索覆盖数百种技术文档。', url: 'https://devdocs.io', category: 'dev', icon: '📚', color: '#3d8bfd', features: ['文档聚合', '离线访问', '快速搜索', '多框架'] },
+    { id: 'tinypng', name: 'TinyPNG', desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积。', url: 'https://tinypng.com', category: 'dev', icon: '🗜️', color: '#2bb673', features: ['图片压缩', '质量保证', '批量处理', 'API支持'] },
+    { id: 'quicktype', name: 'Quicktype', desc: 'JSON 转 TypeScript/Go/Rust 等语言的类型定义生成器，节省手写时间。', url: 'https://app.quicktype.io', category: 'dev', icon: '⚡', color: '#0088cc', features: ['类型生成', '多语言支持', '代码转换', '自动推断'] },
+    { id: 'cronitor', name: 'Cronitor', desc: 'Cron 表达式可视化编辑器，直观设置定时任务周期并预览执行时间。', url: 'https://cronitor.io/tools/cron-builder', category: 'dev', icon: '⏱️', color: '#0366d6', features: ['Cron编辑', '周期预览', '任务监控', '可视化'] },
+    { id: 'codesandbox', name: 'CodeSandbox', desc: '基于 Web 的在线代码编辑器，支持 React、Vue 等框架快速开发。', url: 'https://codesandbox.io', category: 'dev', icon: '🌐', color: '#ffffff', features: ['在线开发', '框架支持', '实时协作', '部署功能'] },
+    { id: 'stackblitz', name: 'StackBlitz', desc: '实时在线代码编辑器，支持 VS Code 与 50+ 框架快速预览。', url: 'https://stackblitz.com', category: 'dev', icon: '⚡', color: '#2932e1', features: ['即时加载', '框架支持', 'VS Code', 'npm支持'] },
+    { id: 'replit', name: 'Replit', desc: '完整在线开发环境，支持 50+ 语言与实时协作开发。', url: 'https://replit.com', category: 'dev', icon: '🛠️', color: '#0db7ed', features: ['多语言', '云IDE', '实时协作', 'AI集成'] },
+    { id: 'postman', name: 'Postman', desc: 'API 开发与测试平台，支持接口调试、自动化测试与文档生成。', url: 'https://www.postman.com', category: 'dev', icon: '📨', color: '#ff6c37', features: ['API调试', '自动化测试', '文档生成', 'Mock服务'] },
+    { id: 'insomnia', name: 'Insomnia', desc: 'API 客户端工具，支持 REST/GraphQL 接口调试与文档查看。', url: 'https://insomnia.rest', category: 'dev', icon: '🦄', color: '#008000', features: ['GraphQL', 'REST调试', '插件系统', '本地部署'] },
+    { id: 'dbeaver', name: 'DBeaver', desc: '开源数据库管理工具，支持多数据库连接与 SQL 查询编辑。', url: 'https://dbeaver.io', category: 'dev', icon: '🐘', color: '#00758f', features: ['多数据库', 'SQL编辑', 'ER图', '数据导出'] },
+    { id: 'tableplus', name: 'TablePlus', desc: '轻量级数据库管理工具，支持 Mac/Windows 多数据库连接。', url: 'https://tableplus.com', category: 'dev', icon: '📊', color: '#e74c3c', features: ['多数据库', '跨平台', '可视化', '高效率'] },
+    { id: 'mdn', name: 'MDN Web Docs', desc: 'Mozilla 开发的 Web 开发权威文档，涵盖 HTML/CSS/JavaScript。', url: 'https://developer.mozilla.org', category: 'dev', icon: '📚', color: '#000000', features: ['权威文档', 'Web技术', '中文支持', '免费'] },
+    { id: 'stackoverflow', name: 'Stack Overflow', desc: '全球最大的程序员问答社区，解决技术难题与分享经验。', url: 'https://stackoverflow.com', category: 'dev', icon: '💡', color: '#f48024', features: ['问答社区', '技术问答', '解决方案', '代码片段'] },
+    { id: 'leetcode', name: 'LeetCode', desc: '算法与数据结构刷题平台，支持编程面试准备。', url: 'https://leetcode.com', category: 'dev', icon: '📝', color: '#ffa116', features: ['算法刷题', '面试准备', '竞赛', '企业题库'] },
+    { id: 'freecodecamp', name: 'freeCodeCamp', desc: '免费开源编程学习平台，支持实战项目与证书认证。', url: 'https://www.freecodecamp.org', category: 'dev', icon: '💻', color: '#0a0a23', features: ['免费学习', '实战项目', '证书认证', '社区支持'] },
+    { id: 'carbon', name: 'Carbon', desc: '代码转图片工具，代码美化生成精美图片，分享代码更美观。', url: 'https://carbon.now.sh', category: 'dev', icon: '💎', color: '#333333', features: ['代码截图', '主题定制', '社交分享', '多种语言'] },
+    { id: 'visualgo', name: 'Visualgo', desc: '算法可视化学习工具，各种算法可视化，让算法更直观。', url: 'https://visualgo.net/zh', category: 'dev', icon: '📊', color: '#3498db', features: ['算法可视化', '动画演示', '学习教程', '互动操作'] },
+    { id: 'codelf', name: 'Codelf', desc: '变量命名神器，搜索开源项目中的变量命名参考。', url: 'https://unbug.github.io/codelf/', category: 'dev', icon: '📝', color: '#e74c3c', features: ['命名参考', 'GitHub搜索', '关键词分析'] },
+    // 设计工具
+    { id: 'figma', name: 'Figma', desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统。', url: 'https://www.figma.com', category: 'design', icon: '🎯', color: '#a259ff', features: ['UI设计', '原型设计', '团队协作', '组件系统'] },
+    { id: 'canva', name: 'Canva', desc: '在线设计平台，支持海报、PPT、社交媒体图片等快速设计。', url: 'https://www.canva.com', category: 'design', icon: '🎨', color: '#00c4cc', features: ['在线设计', '模板丰富', '团队协作', '多场景'] },
+    { id: 'removebg', name: 'Remove.bg', desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高。', url: 'https://www.remove.bg', category: 'design', icon: '✂️', color: '#2c82c9', features: ['AI抠图', '自动去背景', '批量处理', 'API支持'] },
+    { id: 'photopea', name: 'Photopea', desc: '免费在线 Photoshop 替代品，支持 PSD 文件编辑与图层操作，无需安装。', url: 'https://www.photopea.com', category: 'design', icon: '🖌️', color: '#31a8ff', features: ['PS替代', 'PSD编辑', '在线使用', '免费'] },
+    { id: 'coolors', name: 'Coolors', desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式。', url: 'https://coolors.co', category: 'design', icon: '🎨', color: '#0066ff', features: ['配色生成', '色板导出', '品牌色', '随机配色'] },
+    { id: 'unsplash', name: 'Unsplash', desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品。', url: 'https://unsplash.com', category: 'design', icon: '📷', color: '#111111', features: ['免费图片', '商用授权', '高质量', '分类齐全'] },
+    { id: 'pexels', name: 'Pexels', desc: '免费商用图片视频素材库，提供高质量免版权资源。', url: 'https://www.pexels.com', category: 'design', icon: '📸', color: '#00d2b3', features: ['免费素材', '视频素材', '商用授权', '中文搜索'] },
+    { id: 'flaticon', name: 'Flaticon', desc: '免费矢量图标库，提供 2000 万+ 商用图标素材。', url: 'https://www.flaticon.com', category: 'design', icon: '☆', color: '#ff3b30', features: ['图标素材', '矢量下载', '格式多样', '免费商用'] },
+    { id: 'iconfinder', name: 'Iconfinder', desc: '专业图标素材库，提供 3000 万+ 高质量商用图标。', url: 'https://www.iconfinder.com', category: 'design', icon: '🔍', color: '#2c3e50', features: ['图标搜索', 'Premium图标', 'SVG格式', 'API接入'] },
+    { id: 'fontawesome', name: 'Font Awesome', desc: '最流行的图标字体库，提供数千个矢量图标，支持框架集成。', url: 'https://fontawesome.com', category: 'design', icon: '★', color: '#538dd7', features: ['图标字体', 'CDN引入', '免费版', '社区活跃'] },
+    { id: 'heroicons', name: 'Heroicons', desc: 'Tailwind 团队出品的开源 SVG 图标库，风格简洁现代。', url: 'https://heroicons.com', category: 'design', icon: '◈', color: '#0ea5e9', features: ['开源免费', 'SVG图标', 'Tailwind配套', '设计优美'] },
+    { id: 'materialicons', name: 'Material Icons', desc: 'Google 官方图标库，提供 2500+ Material Design 图标。', url: 'https://fonts.google.com/icons', category: 'design', icon: '☆', color: '#4285f4', features: ['官方图标', '设计规范', '多格式', '免费使用'] },
+    { id: 'cssgradient', name: 'CSS Gradient', desc: '渐变色在线生成器，可视调节色标位置与角度，直接复制 CSS 代码。', url: 'https://cssgradient.io', category: 'design', icon: '🌅', color: '#e67685', features: ['渐变生成', 'CSS代码', '可视化', '免费使用'] },
+    { id: 'svgomg', name: 'SVGOMG', desc: 'Jake Archibald 出品的 SVG 优化工具，智能精简代码体积。', url: 'https://jakearchibald.github.io/svgomg/', category: 'design', icon: '📐', color: '#ffb13b', features: ['SVG优化', '代码精简', '在线使用', '开源'] },
+    { id: 'realtimecolors', name: 'Realtime Colors', desc: '实时预览配色方案在真实网页上的效果，所见即所得。', url: 'https://www.realtimecolors.com', category: 'design', icon: '👁️', color: '#ff6b6b', features: ['配色预览', '实时预览', '品牌色', '导出代码'] },
+    { id: 'zeplin', name: 'Zeplin', desc: '设计协作平台，支持设计稿标注与代码生成。', url: 'https://zeplin.io', category: 'design', icon: '🎨', color: '#ff3d71', features: ['设计协作', '标注工具', '代码生成', '版本管理'] },
+    { id: 'sketch', name: 'Sketch', desc: 'Mac 平台专用 UI/UX 设计工具，轻量级且支持插件生态。', url: 'https://www.sketch.com', category: 'design', icon: '🎨', color: '#ff3b30', features: ['Mac专属', 'UI设计', '插件生态', '团队协作'] },
+    { id: 'adobe', name: 'Adobe Creative Cloud', desc: 'Adobe 全套设计软件订阅服务，PS、AI、AE 等全包含。', url: 'https://www.adobe.com/creativecloud.html', category: 'design', icon: '🎨', color: '#ff0000', features: ['全家桶', '行业标准', '创意设计', '云同步'] },
+    { id: 'gimp', name: 'GIMP', desc: '开源图像编辑软件，功能接近 Photoshop，完全免费。', url: 'https://www.gimp.org', category: 'design', icon: '🖼️', color: '#8d6e63', features: ['免费开源', 'PS替代', '跨平台', '插件支持'] },
+    { id: 'inkscape', name: 'Inkscape', desc: '开源矢量图形编辑软件，适合 Logo 与插画设计。', url: 'https://inkscape.org', category: 'design', icon: '⭐', color: '#07c160', features: ['矢量编辑', '开源免费', 'Logo设计', '跨平台'] },
+    { id: 'processon', name: 'ProcessOn', desc: '在线流程图、思维导图、架构图绘制工具。', url: 'https://www.processon.com', category: 'design', icon: '📈', color: '#00b578', features: ['流程图', '思维导图', '在线协作', '模板丰富'] },
+    { id: 'xmind', name: 'XMind', desc: '思维导图软件，支持 Mac/Windows 全平台使用。', url: 'https://www.xmind.cn', category: 'design', icon: '🧠', color: '#ff6b6b', features: ['思维导图', '多平台', '模板丰富', '演示功能'] },
+    { id: 'drawio', name: 'Draw.io', desc: '免费在线流程图绘制工具，无需注册即可使用。', url: 'https://app.diagrams.net/', category: 'design', icon: '🧩', color: '#00d2b3', features: ['免费使用', '流程图', '本地存储', '导出多格式'] },
+    { id: 'lucidchart', name: 'Lucidchart', desc: '专业流程图工具，支持团队协作与多格式导出。', url: 'https://www.lucidchart.com', category: 'design', icon: '📊', color: '#2f80ed', features: ['团队协作', '流程图', 'UML', '企业版'] },
+    { id: 'dripdrop', name: 'DripDrop', desc: '在线白板工具，适合头脑风暴和团队协作。', url: 'https://dripdrop.io', category: 'design', icon: '💧', color: '#4285f4', features: ['在线白板', '协作', '模板', '免费'] }
+];
 
-    /* ========== 工具数据源 ========== */
-    const TOOLS = [
-        // ── AI 工具 ──
-        {
-            name: 'ChatGPT',
-            desc: 'OpenAI 推出的智能对话助手，支持文本生成、代码编写、翻译摘要等全方位能力',
-            url: 'https://chat.openai.com',
-            category: 'ai',
-            icon: '💬',
-            color: '#10a37f'
-        },
-        {
-            name: 'Claude',
-            desc: 'Anthropic 出品的高质量 AI 助手，擅长长文本分析、复杂推理与安全对话',
-            url: 'https://claude.ai',
-            category: 'ai',
-            icon: '🧠',
-            color: '#d97706'
-        },
-        {
-            name: 'Gemini',
-            desc: 'Google DeepMind 打造的多模态 AI，支持图文理解、代码生成与实时联网搜索',
-            url: 'https://gemini.google.com',
-            category: 'ai',
-            icon: '✨',
-            color: '#4285f4'
-        },
-        {
-            name: 'Midjourney',
-            desc: '顶级 AI 图像生成工具，通过自然语言描述即可创作出惊艳的视觉艺术作品',
-            url: 'https://www.midjourney.com',
-            category: 'ai',
-            icon: '🎨',
-            color: '#000000'
-        },
-        {
-            name: 'Stable Diffusion',
-            desc: '开源 AI 绘画模型，支持本地部署与自定义训练，图像生成自由度极高',
-            url: 'https://stability.ai',
-            category: 'ai',
-            icon: '🖼️',
-            color: '#9333ea'
-        },
-        {
-            name: 'DALL·E 3',
-            desc: 'OpenAI 图像生成模型，集成于 ChatGPT 中，支持精准的文字渲染与细节控制',
-            url: 'https://openai.com/dall-e-3',
-            category: 'ai',
-            icon: '🌈',
-            color: '#6366f1'
-        },
-        {
-            name: 'Suno AI',
-            desc: 'AI 音乐创作平台，输入文字描述即可生成完整歌曲，支持多种风格与语言',
-            url: 'https://suno.ai',
-            category: 'ai',
-            icon: '🎵',
-            color: '#ec4899'
-        },
-        {
-            name: 'Runway ML',
-            desc: '专业级 AI 视频生成与编辑平台，Gen-2 支持文生视频与图生视频',
-            url: 'https://runwayml.com',
-            category: 'ai',
-            icon: '🎬',
-            color: '#7c3aed'
-        },
-        {
-            name: 'Perplexity AI',
-            desc: 'AI 驱动的搜索引擎，实时检索网络并附带引用来源，回答准确且可追溯',
-            url: 'https://www.perplexity.ai',
-            category: 'ai',
-            icon: '🔍',
-            color: '#20b2aa'
-        },
-        {
-            name: 'Gamma',
-            desc: 'AI 演示文稿生成器，一键将大纲转化为精美 PPT，支持导出多格式',
-            url: 'https://gamma.app',
-            category: 'ai',
-            icon: '📊',
-            color: '#6366f1'
-        },
-        {
-            name: 'Hugging Face',
-            desc: 'AI 模型与数据集托管平台，提供数千个预训练模型与完整开发环境',
-            url: 'https://huggingface.co',
-            category: 'ai',
-            icon: '🤗',
-            color: '#ff7c00'
-        },
-        {
-            name: 'Poe',
-            desc: '聚合式 AI 聊天平台，支持 ChatGPT、Claude、GPT-4 等多个模型一键切换',
-            url: 'https://poe.com',
-            category: 'ai',
-            icon: '🤖',
-            color: '#a674b5'
-        },
-        {
-            name: 'Jasper',
-            desc: '专为营销内容设计的 AI 写作助手，支持博客、社媒、广告文案生成',
-            url: 'https://jasper.ai',
-            category: 'ai',
-            icon: '✍️',
-            color: '#c02d28'
-        },
-        {
-            name: 'Copy.ai',
-            desc: '企业级 AI 内容生成平台，支持营销文案、邮件、博客、社交媒体内容创作',
-            url: 'https://copy.ai',
-            category: 'ai',
-            icon: '📝',
-            color: '#000000'
-        },
-        {
-            name: 'Notion AI',
-            desc: '集成于 Notion 中的 AI 写作助手，支持总结、扩写、翻译、内容润色',
-            url: 'https://notion.so',
-            category: 'ai',
-            icon: '🧠',
-            color: '#000000'
-        },
-        {
-            name: 'Grammarly',
-            desc: 'AI 驱动的英文语法检查与写作优化工具，支持拼写、语法、风格建议',
-            url: 'https://grammarly.com',
-            category: 'ai',
-            icon: '✅',
-            color: '#2684ff'
-        },
-        {
-            name: 'DeepL',
-            desc: '高精度机器翻译工具，支持 30+ 语言互译，准确度远超同类产品',
-            url: 'https://deepl.com',
-            category: 'ai',
-            icon: '🌍',
-            color: '#4a90e2'
-        },
-        {
-            name: 'Google Bard',
-            desc: 'Google 旗下对话式 AI 助手，支持实时信息检索与多轮对话',
-            url: 'https://bard.google.com',
-            category: 'ai',
-            icon: '💬',
-            color: '#4285f4'
-        },
-        {
-            name: 'Character.AI',
-            desc: '自定义 AI 角色聊天平台，与虚拟角色进行对话，支持创作与娱乐',
-            url: 'https://character.ai',
-            category: 'ai',
-            icon: '🎭',
-            color: '#000000'
-        },
-        {
-            name: 'Runway Gen-2',
-            desc: 'AI 视频生成与编辑工具，支持文生视频、图生视频与智能剪辑',
-            url: 'https://runwayml.com',
-            category: 'ai',
-            icon: '🎬',
-            color: '#7c3aed'
-        },
-        {
-            name: 'Synthesia',
-            desc: 'AI 数字人视频生成器，上传脚本即可生成真人主播讲解视频',
-            url: 'https://synthesia.io',
-            category: 'ai',
-            icon: '🎥',
-            color: '#5e6ad2'
-        },
-        {
-            name: 'Leonardo AI',
-            desc: '开源 AI 绘画生成平台，支持图片风格迁移、模型训练与像素级编辑',
-            url: 'https://leonardo.ai',
-            category: 'ai',
-            icon: '🎨',
-            color: '#ff5d01'
-        },
-        {
-            name: 'NightCafe',
-            desc: '社区驱动型 AI 艺术创作平台，支持多种生成算法与艺术风格',
-            url: 'https://nightcafe.studio',
-            category: 'ai',
-            icon: '🌙',
-            color: '#1e1e1e'
-        },
-        {
-            name: 'StarryAI',
-            desc: 'AI 图像生成工具，快速将文本提示转化为高质量艺术作品',
-            url: 'https://starryai.com',
-            category: 'ai',
-            icon: '✨',
-            color: '#2b2b2b'
-        },
-        {
-            name: 'Deep Dream Generator',
-            desc: 'Google 开源的深度学习艺术生成器，产生梦幻视觉效果',
-            url: 'https://deepdreamgenerator.com',
-            category: 'ai',
-            icon: '🦄',
-            color: '#4285f4'
-        },
-        {
-            name: 'Artbreeder',
-            desc: 'AI 图像混合与进化工具，调整参数生成个性化人物与风景',
-            url: 'https://www.artbreeder.com',
-            category: 'ai',
-            icon: '🌈',
-            color: '#6366f1'
-        },
-        {
-            name: 'D-ID',
-            desc: 'AI 面部动画工具，上传照片即可生成动态说话视频',
-            url: 'https://d-id.com',
-            category: 'ai',
-            icon: '😊',
-            color: '#ff0055'
-        },
-        {
-            name: 'Codeium',
-            desc: '免费 AI 编程助手，支持代码补全、重构、调试与智能问答',
-            url: 'https://codeium.com',
-            category: 'ai',
-            icon: '💻',
-            color: '#4285f4'
-        },
-        {
-            name: 'Tabnine',
-            desc: '企业级 AI 代码补全工具，支持多种 IDE 与编程语言',
-            url: 'https://tabnine.com',
-            category: 'ai',
-            icon: '⌨️',
-            color: '#1c7ed6'
-        },
-        {
-            name: 'Replit AI',
-            desc: '集成于在线代码编辑器的 AI 编程助手，实时代码生成与建议',
-            url: 'https://replit.com',
-            category: 'ai',
-            icon: '🛠️',
-            color: '#0db7ed'
-        },
-        {
-            name: 'GitHub Copilot',
-            desc: 'OpenAI 提供的 AI 代码补全助手，自动生成代码建议与注释',
-            url: 'https://github.com/features/copilot',
-            category: 'ai',
-            icon: '🐙',
-            color: '#24292e'
-        },
-        {
-            name: 'Github Copilot Chat',
-            desc: '基于 Copilot 的对话式 AI 编程助手，支持复杂代码问题解答',
-            url: 'https://github.com/features/copilot-chat',
-            category: 'ai',
-            icon: '💬',
-            color: '#24292e'
-        },
-        {
-            name: 'CodeGeeX',
-            desc: '智谱 AI 开发的代码生成与翻译工具，支持多语言互译与补全',
-            url: 'https://codegeex.cn',
-            category: 'ai',
-            icon: '🧩',
-            color: '#00a676'
-        },
-        {
-            name: 'Code Llama',
-            desc: 'Meta 开源的代码生成大模型，支持多种编程语言代码补全',
-            url: 'https://llama.meta.com',
-            category: 'ai',
-            icon: '🐍',
-            color: '#008080'
-        },
-        {
-            name: 'Focalhost',
-            desc: 'AI 驱动的开发调试工具，支持智能错误诊断与修复建议',
-            url: 'https://focalhost.ai',
-            category: 'ai',
-            icon: '🐛',
-            color: '#e74c3c'
-        },
-        {
-            name: 'Accord LLM',
-            desc: '自然语言到 SQL 的智能转换工具，快速生成数据库查询语句',
-            url: 'https://www.accord-llm.com',
-            category: 'ai',
-            icon: '📊',
-            color: '#3498db'
-        },
-        {
-            name: 'TextCortex',
-            desc: 'AI 写作与内容生成平台，支持博客、营销文案、学术写作等多种场景',
-            url: 'https://textcortex.com',
-            category: 'ai',
-            icon: '🖋️',
-            color: '#6366f1'
-        },
-        {
-            name: 'HuggingChat',
-            desc: 'Hugging Face 提供的免费 AI 对话平台，支持多个模型在线对话',
-            url: 'https://huggingface.co/chat',
-            category: 'ai',
-            icon: '💬',
-            color: '#ff7c00'
-        },
-        {
-            name: 'CodeWhisperer',
-            desc: 'AWS 推出的 AI 编程助手，实时代码建议与安全审计',
-            url: 'https://aws.amazon.com/codewhisperer/',
-            category: 'ai',
-            icon: '🔦',
-            color: '#ff9900'
-        },
-        {
-            name: 'Kimi',
-            desc: '月之暗面推出的智能 AI 助手，支持长文档阅读与多轮对话',
-            url: 'https://kimi.moonshot.cn',
-            category: 'ai',
-            icon: '🌙',
-            color: '#1e3a8a'
-        },
-        {
-            name: '腾讯混元',
-            desc: '腾讯发布的 AI 大模型，支持多模态理解与生成',
-            url: 'https://hunyuan.tencent.com',
-            category: 'ai',
-            icon: '🐉',
-            color: '#0052d9'
-        },
-        {
-            name: '百川智能',
-            desc: '百川推出的开源大模型，支持中文对话与内容创作',
-            url: 'https://baichuan-ai.com',
-            category: 'ai',
-            icon: '🌊',
-            color: '#e60012'
-        },
-        {
-            name: 'DeepSeek',
-            desc: '开源大模型，专注于代码生成与逻辑推理',
-            url: 'https://deepseek.com',
-            category: 'ai',
-            icon: '🔍',
-            color: '#2c3e50'
-        },
-        {
-            name: '文心一言',
-            desc: '百度推出的国产大语言模型，支持多轮对话与多模态内容生成',
-            url: 'https://yiyan.baidu.com',
-            category: 'ai',
-            icon: '💎',
-            color: '#2932e1'
-        },
-        {
-            name: '讯飞星火',
-            desc: '科大讯飞发布的认知大模型，支持文本生成与多模态交互',
-            url: 'https://xinghuo.xfyun.cn',
-            category: 'ai',
-            icon: '✨',
-            color: '#0052cc'
-        },
-        {
-            name: '智谱清言',
-            desc: '智谱 AI 推出的对话助手，支持长文档解析与知识问答',
-            url: 'https://zhipuai.cn',
-            category: 'ai',
-            icon: '🤔',
-            color: '#e60012'
-        },
-        {
-            name: '豆包',
-            desc: '字节跳动推出的 AI 助手，支持智能对话与任务管理',
-            url: 'https://www.doubao.com',
-            category: 'ai',
-            icon: '🦆',
-            color: '#f85959'
-        },
-        {
-            name: '通义千问',
-            desc: '阿里云推出的多模态大模型，支持文本、图像、语音生成',
-            url: 'https://qianwen.aliyun.com',
-            category: 'ai',
-            icon: '💬',
-            color: '#ff6a00'
-        },
-        {
-            name: 'Minimax',
-            desc: 'MiniMax 推出的 AI 聊天平台，支持角色扮演与创意写作',
-            url: 'https://www.minimaxi.com',
-            category: 'ai',
-            icon: '🎭',
-            color: '#00a4e4'
-        },
-        {
-            name: '百幕大',
-            desc: '360 发布的 AI 对话助手，支持多轮对话与内容生成',
-            url: 'https://ai.360.cn',
-            category: 'ai',
-            icon: '🧭',
-            color: '#00d2b8'
-        },
-        {
-            name: '阶跃星辰',
-            desc: '阶跃星辰推出的多模态大模型，支持复杂任务理解与执行',
-            url: 'https://www.stepfun.com',
-            category: 'ai',
-            icon: '⭐',
-            color: '#007aff'
-        },
-        {
-            name: '智谱 GLM',
-            desc: '智谱推出的通用大模型，支持代码生成与多语言翻译',
-            url: 'https://open.bigmodel.cn',
-            category: 'ai',
-            icon: '🧩',
-            color: '#4CAF50'
-        },
-        // ── 开发工具 ──
-        {
-            name: 'GitHub',
-            desc: '全球最大的代码托管平台，支持 Git 版本管理、协作开发与开源项目发现',
-            url: 'https://github.com',
-            category: 'dev',
-            icon: '🐙',
-            color: '#171515'
-        },
-        {
-            name: 'CodePen',
-            desc: '前端代码在线 playground，支持 HTML/CSS/JS 实时预览与社区分享',
-            url: 'https://codepen.io',
-            category: 'dev',
-            icon: '✏️',
-            color: '#000000'
-        },
-        {
-            name: 'JSFiddle',
-            desc: '轻量级 Web 代码在线编辑器，快速测试 JavaScript 片段并分享给他人',
-            url: 'https://jsfiddle.net',
-            category: 'dev',
-            icon: '🔧',
-            color: '#f7df1e'
-        },
-        {
-            name: 'Regex101',
-            desc: '正则表达式在线调试工具，提供实时匹配高亮、详细解释与多引擎支持',
-            url: 'https://regex101.com',
-            category: 'dev',
-            icon: '🔣',
-            color: '#d93025'
-        },
-        {
-            name: 'JSONLint',
-            desc: 'JSON 格式校验与美化工具，快速定位语法错误并输出格式化结果',
-            url: 'https://jsonlint.com',
-            category: 'dev',
-            icon: '{ }',
-            color: '#f5a623'
-        },
-        {
-            name: 'Can I Use',
-            desc: '浏览器兼容性查询数据库，查看 CSS/JS API 在各浏览器的支持情况',
-            url: 'https://caniuse.com',
-            category: 'dev',
-            icon: '🌐',
-            color: '#3eaf7c'
-        },
-        {
-            name: 'DevDocs.io',
-            desc: '聚合式开发者文档搜索引擎，一次搜索覆盖数百种技术文档',
-            url: 'https://devdocs.io',
-            category: 'dev',
-            icon: '📚',
-            color: '#3d8bfd'
-        },
-        {
-            name: 'TinyPNG',
-            desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积',
-            url: 'https://tinypng.com',
-            category: 'dev',
-            icon: '🗜️',
-            color: '#2bb673'
-        },
-        {
-            name: 'Quicktype',
-            desc: 'JSON 转 TypeScript/Go/Rust 等语言的类型定义生成器，节省手写时间',
-            url: 'https://app.quicktype.io',
-            category: 'dev',
-            icon: '⚡',
-            color: '#0088cc'
-        },
-        {
-            name: 'Cronitor',
-            desc: 'Cron 表达式可视化编辑器，直观设置定时任务周期并预览执行时间',
-            url: 'https://cronitor.io/tools/cron-builder',
-            category: 'dev',
-            icon: '⏱️',
-            color: '#0366d6'
-        },
-        {
-            name: 'GitLab',
-            desc: '企业级代码托管平台，提供 CI/CD、DevSecOps 与协作开发功能',
-            url: 'https://gitlab.com',
-            category: 'dev',
-            icon: '🐙',
-            color: '#fc6d26'
-        },
-        {
-            name: 'Bitbucket',
-            desc: 'Atlassian 推出的代码托管平台，深度集成 Jira 与 Trello',
-            url: 'https://bitbucket.org',
-            category: 'dev',
-            icon: '🐙',
-            color: '#0052cc'
-        },
-        {
-            name: 'Gitee',
-            desc: '开源中国推出的代码托管平台，支持 Gitea 自建与云端托管',
-            url: 'https://gitee.com',
-            category: 'dev',
-            icon: '🍃',
-            color: '#c71d23'
-        },
-        {
-            name: 'CodeSandbox',
-            desc: '基于 Web 的在线代码编辑器，支持 React、Vue 等框架快速开发',
-            url: 'https://codesandbox.io',
-            category: 'dev',
-            icon: '🌐',
-            color: '#ffffff'
-        },
-        {
-            name: 'StackBlitz',
-            desc: '实时在线代码编辑器，支持 VS Code 与 50+ 框架快速预览',
-            url: 'https://stackblitz.com',
-            category: 'dev',
-            icon: '⚡',
-            color: '#2932e1'
-        },
-        {
-            name: 'Replit',
-            desc: '完整在线开发环境，支持 50+ 语言与实时协作开发',
-            url: 'https://replit.com',
-            category: 'dev',
-            icon: '🛠️',
-            color: '#0db7ed'
-        },
-        {
-            name: 'JSBin',
-            desc: '轻量级在线代码编辑器，支持 HTML/CSS/JS 实时预览与分享',
-            url: 'https://jsbin.com',
-            category: 'dev',
-            icon: '📦',
-            color: '#f50057'
-        },
-        {
-            name: 'CodePen',
-            desc: '前端代码在线 playground，支持 HTML/CSS/JS 实时预览与社区分享',
-            url: 'https://codepen.io',
-            category: 'dev',
-            icon: '✏️',
-            color: '#000000'
-        },
-        {
-            name: 'JSFiddle',
-            desc: '轻量级 Web 代码在线编辑器，快速测试 JavaScript 片段并分享给他人',
-            url: 'https://jsfiddle.net',
-            category: 'dev',
-            icon: '🔧',
-            color: '#f7df1e'
-        },
-        {
-            name: 'PlayCode',
-            desc: '浏览器端代码编辑器，支持 Rust、Go、Python 等多语言',
-            url: 'https://playcode.io',
-            category: 'dev',
-            icon: '🎮',
-            color: '#2c3e50'
-        },
-        {
-            name: 'RegExr',
-            desc: '正则表达式可视化调试工具，支持实时预览与语法高亮',
-            url: 'https://regexr.com',
-            category: 'dev',
-            icon: '🔍',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'Regex101',
-            desc: '正则表达式在线调试工具，提供实时匹配高亮、详细解释与多引擎支持',
-            url: 'https://regex101.com',
-            category: 'dev',
-            icon: '🔣',
-            color: '#d93025'
-        },
-        {
-            name: 'Debuggex',
-            desc: '正则表达式可视化调试工具，直观展示匹配过程与分组',
-            url: 'https://www.debuggex.com',
-            category: 'dev',
-            icon: '🐛',
-            color: '#4CAF50'
-        },
-        {
-            name: 'RegexCoach',
-            desc: '交互式正则表达式学习工具，逐步演示匹配逻辑',
-            url: 'https://regexr.com/educate',
-            category: 'dev',
-            icon: '📚',
-            color: '#2196F3'
-        },
-        {
-            name: 'JSONLint',
-            desc: 'JSON 格式校验与美化工具，快速定位语法错误并输出格式化结果',
-            url: 'https://jsonlint.com',
-            category: 'dev',
-            icon: '{ }',
-            color: '#f5a623'
-        },
-        {
-            name: 'BeautifyTools',
-            desc: '前端代码格式化工具，支持 HTML/CSS/JS/JSON 多种格式化',
-            url: 'https://beautifier.io',
-            category: 'dev',
-            icon: '🎨',
-            color: '#9c27b0'
-        },
-        {
-            name: 'CSS Minifier',
-            desc: 'CSS 代码压缩工具，减小文件体积并保留样式功能',
-            url: 'https://cssminifier.com',
-            category: 'dev',
-            icon: '📏',
-            color: '#03a9f4'
-        },
-        {
-            name: 'JS Minifier',
-            desc: 'JavaScript 代码压缩工具，去除注释与空白并优化代码',
-            url: 'https://jscompress.com',
-            category: 'dev',
-            icon: '🔻',
-            color: '#ff9800'
-        },
-        {
-            name: 'HtmlCompress',
-            desc: 'HTML 代码压缩与美化工具，去除多余标签与空白字符',
-            url: 'https://htmlcompressor.com',
-            category: 'dev',
-            icon: '⬇️',
-            color: '#4caf50'
-        },
-        {
-            name: 'Can I Use',
-            desc: '浏览器兼容性查询数据库，查看 CSS/JS API 在各浏览器的支持情况',
-            url: 'https://caniuse.com',
-            category: 'dev',
-            icon: '🌐',
-            color: '#3eaf7c'
-        },
-        {
-            name: 'BrowserStack',
-            desc: '跨浏览器测试平台，支持 3000+ 设备与浏览器实时预览',
-            url: 'https://www.browserstack.com',
-            category: 'dev',
-            icon: '📱',
-            color: '#e21b36'
-        },
-        {
-            name: 'LambdaTest',
-            desc: '云端跨浏览器测试平台，支持实时调试与截图对比',
-            url: 'https://www.lambdatest.com',
-            category: 'dev',
-            icon: '🧪',
-            color: '#2ea44f'
-        },
-        {
-            name: 'CrossBrowserTesting',
-            desc: '在线跨浏览器兼容性测试工具，支持视频录制与自动化测试',
-            url: 'https://crossbrowsertesting.com',
-            category: 'dev',
-            icon: '🌐',
-            color: '#0052cc'
-        },
-        {
-            name: 'DevDocs.io',
-            desc: '聚合式开发者文档搜索引擎，一次搜索覆盖数百种技术文档',
-            url: 'https://devdocs.io',
-            category: 'dev',
-            icon: '📚',
-            color: '#3d8bfd'
-        },
-        {
-            name: 'MDN Web Docs',
-            desc: 'Mozilla 开发的 Web 开发权威文档，涵盖 HTML/CSS/JavaScript',
-            url: 'https://developer.mozilla.org',
-            category: 'dev',
-            icon: '📚',
-            color: '#000000'
-        },
-        {
-            name: 'Stack Overflow',
-            desc: '全球最大的程序员问答社区，解决技术难题与分享经验',
-            url: 'https://stackoverflow.com',
-            category: 'dev',
-            icon: '💡',
-            color: '#f48024'
-        },
-        {
-            name: 'GitHub Discussions',
-            desc: 'GitHub 官方开发者论坛，项目讨论与开源社区交流',
-            url: 'https://github.com/discussions',
-            category: 'dev',
-            icon: '💬',
-            color: '#24292e'
-        },
-        {
-            name: 'Dev.to',
-            desc: '开发者社区博客平台，分享技术文章与编程心得',
-            url: 'https://dev.to',
-            category: 'dev',
-            icon: '✍️',
-            color: '#0a0a0a'
-        },
-        {
-            name: 'Hashnode',
-            desc: '开发者博客平台，支持 SEO 优化与技术博客托管',
-            url: 'https://hashnode.com',
-            category: 'dev',
-            icon: '📝',
-            color: '#1da1f2'
-        },
-        {
-            name: 'Reddit r/webdev',
-            desc: 'Web 开发讨论区，分享前端技术、框架与工具推荐',
-            url: 'https://reddit.com/r/webdev',
-            category: 'dev',
-            icon: '🗳️',
-            color: '#ff4500'
-        },
-        {
-            name: 'Reddit r/programming',
-            desc: '编程讨论区，分享编程技巧、算法与语言学习经验',
-            url: 'https://reddit.com/r/programming',
-            category: 'dev',
-            icon: '💻',
-            color: '#ff4500'
-        },
-        {
-            name: 'Reddit r/learnprogramming',
-            desc: '编程学习讨论区，帮助新手解决编程问题与困惑',
-            url: 'https://reddit.com/r/learnprogramming',
-            category: 'dev',
-            icon: '🎓',
-            color: '#ff4500'
-        },
-        {
-            name: 'TinyPNG',
-            desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积',
-            url: 'https://tinypng.com',
-            category: 'dev',
-            icon: '🗜️',
-            color: '#2bb673'
-        },
-        {
-            name: 'Squoosh',
-            desc: 'Google 开源的图片优化工具，支持压缩、格式转换与对比',
-            url: 'https://squoosh.app',
-            category: 'dev',
-            icon: '🖼️',
-            color: '#4285f4'
-        },
-        {
-            name: 'ImageOptim',
-            desc: '图片压缩工具，基于 WebP 格式自动优化图片质量与体积',
-            url: 'https://imageoptim.com',
-            category: 'dev',
-            icon: '📉',
-            color: '#e74c3c'
-        },
-        {
-            name: 'Compressor.io',
-            desc: '在线图片压缩工具，支持批量处理与多格式转换',
-            url: 'https://compressor.io',
-            category: 'dev',
-            icon: '⬇️',
-            color: '#6c757d'
-        },
-        {
-            name: 'ShortPixel',
-            desc: 'AI 驱动的图片压缩工具，自动优化并转换 WebP 格式',
-            url: 'https://shortpixel.com',
-            category: 'dev',
-            icon: '🚀',
-            color: '#f5a623'
-        },
-        {
-            name: 'Quicktype',
-            desc: 'JSON 转 TypeScript/Go/Rust 等语言的类型定义生成器，节省手写时间',
-            url: 'https://app.quicktype.io',
-            category: 'dev',
-            icon: '⚡',
-            color: '#0088cc'
-        },
-        {
-            name: 'JSON to Go',
-            desc: 'JSON 转换为 Go 结构体的在线工具，自动生成类型定义',
-            url: 'https://mholt.github.io/json-to-go/',
-            category: 'dev',
-            icon: '⚙️',
-            color: '#00ADD8'
-        },
-        {
-            name: 'JSON to Python',
-            desc: 'JSON 转换为 Python 类型的在线工具，生成可用的数据结构',
-            url: 'https://www.json2python.com/',
-            category: 'dev',
-            icon: '🐍',
-            color: '#3776ab'
-        },
-        {
-            name: 'JSON to YAML',
-            desc: 'JSON 与 YAML 格式互转工具，支持在线编辑与下载',
-            url: 'https://www.json2yaml.com/',
-            category: 'dev',
-            icon: '📄',
-            color: '#00570a'
-        },
-        {
-            name: 'JSON Editor Online',
-            desc: '可视化 JSON 编辑器，支持语法高亮、格式化与数据验证',
-            url: 'https://jsoneditoronline.org',
-            category: 'dev',
-            icon: '✏️',
-            color: '#2980b9'
-        },
-        {
-            name: 'Postman',
-            desc: 'API 开发与测试平台，支持接口调试、自动化测试与文档生成',
-            url: 'https://www.postman.com',
-            category: 'dev',
-            icon: '📨',
-            color: '#ff6c37'
-        },
-        {
-            name: 'Insomnia',
-            desc: 'API 客户端工具，支持 REST/GraphQL 接口调试与文档查看',
-            url: 'https://insomnia.rest',
-            category: 'dev',
-            icon: '🦄',
-            color: '#008000'
-        },
-        {
-            name: 'Bruno',
-            desc: '开源 API 测试工具，支持多环境与自动化测试',
-            url: 'https://usebruno.com',
-            category: 'dev',
-            icon: '🚀',
-            color: '#ffd700'
-        },
-        {
-            name: 'Thunder Client',
-            desc: 'VS Code 扩展 API 测试工具，支持导入 Swagger 文档与自动化测试',
-            url: 'https://thunderclient.com',
-            category: 'dev',
-            icon: '⚡',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'DBeaver',
-            desc: '开源数据库管理工具，支持多数据库连接与 SQL 查询编辑',
-            url: 'https://dbeaver.io',
-            category: 'dev',
-            icon: '🐘',
-            color: '#00758f'
-        },
-        {
-            name: 'TablePlus',
-            desc: '轻量级数据库管理工具，支持 Mac/Windows 多数据库连接',
-            url: 'https://tableplus.com',
-            category: 'dev',
-            icon: '📊',
-            color: '#e74c3c'
-        },
-        {
-            name: 'SQLFiddle',
-            desc: '在线 SQL 开发与测试工具，支持多种数据库与 SQL 语法',
-            url: 'https://sqlfiddle.com',
-            category: 'dev',
-            icon: '🔧',
-            color: '#3498db'
-        },
-        {
-            name: 'SQLBolt',
-            desc: '交互式 SQL 教程，逐步学习 SQL 查询语法与实践',
-            url: 'https://sqlbolt.com',
-            category: 'dev',
-            icon: '💡',
-            color: '#1abc9c'
-        },
-        {
-            name: 'DB Diagram',
-            desc: '数据库 ER 图在线绘制工具，生成 SQL 并同步到数据库',
-            url: 'https://dbdiagram.io',
-            category: 'dev',
-            icon: '📊',
-            color: '#6366f1'
-        },
-        {
-            name: 'Mimo',
-            desc: '在线代码编辑器，支持 Web、Python、Java 等语言练习',
-            url: 'https://mimo.org',
-            category: 'dev',
-            icon: '📚',
-            color: '#0084ff'
-        },
-        {
-            name: 'Scrimba',
-            desc: '互动式编程学习平台，边看视频边编写代码',
-            url: 'https://scrimba.com',
-            category: 'dev',
-            icon: '🎮',
-            color: '#a855f7'
-        },
-        {
-            name: 'freeCodeCamp',
-            desc: '免费开源编程学习平台，支持实战项目与证书认证',
-            url: 'https://www.freecodecamp.org',
-            category: 'dev',
-            icon: '💻',
-            color: '#0a0a23'
-        },
-        {
-            name: 'Coding Game',
-            desc: '游戏化编程学习平台，通过挑战提升编程技能',
-            url: 'https://www.codingame.com',
-            category: 'dev',
-            icon: '🎮',
-            color: '#ff6b35'
-        },
-        {
-            name: 'LeetCode',
-            desc: '算法与数据结构刷题平台，支持编程面试准备',
-            url: 'https://leetcode.com',
-            category: 'dev',
-            icon: '📝',
-            color: '#ffa116'
-        },
-        {
-            name: 'HackerRank',
-            desc: '编程挑战平台，支持算法练习与企业招聘测试',
-            url: 'https://hackerrank.com',
-            category: 'dev',
-            icon: '🎯',
-            color: '#32a852'
-        },
-        {
-            name: 'Codewars',
-            desc: '程序挑战竞技平台，通过解决算法题提升编程能力',
-            url: 'https://www.codewars.com',
-            category: 'dev',
-            icon: '⚔️',
-            color: '#b91c1c'
-        },
-        {
-            name: 'Exercism',
-            desc: '免费编程练习平台，提供导师一对一指导',
-            url: 'https://exercism.org',
-            category: 'dev',
-            icon: '📚',
-            color: '#4CAF50'
-        },
-        {
-            name: 'Exoframe',
-            desc: '本地服务器部署工具，一键托管静态网站到云端',
-            url: 'https://exoframe.dev',
-            category: 'dev',
-            icon: '☁️',
-            color: '#3b82f6'
-        },
-        {
-            name: 'Vercel CLI',
-            desc: 'Vercel 官方 CLI 工具，一键部署静态网站到 Edge 网络',
-            url: 'https://vercel.com/docs/cli',
-            category: 'dev',
-            icon: '🚀',
-            color: '#000000'
-        },
-        {
-            name: 'Netlify CLI',
-            desc: 'Netlify 官方 CLI 工具，本地开发与部署到全球 CDN',
-            url: 'https://docs.netlify.com/cli/get-started/',
-            category: 'dev',
-            icon: '🦀',
-            color: '#00c7be'
-        },
-        {
-            name: 'Firebase Hosting',
-            desc: 'Google Firebase 的静态网站托管服务，自动 HTTPS 与 CDN',
-            url: 'https://firebase.google.com/docs/hosting',
-            category: 'dev',
-            icon: '🔥',
-            color: '#ffca28'
-        },
-        {
-            name: 'Surge',
-            desc: '超轻量级静态网站部署平台，一键推送到全球 CDN',
-            url: 'https://surge.sh',
-            category: 'dev',
-            icon: '🌊',
-            color: '#0066cc'
-        },
-        {
-            name: 'Render',
-            desc: '全栈 Web 应用部署平台，支持 Docker 容器与函数计算',
-            url: 'https://render.com',
-            category: 'dev',
-            icon: '🚀',
-            color: '#3a75a4'
-        },
-        {
-            name: 'Fly.io',
-            desc: '全球边缘部署平台，将应用部署到世界各地的数据中心',
-            url: 'https://fly.io',
-            category: 'dev',
-            icon: '🌍',
-            color: '#0b5ed7'
-        },
-        {
-            name: 'Railway',
-            desc: '云端应用部署平台，支持一键部署与数据库托管',
-            url: 'https://railway.app',
-            category: 'dev',
-            icon: '🚂',
-            color: '#fa5c5c'
-        },
-        {
-            name: 'Zeabur',
-            desc: '新一代云开发平台，支持一键部署与自动扩容',
-            url: 'https://zeabur.com',
-            category: 'dev',
-            icon: '🚀',
-            color: '#3b82f6'
-        },
-        {
-            name: 'LocalSend',
-            desc: '跨平台文件传输工具，支持本地局域网快速传输',
-            url: 'https://localsend.org',
-            category: 'dev',
-            icon: '📤',
-            color: '#6366f1'
-        },
-        {
-            name: 'Snapdrop',
-            desc: '基于 Web 的设备间文件传输工具，无需安装即可使用',
-            url: 'https://snapdrop.net',
-            category: 'dev',
-            icon: '📱',
-            color: '#4caf50'
-        },
-        {
-            name: 'SendAnywhere',
-            desc: '跨平台文件传输工具，支持快速分享与临时链接下载',
-            url: 'https://send-anywhere.com',
-            category: 'dev',
-            icon: '⬆️',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'Tresorit',
-            desc: '端到端加密云存储，确保文件安全传输与共享',
-            url: 'https://tresorit.com',
-            category: 'dev',
-            icon: '🔒',
-            color: '#2c3e50'
-        },
-        {
-            name: 'Proton Drive',
-            desc: 'Proton Mail 官方云存储服务，端到端加密保护隐私',
-            url: 'https://protondrive.com',
-            category: 'dev',
-            icon: '🛡️',
-            color: '#007aff'
-        },
-        {
-            name: 'Dropbox',
-            desc: '云存储与文件同步服务，支持多设备实时同步',
-            url: 'https://www.dropbox.com',
-            category: 'dev',
-            icon: '☁️',
-            color: '#0061ff'
-        },
-        {
-            name: 'Google Drive',
-            desc: 'Google 云存储服务，支持在线编辑与实时协作',
-            url: 'https://drive.google.com',
-            category: 'dev',
-            icon: '📁',
-            color: '#4285f4'
-        },
-        {
-            name: 'OneDrive',
-            desc: 'Microsoft 云存储服务，深度集成 Office 套件',
-            url: 'https://onedrive.live.com',
-            category: 'dev',
-            icon: '💾',
-            color: '#0078d4'
-        },
-        {
-            name: 'Gitea',
-            desc: '轻量级自托管 Git 服务，支持团队协作与 CI/CD',
-            url: 'https://gitea.io',
-            category: 'dev',
-            icon: '🍃',
-            color: '#0052cc'
-        },
-        {
-            name: 'GitLab CE',
-            desc: '开源代码托管平台，提供 CI/CD 与 DevSecOps 功能',
-            url: 'https://about.gitlab.com',
-            category: 'dev',
-            icon: '🌐',
-            color: '#fc6d26'
-        },
-        {
-            name: 'GitHub Enterprise',
-            desc: 'GitHub 企业版，提供私有仓库、高级安全与审计功能',
-            url: 'https://github.com/enterprise',
-            category: 'dev',
-            icon: '🏢',
-            color: '#24292e'
-        },
-        {
-            name: 'GitBook',
-            desc: '文档生成与托管平台，支持 Markdown 与团队协作',
-            url: 'https://www.gitbook.com',
-            category: 'dev',
-            icon: '📖',
-            color: '#4682b4'
-        },
-        {
-            name: 'Notion',
-            desc: '一体化工作空间，支持笔记、项目管理与知识库',
-            url: 'https://www.notion.so',
-            category: 'dev',
-            icon: '📝',
-            color: '#000000'
-        },
-        {
-            name: 'Obsidian',
-            desc: '本地优先的笔记软件，支持双向链接与知识图谱',
-            url: 'https://obsidian.md',
-            category: 'dev',
-            icon: '🔒',
-            color: '#7c3aed'
-        },
-        {
-            name: 'Roam Research',
-            desc: '双向链接笔记工具，构建个人知识网络',
-            url: 'https://roamresearch.com',
-            category: 'dev',
-            icon: '🔗',
-            color: '#ff4757'
-        },
-        {
-            name: 'Logseq',
-            desc: '开源大纲笔记工具，支持双向链接与隐私保护',
-            url: 'https://logseq.com',
-            category: 'dev',
-            icon: '🎯',
-            color: '#2c3e50'
-        },
-        {
-            name: 'Joplin',
-            desc: '开源笔记应用，支持 Markdown 与端到端加密',
-            url: 'https://joplinapp.org',
-            category: 'dev',
-            icon: '🖋️',
-            color: '#34495e'
-        },
-        {
-            name: 'Microsoft To Do',
-            desc: '简单易用的任务管理工具，支持清单与优先级设置',
-            url: 'https://todo.microsoft.com',
-            category: 'dev',
-            icon: '✅',
-            color: '#0078d4'
-        },
-        {
-            name: 'Trello',
-            desc: '看板式任务管理工具，支持可视化流程与团队协作',
-            url: 'https://trello.com',
-            category: 'dev',
-            icon: '📋',
-            color: '#0079bf'
-        },
-        {
-            name: 'Notion AI',
-            desc: '集成于 Notion 中的 AI 写作助手，支持总结、扩写、翻译',
-            url: 'https://notion.so',
-            category: 'dev',
-            icon: '🧠',
-            color: '#000000'
-        },
-        {
-            name: 'ChatGPT',
-            desc: 'OpenAI 推出的智能对话助手，支持文本生成、代码编写、翻译摘要等全方位能力',
-            url: 'https://chat.openai.com',
-            category: 'dev',
-            icon: '💬',
-            color: '#10a37f'
-        },
-        {
-            name: 'Claude',
-            desc: 'Anthropic 出品的高质量 AI 助手，擅长长文本分析、复杂推理与安全对话',
-            url: 'https://claude.ai',
-            category: 'dev',
-            icon: '🧠',
-            color: '#d97706'
-        },
-        {
-            name: 'GitHub Copilot',
-            desc: 'OpenAI 提供的 AI 代码补全助手，自动生成代码建议与注释',
-            url: 'https://github.com/features/copilot',
-            category: 'dev',
-            icon: '🐙',
-            color: '#24292e'
-        },
-        {
-            name: 'Codeium',
-            desc: '免费 AI 编程助手，支持代码补全、重构、调试与智能问答',
-            url: 'https://codeium.com',
-            category: 'dev',
-            icon: '💻',
-            color: '#4285f4'
-        },
-        {
-            name: 'Tabnine',
-            desc: '企业级 AI 代码补全工具，支持多种 IDE 与编程语言',
-            url: 'https://tabnine.com',
-            category: 'dev',
-            icon: '⌨️',
-            color: '#1c7ed6'
-        },
-        {
-            name: 'Replit AI',
-            desc: '集成于在线代码编辑器的 AI 编程助手，实时代码生成与建议',
-            url: 'https://replit.com',
-            category: 'dev',
-            icon: '🛠️',
-            color: '#0db7ed'
-        },
-        {
-            name: 'TextCortex',
-            desc: 'AI 写作与内容生成平台，支持博客、营销文案、学术写作等多种场景',
-            url: 'https://textcortex.com',
-            category: 'dev',
-            icon: '🖋️',
-            color: '#6366f1'
-        },
-        {
-            name: 'Kimi',
-            desc: '月之暗面推出的智能 AI 助手，支持长文档阅读与多轮对话',
-            url: 'https://kimi.moonshot.cn',
-            category: 'dev',
-            icon: '🌙',
-            color: '#1e3a8a'
-        },
-        {
-            name: 'DeepSeek',
-            desc: '开源大模型，专注于代码生成与逻辑推理',
-            url: 'https://deepseek.com',
-            category: 'dev',
-            icon: '🔍',
-            color: '#2c3e50'
-        },
-        {
-            name: 'DeepL',
-            desc: '高精度机器翻译工具，支持 30+ 语言互译，准确度远超同类产品',
-            url: 'https://deepl.com',
-            category: 'dev',
-            icon: '🌍',
-            color: '#4a90e2'
-        },
-        {
-            name: 'Grammarly',
-            desc: 'AI 驱动的英文语法检查与写作优化工具，支持拼写、语法、风格建议',
-            url: 'https://grammarly.com',
-            category: 'dev',
-            icon: '✅',
-            color: '#2684ff'
-        },
-        {
-            name: 'ChatGPT',
-            desc: 'OpenAI 推出的智能对话助手，支持文本生成、代码编写、翻译摘要等全方位能力',
-            url: 'https://chat.openai.com',
-            category: 'dev',
-            icon: '💬',
-            color: '#10a37f'
-        },
-        // ── 设计工具 ──
-        {
-            name: 'Figma',
-            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
-            url: 'https://www.figma.com',
-            category: 'design',
-            icon: '🎯',
-            color: '#a259ff'
-        },
-        {
-            name: 'Canva',
-            desc: '在线设计平台，支持海报、PPT、社交媒体图片等快速设计',
-            url: 'https://www.canva.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#00c4cc'
-        },
-        {
-            name: 'Remove.bg',
-            desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高',
-            url: 'https://www.remove.bg',
-            category: 'design',
-            icon: '✂️',
-            color: '#2c82c9'
-        },
-        {
-            name: 'Photoshop',
-            desc: 'Adobe 推出的专业图像编辑软件，功能强大的设计工具',
-            url: 'https://www.adobe.com/products/photoshop.html',
-            category: 'design',
-            icon: '🖌️',
-            color: '#31a8ff'
-        },
-        {
-            name: 'Illustrator',
-            desc: 'Adobe 矢量图形设计软件，适合 Logo、插画、图标设计',
-            url: 'https://www.adobe.com/products/illustrator.html',
-            category: 'design',
-            icon: '⭐',
-            color: '#ff9a00'
-        },
-        {
-            name: 'InDesign',
-            desc: 'Adobe 推出的排版设计软件，适合杂志、书籍、电子书排版',
-            url: 'https://www.adobe.com/products/indesign.html',
-            category: 'design',
-            icon: '📄',
-            color: '#ff0000'
-        },
-        {
-            name: 'Sketch',
-            desc: 'Mac 平台专用 UI/UX 设计工具，轻量级且支持插件生态',
-            url: 'https://www.sketch.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff3b30'
-        },
-        {
-            name: 'Figma',
-            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
-            url: 'https://www.figma.com',
-            category: 'design',
-            icon: '🎯',
-            color: '#a259ff'
-        },
-        {
-            name: 'Adobe XD',
-            desc: 'Adobe 交互设计工具，支持原型设计与自动动画',
-            url: 'https://www.adobe.com/products/xd.html',
-            category: 'design',
-            icon: '🎯',
-            color: '#FF61F6'
-        },
-        {
-            name: 'InVision',
-            desc: '原型设计协作平台，支持在线 prototyping 与用户测试',
-            url: 'https://www.invisionapp.com',
-            category: 'design',
-            icon: '🎬',
-            color: '#25d366'
-        },
-        {
-            name: 'Principle',
-            desc: 'Mac 专用交互原型工具，支持物理动效与组件动画',
-            url: 'https://principleformac.com',
-            category: 'design',
-            icon: '⬆️',
-            color: '#3498db'
-        },
-        {
-            name: 'ProtoPie',
-            desc: '跨平台交互原型工具，支持复杂交互与多设备预览',
-            url: 'https://protopie.com',
-            category: 'design',
-            icon: '📱',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'Justinmind',
-            desc: '专业 UI/UX 原型设计工具，支持高保真交互原型',
-            url: 'https://www.justinmind.com',
-            category: 'design',
-            icon: '📝',
-            color: '#7c3aed'
-        },
-        {
-            name: 'Mockplus',
-            desc: '快速原型设计工具，支持大量组件与交互原型制作',
-            url: 'https://www.mockplus.cn',
-            category: 'design',
-            icon: '⭐',
-            color: '#00d2b3'
-        },
-        {
-            name: 'Axure RP',
-            desc: '专业交互原型工具，支持动态交互与需求文档生成',
-            url: 'https://www.axure.com',
-            category: 'design',
-            icon: '⚙️',
-            color: '#ff8c00'
-        },
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Adobe Color',
-            desc: 'Adobe 官方色彩工具，提供配色灵感与色板管理',
-            url: 'https://color.adobe.com',
-            category: 'design',
-            icon: '🌈',
-            color: '#ff0000'
-        },
-        {
-            name: 'Paletton',
-            desc: '色彩心理学配色工具，生成和谐色板与色彩组合',
-            url: 'https://paletton.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#9c27b0'
-        },
-        {
-            name: 'Color Hunt',
-            desc: '在线配色方案分享社区，精选 100+ 种配色组合',
-            url: 'https://colorhunt.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff5722'
-        },
-        {
-            name: 'WebGradients',
-            desc: '精选 180+ 个优质渐变背景，免费商用可下载',
-            url: 'https://webgradients.com',
-            category: 'design',
-            icon: '🌅',
-            color: '#f0932b'
-        },
-        {
-            name: 'Gradientify',
-            desc: '渐变色可视化生成器，创建自定义渐变背景',
-            url: 'https://gradientify.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#4facfe'
-        },
-        {
-            name: 'ColorZilla',
-            desc: '浏览器插件，快速拾取网页颜色与渐变生成器',
-            url: 'https://www.colorzilla.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#e91e63'
-        },
-        {
-            name: 'HiSoftware Color Wheel',
-            desc: '色彩轮配色工具，辅助设计师选择和谐色彩',
-            url: 'https://www.hisite.com',
-            category: 'design',
-            icon: '🎡',
-            color: '#00bcd4'
-        },
-        {
-            name: 'Collaborative Color',
-            desc: '团队协作配色工具，多人共同创作色彩方案',
-            url: 'https://collaborativecolor.com',
-            category: 'design',
-            icon: '👥',
-            color: '#8bc34a'
-        },
-        {
-            name: 'Flat UI Colors',
-            desc: '扁平化设计配色方案，适合现代 UI 设计',
-            url: 'https://flatuicolors.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff5252'
-        },
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Adobe Color CC',
-            desc: 'Adobe 色彩创意工具，创建、管理并分享色板',
-            url: 'https://color.adobe.com/create/color-wheel',
-            category: 'design',
-            icon: '🌈',
-            color: '#ff0000'
-        },
-        {
-            name: 'ColorLovers',
-            desc: '配色方案分享社区，收藏 200+ 万种设计配色',
-            url: 'https://colorlovers.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff9800'
-        },
-        {
-            name: 'Pantone Color',
-            desc: 'Pantone 官方色彩工具，查找专业色彩标准',
-            url: 'https://www.pantone.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#000000'
-        },
-        {
-            name: 'NipponColors',
-            desc: '日本传统色彩数据库，提供 216 种传统配色',
-            url: 'https://nipponcolors.com',
-            category: 'design',
-            icon: '🌸',
-            color: '#e91e63'
-        },
-        {
-            name: 'Pinterest',
-            desc: '灵感收藏平台，搜索并保存设计灵感与配色方案',
-            url: 'https://www.pinterest.com',
-            category: 'design',
-            icon: '📌',
-            color: '#e60023'
-        },
-        {
-            name: 'Unsplash',
-            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
-            url: 'https://unsplash.com',
-            category: 'design',
-            icon: '📷',
-            color: '#111111'
-        },
-        {
-            name: 'Pexels',
-            desc: '免费商用图片视频素材库，提供高质量免版权资源',
-            url: 'https://www.pexels.com',
-            category: 'design',
-            icon: '📸',
-            color: '#00d2b3'
-        },
-        {
-            name: 'Pixabay',
-            desc: '免费图片、视频、插画素材库，支持中文搜索',
-            url: 'https://pixabay.com',
-            category: 'design',
-            icon: '🖼️',
-            color: '#2980b9'
-        },
-        {
-            name: 'Burst',
-            desc: 'Shutterstock 旗下的免费商用图片库，适合电商与营销素材',
-            url: 'https://burst.shopify.com',
-            category: 'design',
-            icon: '📦',
-            color: '#ff5722'
-        },
-        {
-            name: 'Freepik',
-            desc: '免费矢量图与 PSD 模板库，支持中文搜索',
-            url: 'https://www.freepik.com',
-            category: 'design',
-            icon: '⭐',
-            color: '#0057b8'
-        },
-        {
-            name: 'Flaticon',
-            desc: '免费矢量图标库，提供 2000 万+ 商用图标素材',
-            url: 'https://www.flaticon.com',
-            category: 'design',
-            icon: '☆',
-            color: '#ff3b30'
-        },
-        {
-            name: 'Iconfinder',
-            desc: '专业图标素材库，提供 3000 万+ 高质量商用图标',
-            url: 'https://www.iconfinder.com',
-            category: 'design',
-            icon: '🔍',
-            color: '#2c3e50'
-        },
-        {
-            name: 'FontAwesome',
-            desc: '最流行的图标字体库，提供数千个矢量图标，支持框架集成与自定义',
-            url: 'https://fontawesome.com',
-            category: 'design',
-            icon: '★',
-            color: '#538dd7'
-        },
-        {
-            name: 'Heroicons',
-            desc: 'Tailwind 团队出品的开源 SVG 图标库，风格简洁现代，适合 Web 项目使用',
-            url: 'https://heroicons.com',
-            category: 'design',
-            icon: '◈',
-            color: '#0ea5e9'
-        },
-        {
-            name: 'Material Icons',
-            desc: 'Google 官方图标库，提供 2500+ Material Design 图标',
-            url: 'https://fonts.google.com/icons',
-            category: 'design',
-            icon: '☆',
-            color: '#4285f4'
-        },
-        {
-            name: 'Remix Icon',
-            desc: '开源图标库，提供 2000+ 免费 SVG 图标',
-            url: 'https://remixicon.com',
-            category: 'design',
-            icon: '💫',
-            color: '#ff5252'
-        },
-        {
-            name: 'Tabler Icons',
-            desc: '免费开源图标库，提供 2000+ 矢量图标',
-            url: 'https://tabler.io/icons',
-            category: 'design',
-            icon: '✨',
-            color: '#0052cc'
-        },
-        {
-            name: 'Phosphor Icons',
-            desc: '现代风格图标库，提供 1200+ SVG 图标',
-            url: 'https://phosphoricons.com',
-            category: 'design',
-            icon: '✅',
-            color: '#00bcd4'
-        },
-        {
-            name: 'Lucide Icons',
-            desc: '轻量级开源图标库，提供 1000+ SVG 图标',
-            url: 'https://lucide.dev',
-            category: 'design',
-            icon: '⚡',
-            color: '#7c3aed'
-        },
-        {
-            name: 'Feather Icons',
-            desc: '极简风格 SVG 图标库，提供 300+ 图标',
-            url: 'https://feathericons.com',
-            category: 'design',
-            icon: '🪶',
-            color: '#6366f1'
-        },
-        {
-            name: 'Game Icons',
-            desc: '游戏风格图标库，提供 2000+ 可视化图标',
-            url: 'https://game-icons.net',
-            category: 'design',
-            icon: '🎮',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'CSS Gradient',
-            desc: '渐变色在线生成器，可视调节色标位置与角度，直接复制 CSS 代码',
-            url: 'https://cssgradient.io',
-            category: 'design',
-            icon: '🌅',
-            color: '#e67685'
-        },
-        {
-            name: 'Gradient Maker',
-            desc: '渐变生成器，创建自定义渐变背景与 CSS 代码',
-            url: 'https://gradientmaker.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#f0932b'
-        },
-        {
-            name: 'Gradients.io',
-            desc: '渐变背景生成器，提供多种渐变风格与导出选项',
-            url: 'https://gradients.io',
-            category: 'design',
-            icon: '🌈',
-            color: '#4facfe'
-        },
-        {
-            name: 'CSSmatic',
-            desc: 'CSS 样式生成器，支持渐变、阴影、圆角等效果',
-            url: 'https://www.cssmatic.com',
-            category: 'design',
-            icon: '✏️',
-            color: '#ff7e5f'
-        },
-        {
-            name: 'Border Radius Generator',
-            desc: '圆角生成器，可视化调节圆角值与 CSS 代码',
-            url: 'https://border-radius.com',
-            category: 'design',
-            icon: '⭕',
-            color: '#00d2b3'
-        },
-        {
-            name: 'Box Shadow Generator',
-            desc: '阴影生成器，创建不同方向的阴影效果',
-            url: 'https://www.cssdesk.com/css-shadows',
-            category: 'design',
-            icon: '🌑',
-            color: '#434343'
-        },
-        {
-            name: 'Transparent PNG',
-            desc: '透明背景 PNG 图片搜索与下载工具',
-            url: 'https://transparenttextures.com',
-            category: 'design',
-            icon: '🖼️',
-            color: '#ff9a9e'
-        },
-        {
-            name: 'TinyPNG',
-            desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积',
-            url: 'https://tinypng.com',
-            category: 'design',
-            icon: '🗜️',
-            color: '#2bb673'
-        },
-        {
-            name: 'Compressor.io',
-            desc: '在线图片压缩工具，支持批量处理与多格式转换',
-            url: 'https://compressor.io',
-            category: 'design',
-            icon: '⬇️',
-            color: '#6c757d'
-        },
-        {
-            name: 'SVGOMG',
-            desc: 'Jake Archibald 出品的 SVG 优化工具，智能精简代码体积而不损失质量',
-            url: 'https://jakearchibald.github.io/svgomg/',
-            category: 'design',
-            icon: '📐',
-            color: '#ffb13b'
-        },
-        {
-            name: 'SVGO',
-            desc: 'SVG 优化工具 CLI 版本，自动压缩 SVG 代码',
-            url: 'https://jakearchibald.github.io/svgomg/',
-            category: 'design',
-            icon: '🔍',
-            color: '#e67e22'
-        },
-        {
-            name: 'Responsive Design Checker',
-            desc: '响应式设计检查工具，模拟多设备屏幕尺寸',
-            url: 'https://responsivedesignchecker.com',
-            category: 'design',
-            icon: '📱',
-            color: '#9b59b6'
-        },
-        {
-            name: 'Device Mode',
-            desc: 'Chrome 开发者工具响应式模拟器',
-            url: 'https://developer.chrome.com/docs/devtools/device-mode/',
-            category: 'design',
-            icon: '💻',
-            color: '#3498db'
-        },
-        {
-            name: 'Realtime Colors',
-            desc: '实时预览配色方案在真实网页上的效果，所见即所得地调整品牌色调',
-            url: 'https://www.realtimecolors.com',
-            category: 'design',
-            icon: '👁️',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'Adobe XD Preview',
-            desc: 'XDR 预览工具，快速分享设计到移动设备预览',
-            url: 'https://xd.adobe.com/preview/',
-            category: 'design',
-            icon: '📱',
-            color: '#FF61F6'
-        },
-        {
-            name: 'Zeplin',
-            desc: '设计协作平台，支持设计稿标注与代码生成',
-            url: 'https://zeplin.io',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff3d71'
-        },
-        {
-            name: 'Figma Dev Mode',
-            desc: 'Figma 开发者模式，查看设计规范与自动生成代码',
-            url: 'https://www.figma.com/dev',
-            category: 'design',
-            icon: '💻',
-            color: '#a259ff'
-        },
-        {
-            name: 'Figma Inspect',
-            desc: 'Figma 设计检查工具，实时预览交互效果与代码样式',
-            url: 'https://www.figma.com/inspect',
-            category: 'design',
-            icon: '🔍',
-            color: '#a259ff'
-        },
-        {
-            name: 'Flowchart Maker',
-            desc: '在线流程图绘制工具，支持拖拽式创建流程图',
-            url: 'https://www.draw.io',
-            category: 'design',
-            icon: '🧩',
-            color: '#00d2b3'
-        },
-        {
-            name: 'Lucidchart',
-            desc: '专业流程图工具，支持团队协作与多格式导出',
-            url: 'https://www.lucidchart.com',
-            category: 'design',
-            icon: '📊',
-            color: '#2f80ed'
-        },
-        {
-            name: 'ProcessOn',
-            desc: '在线流程图、思维导图、架构图绘制工具',
-            url: 'https://www.processon.com',
-            category: 'design',
-            icon: '📈',
-            color: '#00b578'
-        },
-        {
-            name: 'XMind',
-            desc: '思维导图软件，支持 Mac/Windows 全平台使用',
-            url: 'https://www.xmind.cn',
-            category: 'design',
-            icon: '🧠',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'MindMaster',
-            desc: '亿图思维导图软件，支持多平台与云同步',
-            url: 'https://www.edrawsoft.cn',
-            category: 'design',
-            icon: '🎯',
-            color: '#4285f4'
-        },
-        {
-            name: 'ProcessOn',
-            desc: '在线流程图、思维导图、架构图绘制工具',
-            url: 'https://www.processon.com',
-            category: 'design',
-            icon: '📈',
-            color: '#00b578'
-        },
-        {
-            name: 'HTML5 CSS3 Box Model',
-            desc: 'HTML5/CSS3 盒模型可视化调试工具',
-            url: 'https://css-tricks.com/snippets/css/complete-guide-box-model/',
-            category: 'design',
-            icon: '📦',
-            color: '#3498db'
-        },
-        {
-            name: 'Grid Garden',
-            desc: 'CSS Grid 游戏化学习工具，逐步学习 Grid 布局',
-            url: 'https://cssgridgarden.com',
-            category: 'design',
-            icon: '🌻',
-            color: '#4caf50'
-        },
-        {
-            name: 'Flexbox Froggy',
-            desc: 'Flexbox 布局游戏化学习工具',
-            url: 'https://flexboxfroggy.com',
-            category: 'design',
-            icon: '🐸',
-            color: '#8bc34a'
-        },
-        {
-            name: 'Grid Layout Cheatsheet',
-            desc: 'CSS Grid 布局速查表，快速查阅 Grid 属性用法',
-            url: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
-            category: 'design',
-            icon: '📚',
-            color: '#ff5722'
-        },
-        {
-            name: 'GitHub Readme Stats',
-            desc: 'GitHub 个人资料统计卡片生成器',
-            url: 'https://github-readme-stats.vercel.app',
-            category: 'design',
-            icon: '📊',
-            color: '#181717'
-        },
-        {
-            name: 'Shields.io',
-            desc: '状态徽章生成器，用于 GitHub 仓库 README 中',
-            url: 'https://shields.io',
-            category: 'design',
-            icon: '🛡️',
-            color: '#0073e6'
-        },
-        {
-            name: 'Badgen.net',
-            desc: 'Badge 生成器，生成 SVG 徽章用于项目文档',
-            url: 'https://badgen.net',
-            category: 'design',
-            icon: '🏅',
-            color: '#35a4ff'
-        },
-        {
-            name: 'SVG Icons',
-            desc: 'SVG 图标库，提供 1000+ 可缩放矢量图标',
-            url: 'https://ionic.io/ionicons',
-            category: 'design',
-            icon: '🔷',
-            color: '#00b8d4'
-        },
-        {
-            name: 'Material Design Icons',
-            desc: 'Google Material Design 官方图标库',
-            url: 'https://fonts.google.com/icons',
-            category: 'design',
-            icon: '☆',
-            color: '#4285f4'
-        },
-        {
-            name: 'Ant Design Icons',
-            desc: 'Ant Design UI 框架图标库',
-            url: 'https://ant.design/components/icon-cn/',
-            category: 'design',
-            icon: '🎨',
-            color: '#1890ff'
-        },
-        {
-            name: 'Bootstrap Icons',
-            desc: 'Bootstrap 官方图标库，提供 1200+ SVG 图标',
-            url: 'https://icons.getbootstrap.com',
-            category: 'design',
-            icon: '🔵',
-            color: '#7952b3'
-        },
-        {
-            name: 'Ionicons',
-            desc: '开源图标库，提供 1300+ SVG 图标',
-            url: 'https://ionic.io/ionicons',
-            category: 'design',
-            icon: '⚡',
-            color: '#3880ff'
-        },
-        {
-            name: 'Boxicons',
-            desc: '开源图标库，提供 2000+ 矢量图标',
-            url: 'https://boxicons.com',
-            category: 'design',
-            icon: '💡',
-            color: '#00a0dc'
-        },
-        {
-            name: 'Boxicons',
-            desc: 'Boxicons 矢量图标库，提供 2000+ 商用图标',
-            url: 'https://boxicons.com',
-            category: 'design',
-            icon: '💡',
-            color: '#00a0dc'
-        },
-        {
-            name: 'Font Awesome',
-            desc: '最流行的图标字体库，提供数千个矢量图标，支持框架集成与自定义',
-            url: 'https://fontawesome.com',
-            category: 'design',
-            icon: '★',
-            color: '#538dd7'
-        },
-        {
-            name: 'Heroicons',
-            desc: 'Tailwind 团队出品的开源 SVG 图标库，风格简洁现代，适合 Web 项目使用',
-            url: 'https://heroicons.com',
-            category: 'design',
-            icon: '◈',
-            color: '#0ea5e9'
-        },
-        {
-            name: 'Remove.bg',
-            desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高',
-            url: 'https://www.remove.bg',
-            category: 'design',
-            icon: '✂️',
-            color: '#2c82c9'
-        },
-        {
-            name: 'Photopea',
-            desc: '免费在线 Photoshop 替代品，支持 PSD 文件编辑与图层操作，无需安装',
-            url: 'https://www.photopea.com',
-            category: 'design',
-            icon: '🖌️',
-            color: '#31a8ff'
-        },
-        {
-            name: 'GIMP',
-            desc: '开源图像编辑软件，功能接近 Photoshop',
-            url: 'https://www.gimp.org',
-            category: 'design',
-            icon: '🖼️',
-            color: '#8d6e63'
-        },
-        {
-            name: 'Paint.NET',
-            desc: '免费图片编辑软件，适合 Windows 平台快速编辑',
-            url: 'https://www.getpaint.net',
-            category: 'design',
-            icon: '🖌️',
-            color: '#1d6f42'
-        },
-        {
-            name: 'Krita',
-            desc: '开源数字绘画软件，适合插画师使用',
-            url: 'https://krita.org',
-            category: 'design',
-            icon: '🎨',
-            color: '#2980b9'
-        },
-        {
-            name: 'Inkscape',
-            desc: '开源矢量图形编辑软件，适合 Logo 与插画设计',
-            url: 'https://inkscape.org',
-            category: 'design',
-            icon: '⭐',
-            color: '#07c160'
-        },
-        {
-            name: 'Blender',
-            desc: '开源 3D 建模与渲染软件',
-            url: 'https://www.blender.org',
-            category: 'design',
-            icon: '🧊',
-            color: '#f37226'
-        },
-        {
-            name: 'TinyPNG',
-            desc: '智能图片压缩工具，在保持视觉质量的前提下大幅减小 PNG/JPG 文件体积',
-            url: 'https://tinypng.com',
-            category: 'design',
-            icon: '🗜️',
-            color: '#2bb673'
-        },
-        {
-            name: 'Photopea',
-            desc: '免费在线 Photoshop 替代品，支持 PSD 文件编辑与图层操作，无需安装',
-            url: 'https://www.photopea.com',
-            category: 'design',
-            icon: '🖌️',
-            color: '#31a8ff'
-        },
-        {
-            name: 'Figma',
-            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
-            url: 'https://www.figma.com',
-            category: 'design',
-            icon: '🎯',
-            color: '#a259ff'
-        },
-        {
-            name: 'Adobe Creative Cloud',
-            desc: 'Adobe 全套设计软件订阅服务',
-            url: 'https://www.adobe.com/creativecloud.html',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff0000'
-        },
-        {
-            name: 'Sketch',
-            desc: 'Mac 平台专用 UI/UX 设计工具，轻量级且支持插件生态',
-            url: 'https://www.sketch.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#ff3b30'
-        },
-        {
-            name: 'Canva',
-            desc: '在线设计平台，支持海报、PPT、社交媒体图片等快速设计',
-            url: 'https://www.canva.com',
-            category: 'design',
-            icon: '🎨',
-            color: '#00c4cc'
-        },
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Unsplash',
-            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
-            url: 'https://unsplash.com',
-            category: 'design',
-            icon: '📷',
-            color: '#111111'
-        },
-        {
-            name: 'Figma',
-            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
-            url: 'https://www.figma.com',
-            category: 'design',
-            icon: '🎯',
-            color: '#a259ff'
-        },
-        {
-            name: 'Remove.bg',
-            desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高',
-            url: 'https://www.remove.bg',
-            category: 'design',
-            icon: '✂️',
-            color: '#2c82c9'
-        },
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Unsplash',
-            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
-            url: 'https://unsplash.com',
-            category: 'design',
-            icon: '📷',
-            color: '#111111'
-        },
-        {
-            name: 'Figma',
-            desc: '基于云端的专业 UI/UX 设计工具，支持多人实时协作、原型设计与组件系统',
-            url: 'https://www.figma.com',
-            category: 'design',
-            icon: '🎯',
-            color: '#a259ff'
-        },
-        {
-            name: 'Remove.bg',
-            desc: 'AI 一键抠图工具，自动去除图片背景，处理速度快且边缘精度高',
-            url: 'https://www.remove.bg',
-            category: 'design',
-            icon: '✂️',
-            color: '#2c82c9'
-        },
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Unsplash',
-            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
-            url: 'https://unsplash.com',
-            category: 'design',
-            icon: '📷',
-            color: '#111111'
-        },
-        // ── AI 工具 ──
-        {
-            name: 'Coolors',
-            desc: '配色方案生成器，一键生成协调色彩组合，支持导出为多种格式',
-            url: 'https://coolors.co',
-            category: 'design',
-            icon: '🎨',
-            color: '#0066ff'
-        },
-        {
-            name: 'Unsplash',
-            desc: '高质量免费商用图片库，涵盖风景、人物、科技等海量摄影作品',
-            url: 'https://unsplash.com',
-            category: 'design',
-            icon: '📷',
-            color: '#111111'
-        },
-        {
-            name: 'Font Awesome',
-            desc: '最流行的图标字体库，提供数千个矢量图标，支持框架集成与自定义',
-            url: 'https://fontawesome.com',
-            category: 'design',
-            icon: '★',
-            color: '#538dd7'
-        },
-        {
-            name: 'CSS Gradient',
-            desc: '渐变色在线生成器，可视调节色标位置与角度，直接复制 CSS 代码',
-            url: 'https://cssgradient.io',
-            category: 'design',
-            icon: '🌅',
-            color: '#e67685'
-        },
-        {
-            name: 'SVGOMG',
-            desc: 'Jake Archibald 出品的 SVG 优化工具，智能精简代码体积而不损失质量',
-            url: 'https://jakearchibald.github.io/svgomg/',
-            category: 'design',
-            icon: '📐',
-            color: '#ffb13b'
-        },
-        {
-            name: 'Photopea',
-            desc: '免费在线 Photoshop 替代品，支持 PSD 文件编辑与图层操作，无需安装',
-            url: 'https://www.photopea.com',
-            category: 'design',
-            icon: '🖌️',
-            color: '#31a8ff'
-        },
-        {
-            name: 'Realtime Colors',
-            desc: '实时预览配色方案在真实网页上的效果，所见即所得地调整品牌色调',
-            url: 'https://www.realtimecolors.com',
-            category: 'design',
-            icon: '👁️',
-            color: '#ff6b6b'
-        },
-        {
-            name: 'Heroicons',
-            desc: 'Tailwind 团队出品的开源 SVG 图标库，风格简洁现代，适合 Web 项目使用',
-            url: 'https://heroicons.com',
-            category: 'design',
-            icon: '◈',
-            color: '#0ea5e9'
-        }
-    ];
+// 状态
+let currentCategory = 'all';
+let currentSearch = '';
+let toolHistory = [];
 
-    /* ========== DOM 引用 ========== */
-    const toolsGrid = document.getElementById('toolsGrid');
-    const searchInput = document.getElementById('searchInput');
-    const navTabs = document.querySelectorAll('.nav-tab');
-    const totalCountEl = document.getElementById('totalCount');
-    const visibleCountEl = document.getElementById('visibleCount');
-    const toast = document.getElementById('toast');
-    const toastText = document.getElementById('toastText');
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    initCounts();
+    handleRoute();
+    setupEventListeners();
+});
 
-    let currentFilter = 'all';
-    let searchQuery = '';
+// 初始化计数
+function initCounts() {
+    const counts = { all: TOOLS.length, ai: 0, dev: 0, design: 0 };
+    TOOLS.forEach(t => counts[t.category]++);
+    document.getElementById('countAll').textContent = counts.all;
+    document.getElementById('countAi').textContent = counts.ai;
+    document.getElementById('countDev').textContent = counts.dev;
+    document.getElementById('countDesign').textContent = counts.design;
+}
 
-    /* ========== 渲染工具卡片 ========== */
-    function renderCards(tools) {
-        if (tools.length === 0) {
-            toolsGrid.innerHTML =
-                '<div class="no-results">' +
-                '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' +
-                '<p>没有找到匹配的工具</p></div>';
-            return;
-        }
+// 设置事件监听
+function setupEventListeners() {
+    // 搜索
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        renderTools();
+    });
 
-        toolsGrid.innerHTML = tools.map((t, i) => {
-            const tagClass = t.category === 'ai' ? 'tag-ai' : t.category === 'dev' ? 'tag-dev' : 'tag-design';
-            const tagLabel = t.category === 'ai' ? 'AI工具' : t.category === 'dev' ? '开发工具' : '设计工具';
-            return '<article class="tool-card" data-index="' + i + '" itemscope itemtype="https://schema.org/SoftwareApplication" itemprop="itemListElement">' +
-                '<meta itemprop="position" content="' + (i + 1) + '">' +
-                '<div class="card-header">' +
-                    '<div class="card-icon" style="background:' + t.color + '22;color:' + t.color + '" aria-hidden="true">' + t.icon + '</div>' +
-                    '<span class="card-tag ' + tagClass + '">' + tagLabel + '</span>' +
-                '</div>' +
-                '<div class="card-body">' +
-                    '<h3 itemprop="name">' + escapeHtml(t.name) + '</h3>' +
-                    '<p itemprop="description">' + escapeHtml(t.desc) + '</p>' +
-                    '<meta itemprop="url" content="' + t.url + '">' +
-                    '<meta itemprop="applicationCategory" content="' + tagLabel + '">' +
-                    '<meta itemprop="operatingSystem" content="Web">' +
-                '</div>' +
-                '<div class="card-actions">' +
-                    '<a href="' + t.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary">访问官网 ↗</a>' +
-                    '<button class="btn btn-ghost" onclick="window.__copyLink(\'' + t.url + '\',this)" aria-label="复制 ' + escapeHtml(t.name) + ' 链接">复制链接</button>' +
-                '</div>' +
-            '</article>';
-        }).join('');
-    }
-
-    /* HTML 转义防 XSS */
-    function escapeHtml(str) {
-        const div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-    }
-
-    /* ========== 筛选逻辑 ========== */
-    function filterTools() {
-        let filtered = TOOLS;
-
-        if (currentFilter !== 'all') {
-            filtered = filtered.filter(t => t.category === currentFilter);
-        }
-
-        if (searchQuery.trim()) {
-            const q = searchQuery.toLowerCase().trim();
-            filtered = filtered.filter(t =>
-                t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)
-            );
-        }
-
-        renderCards(filtered);
-        visibleCountEl.textContent = filtered.length;
-
-        const titles = { all: '全部工具', ai: 'AI 工具推荐', dev: '开发工具推荐', design: '设计工具推荐' };
-        document.getElementById('ai-title').textContent = titles[currentFilter] || '全部工具';
-    }
-
-    /* ========== Toast 提示 ========== */
-    let toastTimer = null;
-    function showToast(msg) {
-        toastText.textContent = msg;
-        toast.classList.add('show');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
-    }
-
-    /* ========== 复制链接（全局暴露供 onclick 调用）========== */
-    window.__copyLink = function(url, btn) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(url).then(function() {
-                showToast('链接已复制到剪贴板');
-                const orig = btn.textContent;
-                btn.textContent = '已复制 ✓';
-                setTimeout(function() { btn.textContent = orig; }, 1500);
-            });
-        } else {
-            /* 降级方案：创建临时 textarea */
-            const ta = document.createElement('textarea');
-            ta.value = url;
-            ta.style.cssText = 'position:fixed;left:-9999px;';
-            document.body.appendChild(ta);
-            ta.select();
-            try { document.execCommand('copy'); showToast('链接已复制到剪贴板'); } catch(e) { showToast('复制失败，请手动复制'); }
-            document.body.removeChild(ta);
-        }
-    };
-
-    /* ========== 事件绑定 ========== */
-
-    /* 分类切换 */
-    navTabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            navTabs.forEach(function(t) {
-                t.classList.remove('active');
-                t.setAttribute('aria-selected', 'false');
-            });
-            this.classList.add('active');
-            this.setAttribute('aria-selected', 'true');
-            currentFilter = this.dataset.filter;
-            filterTools();
+    // 分类菜单
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            currentCategory = item.dataset.category;
+            updateCategoryUI();
+            renderTools();
+            // 移动端隐藏侧边栏
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').style.display = 'none';
+            }
         });
     });
 
-    /* 搜索输入（带防抖） */
-    let debounceTimer = null;
-    searchInput.addEventListener('input', function() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(function() {
-            searchQuery = searchInput.value;
-            filterTools();
-        }, 150);
-    });
+    // URL 变化监听
+    window.addEventListener('hashchange', handleRoute);
+}
 
-    /* 键盘快捷键：/ 聚焦搜索框 */
-    document.addEventListener('keydown', function(e) {
-        if (e.key === '/' && document.activeElement !== searchInput) {
-            e.preventDefault();
-            searchInput.focus();
+// 处理路由
+function handleRoute() {
+    const hash = window.location.hash.slice(1) || '/';
+    
+    if (hash.startsWith('/tool/')) {
+        const toolId = hash.replace('/tool/', '');
+        showDetail(toolId);
+    } else if (hash.startsWith('/')) {
+        const category = hash.replace('/', '');
+        if (['ai', 'dev', 'design'].includes(category)) {
+            currentCategory = category;
+            // 更新侧边栏选中状态
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.category === category);
+            });
+            updateCategoryUI();
         }
-        if (e.key === 'Escape') {
-            searchInput.blur();
-        }
-    });
+        showList();
+        renderTools();
+    }
+}
 
-    /* ========== 初始化 ========== */
-    totalCountEl.textContent = TOOLS.length;
-    filterTools();
+// 显示列表页
+function showList() {
+    document.getElementById('listPage').style.display = 'block';
+    document.getElementById('detailPage').classList.remove('active');
+}
 
-})();
+// 显示详情页
+function showDetail(toolId) {
+    const tool = TOOLS.find(t => t.id === toolId);
+    if (!tool) {
+        window.location.hash = '/';
+        return;
+    }
+
+    document.getElementById('listPage').style.display = 'none';
+    document.getElementById('detailPage').classList.add('active');
+
+    document.getElementById('detailIcon').innerHTML = tool.icon;
+    document.getElementById('detailIcon').style.background = tool.color + '20';
+    document.getElementById('detailIcon').style.color = tool.color;
+    document.getElementById('detailTitle').textContent = tool.name;
+    document.getElementById('detailDesc').textContent = tool.desc;
+    document.getElementById('detailVisitBtn').onclick = () => window.open(tool.url, '_blank');
+    
+    const featuresHtml = tool.features.map(f => `
+        <div class="detail-feature">
+            <span class="detail-feature-icon">✓</span>
+            <span class="detail-feature-text">${f}</span>
+        </div>
+    `).join('');
+    document.getElementById('detailFeatures').innerHTML = featuresHtml;
+
+    // 添加到历史
+    toolHistory.push(toolId);
+}
+
+// 更新分类 UI
+function updateCategoryUI() {
+    const titles = { all: '全部工具', ai: 'AI 工具', dev: '开发工具', design: '设计工具' };
+    const icons = { all: '📁', ai: '🤖', dev: '💻', design: '🎨' };
+    document.getElementById('categoryTitle').textContent = titles[currentCategory];
+    document.getElementById('categoryIcon').textContent = icons[currentCategory];
+}
+
+// 渲染工具列表
+function renderTools() {
+    let filtered = TOOLS;
+
+    // 分类筛选
+    if (currentCategory !== 'all') {
+        filtered = filtered.filter(t => t.category === currentCategory);
+    }
+
+    // 搜索筛选
+    if (currentSearch.trim()) {
+        const q = currentSearch.toLowerCase().trim();
+        filtered = filtered.filter(t => 
+            t.name.toLowerCase().includes(q) || 
+            t.desc.toLowerCase().includes(q)
+        );
+    }
+
+    const grid = document.getElementById('toolsGrid');
+    
+    if (filtered.length === 0) {
+        grid.innerHTML = `
+            <div class="no-result">
+                <div class="no-result-icon">🔍</div>
+                <p>没有找到匹配的工具</p>
+            </div>
+        `;
+        return;
+    }
+
+    grid.innerHTML = filtered.map((t, i) => `
+        <div class="tool-card" onclick="goToDetail('${t.id}')" style="animation-delay: ${i * 0.02}s">
+            <div class="tool-icon" style="background: ${t.color}20; color: ${t.color}">${t.icon}</div>
+            <div class="tool-info">
+                <div class="tool-name">
+                    ${t.name}
+                    <span class="tool-tag">${t.category === 'ai' ? 'AI' : t.category === 'dev' ? '开发' : '设计'}</span>
+                </div>
+                <div class="tool-desc">${t.desc}</div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// 跳转详情
+function goToDetail(toolId) {
+    window.location.hash = `/tool/${toolId}`;
+}
+
+// 返回列表
+function goBack() {
+    window.history.back();
+}
+
+// 返回首页
+function goHome() {
+    window.location.hash = '/';
+}
+
+// 复制详情页URL
+function copyDetailUrl() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => showToast('链接已复制'));
+}
+
+// Toast
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// 切换菜单（移动端）
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+}
 </script>
-
 </body>
 </html>
